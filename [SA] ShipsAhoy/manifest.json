@@ -1,0 +1,11 @@
+{
+  "Name": "Ships Ahoy! The Matchmaking One Piece Mod",
+  "Author": "Callunar IllusiveRose Irene",
+  "Version": "1.0.0",
+  "Description": "Matchmake or marry your favorite ships in this One Piece AU mod!",
+  "UniqueID": "CallunarIllusiveRoseIrene.ShipsAhoy",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
