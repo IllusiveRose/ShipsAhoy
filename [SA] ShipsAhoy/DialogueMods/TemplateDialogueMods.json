@@ -4,9 +4,11 @@
 {
   "Changes": [
     //Sprites
-
+    //https://stardewvalleywiki.com/Modding:NPC_data#Overworld_sprites
 
     //Portraits
+    //The portrait sheet can have any number of expressions, but must only be two expressions wide (A sheet of 10 expressions would consist of 5 rows and 2 columns)
+    //Each expression is 64 pixels x 64 pixels
     //As long as the PNG is named after the original Stardew NPC, no code required. (i.e, the portrait sheet with all of Luffy's expressions is still called Sebastian.PNG.
     //Alternatively, if you want the portrait sheets to have One Piece names, use the below code:
        {
