@@ -1,23 +1,50 @@
 //This document can be duplicated and filled out for any vanilla character that needs to be modified for the mod. 
 //Each .json should be named for the CHARACTER in CamelCase with the following sections: 
 //(List below with sample code).
-
-//Sprites
-
-
-//Portraits
+{
+  "Changes": [
+    //Sprites
 
 
-//Dialogue
+    //Portraits
 
 
-//Marriage Dialogue
+    //Dialogue
 
 
-//Schedule
+    //Marriage Dialogue
 
 
-//NPC Gift Tastes
+    //Schedule
 
 
-//Engagement Dialogue
+    //NPC Gift Tastes: see https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/text-operations.md
+    //To swap entire list:
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "Entries": {
+        "Universal_Love": "74 446 797 373 279 127 128" // replaces current value
+      }
+    },
+    //This is pretty simple, but unfortunately it overwrites any previous values. 
+    //That will remove any changes from other mods or in future game updates. 
+    // So instead, we can use the Append operation to add new gift tastes without changing the other values: 
+
+    {
+      "Action": "EditData",
+      "Target": "Data/NPCGiftTastes",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "Entries", "Universal_Love" ],
+          "Value": "127 128",
+          "Delimiter": " " // if the field isn't empty, add a space between the old & new text
+        }
+      ]
+    }
+
+    //Engagement Dialogue
+
+  ]
+}
