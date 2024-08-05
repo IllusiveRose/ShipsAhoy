@@ -1,0 +1,156 @@
+{
+  "Changes": [
+    //Table of contents:
+    //**Maps
+
+
+    //MAP changes including new designs and tiled events for each map. All changes to animation and tile-based actions go here.
+
+    //LUFFY
+
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Sebastianroom",
+      "FromFile": "assets/Maps/SebastianRoom.tmx"
+    },
+    //ROBIN, FRANKY, USOPP
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ScienceHouse",
+      "FromFile": "assets/Maps/ScienceHouse.tmx"
+    },
+    //ZORO, SANJI
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HaleyHouse",
+      "FromFile": "assets/Maps/HaleyHouse.tmx"
+    },
+    //LAW
+    {
+      "Action": "EditMap",
+      "Target": "Maps/HarveyRoom",
+      "FromFile": "assets/Maps/HarveyRoom.tmx"
+    },
+    //NAMI
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Trailer",
+      "FromFile": "assets/Maps/Trailer.tmx",
+      "MapProperties": {
+        "Doors": "6 7 1 120 13 6 1 120",
+        "DayTiles": "Front 3 1 256 Front 3 2 288 Front 9 3 256 Front 9 4 288 Front 14 1 405 Front 15 1 406",
+        "NightTiles": "Front 3 1 1253 Front 3 2 1285 Front 9 3 1253 Front 9 4 1285 Front 14 1 1220 Front 15 1 1221"
+      }
+    },
+    //PERONA
+    {
+      "Action": "EditMap",
+      "Target": "Maps/LeahHouse",
+      "FromFile": "assets/Maps/LeahHouse.tmx",
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 12,
+            "Y": 11
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Message: This is a mannequin."
+          }
+        },
+
+        {
+          "Position": {
+            "X": 10,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Tailoring"
+          }
+        },
+
+        {
+          "Position": {
+            "X": 11,
+            "Y": 9
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "Tailoring"
+          }
+        },
+
+        {
+          "Position": {
+            "X": 14,
+            "Y": 10
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "DyePot"
+          }
+        },
+
+        {
+          "Position": {
+            "X": 14,
+            "Y": 11
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "DyePot"
+          }
+        }
+
+      ],
+
+      "MapProperties": {
+        "DayTiles": "Front 5 1 256 Front 5 2 288 Front 2 3 1346 Front 14 4 1346",
+        "NightTiles": "Front 5 1 1253 Front 5 2 1285 Front 2 3 1347 Front 14 4 1347",
+        "WindowLight": "3 1 6 3 1 6",
+        "Light": "2 3 4 14 4 4"
+      }
+    },
+
+    //PUDDING
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ElliottHouse",
+      "FromFile": "assets/Maps/ElliottHouse.tmx",
+      "MapProperties": {
+        "DayTiles": "Front 6 1 469 Front 6 2 501 Front 11 1 469 Front 11 2 501 Back 6 4 35 Back 11 4 35",
+        "NightTiles": "Front 6 1 1219 Front 6 2 1251 Front 11 1 1219 Front 11 2 1251 Back 6 4 52 Back 11 4 52",
+        "Light": "1 7 4 14 3 4"
+      }
+    }
+    //ACE, TAMA, SABO, YAMATO
+
+
+    //BARTOLOMEO
+
+
+    //CHOPPER
+
+
+    //HILULUK
+
+
+    //BROOK
+
+
+    //SHAKKY RALEIGH HANCOCK
+
+
+    //PENGUIN BEPO SHACHI
+
+
+    //SHANKS MAKINO JR
+
+    //WHITEBEARD
+
+
+
+
+  ]
+}
