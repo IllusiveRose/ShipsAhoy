@@ -7,8 +7,14 @@
 
 
     //Portraits
-
-
+    //As long as the PNG is named after the original Stardew NPC, no code required. (i.e, the portrait sheet with all of Luffy's expressions is still called Sebastian.PNG.
+    //Alternatively, if you want the portrait sheets to have One Piece names, use the below code:
+       {
+          "Action": "EditImage",
+          "Target": "Portraits/Sebastian",
+          "FromFile": "assets/Portraits/Luffy.png"
+       },  
+    
     //Dialogue
 
 
