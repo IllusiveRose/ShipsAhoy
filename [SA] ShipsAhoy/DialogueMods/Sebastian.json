@@ -9,7 +9,7 @@
       "Action": "Load",
       "Target": "Characters/Sebastian",
       "FromFile": "assets/Characters/Sebastian3.png"
-    },
+    }
 
     //Portraits
     //The portrait sheet can have any number of expressions, but must only be two expressions wide (A sheet of 10 expressions would consist of 5 rows and 2 columns)
