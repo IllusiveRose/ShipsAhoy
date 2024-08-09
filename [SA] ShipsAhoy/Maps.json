@@ -17,7 +17,10 @@
     {
       "Action": "EditMap",
       "Target": "Maps/ScienceHouse",
-      "FromFile": "assets/Maps/ScienceHouse.tmx"
+      "FromFile": "assets/Maps/ScienceHouse.tmx",
+      "MapProperties": {
+        "Doors": "7 10 1 120 13 10 1 120 24 10 1 120"
+      }
     },
     //ZORO, SANJI
     {
@@ -123,31 +126,40 @@
         "NightTiles": "Front 6 1 1219 Front 6 2 1251 Front 11 1 1219 Front 11 2 1251 Back 6 4 52 Back 11 4 52",
         "Light": "1 7 4 14 3 4"
       }
-    }
+    },
     //ACE, TAMA, SABO, YAMATO
+    {
+      "Action": "EditMap",
+      "Target": "Maps/SamHouse",
+      "FromFile": "assets/Maps/SamHouse.tmx",
+      "MapProperties": {
+        "DayTiles": "Front 2 1 225 Front 2 2 257 Front 5 1 225 Front 5 2 257 Back 5 5 226 Back 5 6 258 Back 2 5 258",
+        "NightTiles": "Front 2 1 1222 Front 2 2 1254 Front 5 1 1222 Front 5 2 1254 Back 4 22 574 Back 4 23 606 Back 5 5 294 Back 5 6 262 Back 2 5 262",
+        "Light": "",
+        "Doors": "14 9 1 120 11 18 1 120 21 9 1 120 21 19 1 120"
+      }
+}
+      //BARTOLOMEO
 
 
-    //BARTOLOMEO
+      //CHOPPER
 
 
-    //CHOPPER
+      //HILULUK
 
 
-    //HILULUK
+      //BROOK
 
 
-    //BROOK
+      //SHAKKY RALEIGH HANCOCK
 
 
-    //SHAKKY RALEIGH HANCOCK
+      //PENGUIN BEPO SHACHI
 
 
-    //PENGUIN BEPO SHACHI
+      //SHANKS MAKINO JR
 
-
-    //SHANKS MAKINO JR
-
-    //WHITEBEARD
+      //WHITEBEARD
 
 
 

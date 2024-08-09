@@ -16,11 +16,11 @@
     //Each expression is 64 pixels x 64 pixels
     //As long as the PNG is named after the original Stardew NPC, no code required. (i.e, the portrait sheet with all of Luffy's expressions is still called Sebastian.PNG.
     //Alternatively, if you want the portrait sheets to have One Piece names, use the below code:
-    {
-      "Action": "EditImage",
-      "Target": "Portraits/Sebastian",
-      "FromFile": "assets/Portraits/Luffy.png"
-    },
+   // {
+    //  "Action": "EditImage",
+     // "Target": "Portraits/Sebastian",
+      //"FromFile": "assets/Portraits/Luffy.png"
+   // },
 
     //Dialogue
 
@@ -33,29 +33,29 @@
 
     //NPC Gift Tastes: see https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/text-operations.md
     //To swap entire list:
-    {
-      "Action": "EditData",
-      "Target": "Data/NPCGiftTastes",
-      "Entries": {
-        "Universal_Love": "74 446 797 373 279 127 128" // replaces current value
-      }
-    },
+    //{
+     // "Action": "EditData",
+      //"Target": "Data/NPCGiftTastes",
+      //"Entries": {
+        //"Universal_Love": "74 446 797 373 279 127 128" // replaces current value
+      //}
+   // },
     //This is pretty simple, but unfortunately it overwrites any previous values. 
     //That will remove any changes from other mods or in future game updates. 
     // So instead, we can use the Append operation to add new gift tastes without changing the other values: 
 
-    {
-      "Action": "EditData",
-      "Target": "Data/NPCGiftTastes",
-      "TextOperations": [
-        {
-          "Operation": "Append",
-          "Target": [ "Entries", "Universal_Love" ],
-          "Value": "127 128",
-          "Delimiter": " " // if the field isn't empty, add a space between the old & new text
-        }
-      ]
-    }
+   // {
+     // "Action": "EditData",
+     // "Target": "Data/NPCGiftTastes",
+     // "TextOperations": [
+      //  {
+       //   "Operation": "Append",
+         // "Target": [ "Entries", "Universal_Love" ],
+         // "Value": "127 128",
+         // "Delimiter": " " // if the field isn't empty, add a space between the old & new text
+       // }
+    //  ]
+   // }
 
     //Engagement Dialogue
 

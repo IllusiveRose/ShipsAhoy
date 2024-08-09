@@ -471,7 +471,7 @@
                 "Condition": null,
                 "Location": "ScienceHouse",
                 "Tile": {
-                  "X": 19,
+                  "X": 18,
                   "Y": 4
                 },
                 "Direction": "right"
@@ -3245,8 +3245,8 @@
                 "Condition": null,
                 "Location": "ScienceHouse",
                 "Tile": {
-                  "X": 21,
-                  "Y": 4
+                  "X": 26,
+                  "Y": 5
                 },
                 "Direction": "right"
               }

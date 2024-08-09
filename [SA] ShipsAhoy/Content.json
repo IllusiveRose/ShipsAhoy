@@ -8,6 +8,10 @@
     {
       "Action": "Include",
       "FromFile": "CharacterData.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "DialogueMods/Sebastian.json"
     }
   ]
 }
