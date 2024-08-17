@@ -11,7 +11,7 @@
     },
     {
       "Action": "Include",
-      "FromFile": "DialogueMods/Sebastian.json"
+      "FromFile": "DialogueMods/Luffy.json"
     }
   ]
 }
