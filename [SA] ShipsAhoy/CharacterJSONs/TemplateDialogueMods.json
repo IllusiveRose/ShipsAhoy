@@ -1,0 +1,81 @@
+//This document can be duplicated and filled out for any vanilla character that needs to be modified for the mod. 
+//Each .json should be named for the CHARACTER in CamelCase with the following sections: 
+//(List below with sample code).
+{
+  "Changes": [
+    //Sprites
+    //https://stardewvalleywiki.com/Modding:NPC_data#Overworld_sprites
+    {
+      "Action": "Load",
+      "Target": "Characters/Sebastian",
+      "FromFile": "assets/Characters/Sebastian3.png"
+    },
+
+    //Events
+    //Figure out which events you want to delete so you can set to null then replace. https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/action-editdata.md#edit-a-model
+    //Then follow this guide to program the new event: https://stardewvalleywiki.com/Modding:Dialogue#Events
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Beach",
+      "Entries": {
+        "733330/f Sam 750/w sunny/t 700 1500/z winter/y 1": null,
+        "733330/f Sam 750/w sunny/t 700 1500/z winter": "event script would go here"
+      }
+    },
+
+
+    //Portraits
+    //The portrait sheet can have any number of expressions, but must only be two expressions wide (A sheet of 10 expressions would consist of 5 rows and 2 columns)
+    //Each expression is 64 pixels x 64 pixels
+    //As long as the PNG is named after the original Stardew NPC, no code required. (i.e, the portrait sheet with all of Luffy's expressions is still called Sebastian.PNG.
+    //Alternatively, if you want the portrait sheets to have One Piece names, use the below code:
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Sebastian",
+      "FromFile": "assets/Portraits/Luffy.png"
+    },
+
+    //Dialogue
+    {
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Sebastian",
+      "Entries": {
+        "Introduction": "Oh. You just moved in, right? Nice!#$e#We should go on an adventure sometime!"
+      },
+
+      //Marriage Dialogue
+
+
+      //Schedule
+
+
+      //NPC Gift Tastes: see https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/text-operations.md
+      //To swap entire list:
+      {
+        "Action": "EditData",
+        "Target": "Data/NPCGiftTastes",
+        "Entries": {
+          "Universal_Love": "74 446 797 373 279 127 128" // replaces current value
+        }
+      },
+      //This is pretty simple, but unfortunately it overwrites any previous values. 
+      //That will remove any changes from other mods or in future game updates. 
+      // So instead, we can use the Append operation to add new gift tastes without changing the other values: 
+
+      {
+        "Action": "EditData",
+        "Target": "Data/NPCGiftTastes",
+        "TextOperations": [
+          {
+            "Operation": "Append",
+            "Target": [ "Entries", "Universal_Love" ],
+            "Value": "127 128",
+            "Delimiter": " " // if the field isn't empty, add a space between the old & new text
+          }
+        ]
+      }
+
+      //Engagement Dialogue
+
+  ]
+}

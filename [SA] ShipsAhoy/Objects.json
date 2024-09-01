@@ -1,0 +1,938 @@
+{
+  "Changes": [
+    //Changes the image loaded for all foods and recipes
+    {
+      "Action": "EditImage",
+      "Target": "Maps/springobjects",
+      "FromFile": "Assets/Maps/springobjects.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Tilesheets/Objects_2",
+      "FromFile": "Assets/Tilesheets/Objects_2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/ShipsAhoy/Objects",
+      "FromFile": "Assets/Maps/Food_set.png"
+    },
+
+
+    //Add a new item to the game
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_BoarMeat": {
+          "Name": "Boar Meat",
+          "DisplayName": "Boar Meat",
+          "Description": "A big juicy cut of meat, still on the bone.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 200,
+          "Texture": null,
+          "SpriteIndex": 945,
+          "Edibility": 80,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_red",
+            "meat_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Drumstick": {
+          "Name": "Drumstick",
+          "DisplayName": "Drumstick",
+          "Description": "A lighter type of meat.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 30,
+          "Texture": null,
+          "SpriteIndex": "643",
+          "Edibility": -10,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_pink",
+            "fish_item",
+            "meat_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Poultry": {
+          "Name": "Poultry",
+          "DisplayName": "Poultry",
+          "Description": "A whole bird, excellent for roasting! Do not consume raw.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 50,
+          "Texture": null,
+          "SpriteIndex": "620",
+          "Edibility": -90,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_pink",
+            "meat_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_CherryBlossom": {
+          "Name": "Cherry Blossom",
+          "DisplayName": "Cherry Blossom",
+          "Description": "A beautiful, fragrant flower that only grows outdoors in early spring.",
+          "Category": -80,
+          "Price": 600,
+          "Texture": null,
+          "SpriteIndex": 947,
+          "Edibility": 11,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_pink",
+            "dye_medium",
+            "flower_item",
+            "fruit_tree_item",
+            "category_fruits",
+            "fruit_item",
+            "season_spring"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    //make it fall from trees (isn't working yet)
+    // add cherry blossoms to fruit tree
+
+
+    {
+      "LogName": "Cherry Trees Produces",
+      "Action": "EditData",
+      "Target": "Data/FruitTrees",
+      "TargetField": [
+        "628",
+        "Fruit"
+      ],
+      "Entries": {
+        "ShipsAhoy_CherryBlossom": {
+          "Season": "spring",
+          "Chance": 1,
+          "Id": "ShipsAhoy_CherryBlossom",
+          "ItemId": "ShipsAhoy_CherryBlossom"
+        }
+      },
+      "MoveEntries": [
+        {
+          "ID": "ShipsAhoy_CherryBlossom",
+          "BeforeID": "Default"
+        }
+      ],
+      "When": {
+        "Season": "spring",
+        "Day": "0, 1, 2, 3, 4, 5"
+      }
+    },
+
+
+
+
+    //Changing the ingredients and conditions for obtaining a recipe
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Paella": "720 1 719 1 423 1 256 1/1 10/ShipsAhoy_Paella/f Emily 7/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Pirate Bento": "ShipsAhoy_BoarMeat ShipsAhoy_Poultry/1 10/ShipsAhoy_PirateBento/f Sebastian 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Ramen": "246 1 174 1 ShipsAhoy_BoarMeat 1/5 4/ShipsAhoy_Ramen/f Kent 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Coconut Shrimp": "720 1 88 1 256 1 16 1/5 4/ShipsAhoy_CoconutShrimp/f Leo 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Croquetas": "ShipsAhoy_BoarMeat 1 -5 1 -6 1 246 1/5 4/ShipsAhoy_Croquetas/f Marnie 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Salmon Onigiri": "423 1 152 1 139 1/5 4/ShipsAhoy_SalmonOnigiri/f Harvey 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Heart Shaved Ice": "245 1 829 1 597 1/5 4/ShipsAhoy_HeartShavedIce/f Alex 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Chili": "ShipsAhoy_Poultry 1 256 1 248 1 260 1/5 4/ShipsAhoy_Chili/f George 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Cheeseburger": "ShipsAhoy_BoarMeat 1 216 1 424 1/5 4/ShipsAhoy_Cheeseburger/f Robin 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Sandwich": "ShipsAhoy_Poultry 1 216 1 256 1/5 4/ShipsAhoy_Sandwich/f Demetrius 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "Sakura Cotton Candy": "245 1 ShipsAhoy_CherryBlossom/5 4/ShipsAhoy_SakuraCottonCandy/f Krobus 4/"
+      }
+    },
+
+    //add dishes
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_PirateBento": {
+          "Name": "Pirate Bento",
+          "DisplayName": "Pirate Bento",
+          "Description": "An excellent dish to store in your pockets for adventuring!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 600,
+          "Texture": null,
+          "SpriteIndex": 943,
+          "Edibility": 140,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Ramen": {
+          "Name": "Ramen",
+          "DisplayName": "Ramen",
+          "Description": "A popular noodle dish covered with your favorite toppings!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 940,
+          "Edibility": 140,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Paella": {
+          "Name": "Paella",
+          "DisplayName": "Paella",
+          "Description": "An exquisite, world famous seafood dish!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 1000,
+          "Texture": null,
+          "SpriteIndex": 948,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 2.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Chili": {
+          "Name": "Chili",
+          "DisplayName": "Chili",
+          "Description": "A hearty, meaty dish and Una's personal favorite.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 662,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_CoconutShrimp": {
+          "Name": "Coconut Shrimp",
+          "DisplayName": "Coconut Shrimp",
+          "Description": "Crunchy shrimp with a spicy dipping sauce, Rose's favorite!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 600,
+          "Texture": "Mods/ShipsAhoy/Objects",
+          "SpriteIndex": 0,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 1.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_HeartShavedIce": {
+          "Name": "Heart Shaved Ice",
+          "DisplayName": "Heart Shaved Ice",
+          "Description": "A fabulous sweet treat designed especially to help picky Minks with upset stomachs.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 700,
+          "Texture": null,
+          "SpriteIndex": 946,
+          "Edibility": 70,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_blue",
+            "ginger_item",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Croquetas": {
+          "Name": "Croquetas",
+          "DisplayName": "Croquetas",
+          "Description": "A homecooked savory dish made with leftover meats, Irene's favorite!'",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/ShipsAhoy/Objects",
+          "SpriteIndex": 1,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 1.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_SalmonOnigiri": {
+          "Name": "Salmon Onigiri",
+          "DisplayName": "Salmon Onigiri",
+          "Description": "A portable, filling riceball with a salty filling for those with refined tastes.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 942,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_white",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Cheeseburger": {
+          "Name": "Cheeseburger",
+          "DisplayName": "Cheeseburger",
+          "Description": "Just a meat patty and some buns and a whole lot of cheese.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 655,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat",
+            "food_sandwich"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_Sandwich": {
+          "Name": "Sandwich",
+          "DisplayName": "Sandwich",
+          "Description": "Delicate slices of meat, vegetables, and spreads layered between soft pieces of bread.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 617,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat",
+            "food_sandwich"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "ShipsAhoy_SakuraCottonCandy": {
+          "Name": "Sakura Cotton Candy",
+          "DisplayName": "Sakura Cotton Candy",
+          "Description": "Spun from sugar and cherry blossoms, this sweet treat is one of the most delicious things you've ever tasted!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 941,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_pink",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "222": {
+          "Name": "Joja Cherry Pie",
+          "DisplayName": "Joja Cherry Pie",
+          "Description": "Disclaimer: this cherry pie includes no real or artificial cherries.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 400,
+          "Texture": null,
+          "SpriteIndex": 222,
+          "Edibility": 86,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_red",
+            "food_bakery",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    //Changing the names and descriptions of existing foods and recipes
+    {
+      "Action": "EditData",
+      "Target": "Strings/Objects",
+      "Entries": {
+        "Salmonberry_Name": "Raspberry",
+        "Salmonberry_Description": "A sweet, spring-time berry with the flavor of the forest."
+      }
+    }
+
+  ]
+}

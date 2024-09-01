@@ -1,0 +1,14 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Characters/Monsters/Boar",
+      "FromFile": "assets/Characters/Monsters/boar.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Monsters/Turkey",
+      "FromFile": "assets/Characters/Monsters/Turkey.png"
+    }
+  ]
+}

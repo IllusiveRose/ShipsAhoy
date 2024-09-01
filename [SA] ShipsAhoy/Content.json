@@ -11,7 +11,19 @@
     },
     {
       "Action": "Include",
-      "FromFile": "DialogueMods/Luffy.json"
+      "FromFile": "CharacterJSONs/Luffy.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "Objects.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "WildGame.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "NPCGiftTastes.json"
     }
   ]
 }
