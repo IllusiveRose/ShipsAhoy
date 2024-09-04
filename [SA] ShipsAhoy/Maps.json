@@ -11,8 +11,35 @@
     {
       "Action": "EditMap",
       "Target": "Maps/Sebastianroom",
-      "FromFile": "assets/Maps/SebastianRoom.tmx"
+      "FromFile": "assets/Maps/SebastianRoom.tmx",
+      "MapProperties": {
+        "Light": "1 10 1",
+        "AmbientLight": "95 95 95",
+        "AmbientNightLight": "150 150 30",
+        "DayTiles": "Back3 1 10 826",
+        "NightTiles": "Back3 1 10 827"
+      }
     },
+
+    //{
+      //"Logname": "Adding Tilesheets for Maps",
+      //"Action": "Load",
+      //"Target": "Maps/Luffy_furniture_set",
+      //"FromFile": "assets/Maps/Luffy_furniture_set.png",
+   // },
+
+    {
+      "Logname": "Sitting on custom chair tiles",
+      "Action": "EditData",
+      "Target": "Data/ChairTiles",
+      "Entries": {
+        "Luffy_furniture_set/7/1/": "1/1/left/chair/-1/-1/false"
+      }
+    },
+
+    ///Chopper
+  
+
     //ROBIN, FRANKY, USOPP
     {
       "Action": "EditMap",
@@ -23,17 +50,29 @@
       }
     },
     //ZORO, SANJI
+   
     {
       "Action": "EditMap",
       "Target": "Maps/HaleyHouse",
       "FromFile": "assets/Maps/HaleyHouse.tmx"
     },
-    //LAW
+    //LAW 
+    //Best example of how to do map properties for lighting. Light is going to have day/night glow but doesn't include windows, windowlight is for unrainy window, day tiles tell you what picture sprite AND windows have autoglow, night tiles lamps have autoglow
+
     {
       "Action": "EditMap",
       "Target": "Maps/HarveyRoom",
-      "FromFile": "assets/Maps/HarveyRoom.tmx"
+      "FromFile": "assets/Maps/HarveyRoom.tmx",
+      "MapProperties": {
+        "Light": "4 1 1 4 2 1 4 3 1 5 1 1 5 2 1 5 3 1 9 1 1      1 10 4 14 7 4 3 7 1 19 3 1",
+        "AmbientLight": "95 95 95",
+        "AmbientNightLight": "150 150 30",
+        "WindowLight": "17 4 6 3 2 6 11 2 6",
+        "DayTiles": "Front 3 2 1224 Front 11 2 1224 Front 17 4 1224    Front 1 10 1346 Front 14 7 1346 Front 3 7 480 Front 19 3 1344",
+        "NightTiles": "Front 3 2 1252 Front 11 2 1252 Front 17 4 1252    Front 1 10 1347 Front 14 7 1347 Front 3 7 809 Front 19 3 1345"
+      }
     },
+
     //NAMI
     {
       "Action": "EditMap",
@@ -138,28 +177,28 @@
         "Light": "",
         "Doors": "14 9 1 120 11 18 1 120 21 9 1 120 21 19 1 120"
       }
-}
-      //BARTOLOMEO
+    }
+    //BARTOLOMEO
 
 
-      //CHOPPER
+    //CHOPPER
 
 
-      //HILULUK
+    //HILULUK
 
 
-      //BROOK
+    //BROOK
 
 
-      //SHAKKY RALEIGH HANCOCK
+    //SHAKKY RALEIGH HANCOCK
 
 
-      //PENGUIN BEPO SHACHI
+    //PENGUIN BEPO SHACHI
 
 
-      //SHANKS MAKINO JR
+    //SHANKS MAKINO JR
 
-      //WHITEBEARD
+    //WHITEBEARD
 
 
 
