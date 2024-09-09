@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="4" height="6" tilewidth="16" tileheight="16" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <layer id="3" name="Back3" width="4" height="6">
+  <data encoding="csv">
+0,313,314,315,
+0,338,339,340,
+0,313,314,315,
+0,338,339,340,
+0,227,227,227,
+0,227,599,227
+</data>
+ </layer>
+ <layer id="1" name="Buildings" width="4" height="6">
+  <data encoding="csv">
+441,445,0,442,
+466,470,0,467,
+491,495,0,492,
+516,520,0,517,
+541,545,0,542,
+0,0,0,0
+</data>
+ </layer>
+ <layer id="2" name="Front" width="4" height="6">
+  <data encoding="csv">
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0,
+0,0,0,0
+</data>
+ </layer>
+</map>

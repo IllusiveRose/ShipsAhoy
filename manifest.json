@@ -1,0 +1,11 @@
+{
+  "Name": "Ships Ahoy! The One Piece Shipping Mod",
+  "Author": "IreneRoseUna",
+  "Version": "1.0.0",
+  "Description": "Matchmake or marry your favorite characters in this One Piece AU mod!",
+  "UniqueID": "ShipsAhoy",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
