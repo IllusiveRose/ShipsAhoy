@@ -57,20 +57,19 @@
           "SpriteIndex": "643",
           "Edibility": -10,
           "IsDrink": false,
-          "Buffs": {
-            "BuffId": 25,
-            "DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffName]",
-            "Description": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffDescription]",
-            "IsDebuff": true,
-            "GlowColor": "Green",
-            "Duration": 1200,
-            "MaxDuration": -1,
-            "IconTexture": "TileSheets\\BuffsIcons",
-            "IconSpriteIndex": 25,
-            "Effects": null,
-            "ActionsOnApply": null,
-            "CustomFields": null
-          },
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": "Nauseous",
+              "IconTexture": null,
+              "IconSpriteIndex": 25,
+              "Duration": 1200,
+              "IsDebuff": true,
+              "GlowColor": "Green",
+              "CustomAttributes": null,
+              "CustomFields": null
+            }
+          ],
           "GeodeDropsDefaultItems": false,
           "GeodeDrops": null,
           "ArtifactSpotChances": null,
@@ -103,20 +102,19 @@
           "SpriteIndex": "620",
           "Edibility": 90,
           "IsDrink": false,
-          "Buffs": {
-            "BuffId": 25,
-            "DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffName]",
-            "Description": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffDescription]",
-            "IsDebuff": true,
-            "GlowColor": "Green",
-            "Duration": 12000,
-            "MaxDuration": -1,
-            "IconTexture": "TileSheets\\BuffsIcons",
-            "IconSpriteIndex": 25,
-            "Effects": null,
-            "ActionsOnApply": null,
-            "CustomFields": null
-          },
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": "Nauseous",
+              "IconTexture": null,
+              "IconSpriteIndex": 25,
+              "Duration": 1200,
+              "IsDebuff": true,
+              "GlowColor": "Green",
+              "CustomAttributes": null,
+              "CustomFields": null
+            }
+          ],
           "GeodeDropsDefaultItems": false,
           "GeodeDrops": null,
           "ArtifactSpotChances": null,
@@ -182,7 +180,7 @@
           "Category": -79,
           "Price": 600,
           "Texture": "Mods/{{ModId}}/Objects",
-          "SpriteIndex": 15,
+          "SpriteIndex": 14,
           "Edibility": 5,
           "IsDrink": false,
           "Buffs": null,
@@ -195,7 +193,7 @@
           "ExcludeFromShippingCollection": false,
           "ExcludeFromRandomSale": false,
           "ContextTags": [
-            "color_orange",
+            "color_red",
             "dye_medium",
             "fruit_tree_item",
             "category_fruits",
@@ -263,7 +261,7 @@
       "Target": "Data/FruitTrees",
       "Entries": {
         "{{ModId}}_Cacaosapling": {
-          "DisplayName": "Cacao Sapling",
+          "DisplayName": "Cacaosapling",
           "Seasons": [ "summer" ],
           "Fruit": [
             {
@@ -1030,11 +1028,11 @@
               "IsDebuff": false,
               "GlowColor": null,
               "CustomAttributes": {
-                "FarmingLevel": 0.0,
+                "FarmingLevel": 2.0,
                 "FishingLevel": 0.0,
                 "MiningLevel": 0.0,
                 "LuckLevel": 0.0,
-                "ForagingLevel": 0.0,
+                "ForagingLevel": 1.0,
                 "MaxStamina": 0.0,
                 "MagneticRadius": 0.0,
                 "Speed": 0.0,
@@ -1054,7 +1052,8 @@
           "ExcludeFromRandomSale": false,
           "ContextTags": [
             "color_orange",
-            "food_sweet"
+            "food_sweet",
+            "ginger_item"
           ],
           "CustomFields": null
         }
@@ -1146,10 +1145,10 @@
                 "MiningLevel": 0.0,
                 "LuckLevel": 0.0,
                 "ForagingLevel": 0.0,
-                "MaxStamina": 50.0,
-                "MagneticRadius": 40.0,
-                "Speed": 2.0,
-                "Defense": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 3.0,
                 "Attack": 0.0
               },
               "CustomFields": null
@@ -1165,7 +1164,7 @@
           "ExcludeFromRandomSale": false,
           "ContextTags": [
             "color_brown",
-            "food_sweet"
+            "food_meat"
           ],
           "CustomFields": null
         }
