@@ -15,7 +15,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_BoarMeat": {
-          "Name": "Boar Meat",
+          "Name": "{{ModId}}_BoarMeat",
           "DisplayName": "Boar Meat",
           "Description": "A big juicy cut of meat, still on the bone.",
           "Type": "Basic",
@@ -47,9 +47,9 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Drumstick": {
-          "Name": "Drumstick",
+          "Name": "{{ModId}}_Drumstick",
           "DisplayName": "Drumstick",
-          "Description": "A lighter type of meat.",
+          "Description": "A lighter type of meat, not to be eaten raw.",
           "Type": "Basic",
           "Category": -28,
           "Price": 30,
@@ -57,7 +57,20 @@
           "SpriteIndex": "643",
           "Edibility": -10,
           "IsDrink": false,
-          "Buffs": null,
+          "Buffs": {
+            "BuffId": 25,
+            "DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffName]",
+            "Description": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffDescription]",
+            "IsDebuff": true,
+            "GlowColor": "Green",
+            "Duration": 1200,
+            "MaxDuration": -1,
+            "IconTexture": "TileSheets\\BuffsIcons",
+            "IconSpriteIndex": 25,
+            "Effects": null,
+            "ActionsOnApply": null,
+            "CustomFields": null
+          },
           "GeodeDropsDefaultItems": false,
           "GeodeDrops": null,
           "ArtifactSpotChances": null,
@@ -80,17 +93,30 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Poultry": {
-          "Name": "Poultry",
+          "Name": "{{ModId}}_Poultry",
           "DisplayName": "Poultry",
-          "Description": "A whole bird, excellent for roasting! Do not consume raw.",
+          "Description": "A whole bird, excellent for smoking! Do not consume raw.",
           "Type": "Basic",
           "Category": -28,
           "Price": 50,
           "Texture": null,
           "SpriteIndex": "620",
-          "Edibility": -90,
+          "Edibility": 90,
           "IsDrink": false,
-          "Buffs": null,
+          "Buffs": {
+            "BuffId": 25,
+            "DisplayName": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffName]",
+            "Description": "[LocalizedText Strings\\StringsFromCSFiles:Nauseous_BuffDescription]",
+            "IsDebuff": true,
+            "GlowColor": "Green",
+            "Duration": 12000,
+            "MaxDuration": -1,
+            "IconTexture": "TileSheets\\BuffsIcons",
+            "IconSpriteIndex": 25,
+            "Effects": null,
+            "ActionsOnApply": null,
+            "CustomFields": null
+          },
           "GeodeDropsDefaultItems": false,
           "GeodeDrops": null,
           "ArtifactSpotChances": null,
@@ -113,7 +139,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_CherryBlossom": {
-          "Name": "Cherry Blossom",
+          "Name": "{{ModId}}_CherryBlossom",
           "DisplayName": "Cherry Blossom",
           "Description": "A beautiful, fragrant flower that only grows outdoors in early spring.",
           "Category": -80,
@@ -145,7 +171,42 @@
       }
     },
 
-    //make it fall from trees (isn't working yet)
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_CacaoPod": {
+          "Name": "{{ModId}}_CacaoPod",
+          "DisplayName": "Cacao Pod",
+          "Description": "The highly-prized fruit of a cacao tree, used in making chocolate.",
+          "Category": -79,
+          "Price": 600,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 15,
+          "Edibility": 5,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_orange",
+            "dye_medium",
+            "fruit_tree_item",
+            "category_fruits",
+            "season_summer"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    //make it fall from trees
     // add cherry blossoms to fruit tree
 
 
@@ -177,6 +238,44 @@
       }
     },
 
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+      
+        "{{ModId}}_Cacaosapling": {
+          "Name": "{{ModId}}_Cacaosapling",
+          "DisplayName": "Cacao sapling",
+          "Description": "A cacao tree sapling.",
+          "Type": "Basic",
+          "Category": -74,
+          "Price": 2200,
+
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 41
+        }
+      }
+    },
+
+    // add fruit tree
+    {
+      "Action": "EditData",
+      "Target": "Data/FruitTrees",
+      "Entries": {
+        "{{ModId}}_Cacaosapling": {
+          "DisplayName": "Cacao Sapling",
+          "Seasons": [ "summer" ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_CacaoPod",
+              "ItemId": "{{ModId}}_CacaoPod"
+            }
+          ],
+          "Texture": "Mods/{{ModId}}/FruitTrees",
+          "TextureSpriteRow": 0
+        }
+      }
+    },
 
 
 
@@ -185,36 +284,14 @@
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Paella": "720 1 719 1 423 1 256 1/1 10/{{ModId}}_Paella/f Emily 7/"
+        "{{ModId}}_Paella": "720 1 719 1 423 1 256 1/1 10/{{ModId}}_Paella/f Emily 7/"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Pirate Bento": "{{ModId}}_BoarMeat {{ModId}}_Poultry/1 10/{{ModId}}_PirateBento/f Sebastian 4/"
-      }
-    },
-
-    {
-      "Action": "EditData",
-      "Target": "Data/CookingRecipes",
-      "Entries": {
-        "Ramen": "246 1 174 1 {{ModId}}_BoarMeat 1/5 4/{{ModId}}_Ramen/f Kent 4/"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/CookingRecipes",
-      "Entries": {
-        "Coconut Shrimp": "720 1 88 1 256 1 16 1/5 4/{{ModId}}_CoconutShrimp/f Leo 4/"
-      }
-    },
-    {
-      "Action": "EditData",
-      "Target": "Data/CookingRecipes",
-      "Entries": {
-        "Croquetas": "{{ModId}}_BoarMeat 1 -5 1 -6 1 246 1/5 4/{{ModId}}_Croquetas/f Marnie 4/"
+        "{{ModId}}_PirateBento": "{{ModId}}_BoarMeat {{ModId}}_Poultry/1 10/{{ModId}}_PirateBento/f Sebastian 4/"
       }
     },
 
@@ -222,29 +299,21 @@
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Salmon Onigiri": "423 1 152 1 139 1/5 4/{{ModId}}_SalmonOnigiri/f Harvey 4/"
+        "{{ModId}}_Ramen": "246 1 174 1 {{ModId}}_BoarMeat 1/5 4/{{ModId}}_Ramen/f Kent 4/"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Heart Shaved Ice": "245 1 829 1 597 1/5 4/{{ModId}}_HeartShavedIce/f Alex 4/"
+        "{{ModId}}_CoconutShrimp": "720 1 88 1 256 1 16 1/5 4/{{ModId}}_CoconutShrimp/f Leo 4/"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Chili": "{{ModId}}_Poultry 1 256 1 248 1 260 1/5 4/{{ModId}}_Chili/f George 4/"
-      }
-    },
-
-    {
-      "Action": "EditData",
-      "Target": "Data/CookingRecipes",
-      "Entries": {
-        "Cheeseburger": "{{ModId}}_BoarMeat 1 216 1 424 1/5 4/{{ModId}}_Cheeseburger/f Robin 4/"
+        "{{ModId}}_Croquetas": "{{ModId}}_BoarMeat 1 -5 1 -6 1 246 1/5 4/{{ModId}}_Croquetas/f Marnie 4/"
       }
     },
 
@@ -252,7 +321,21 @@
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Sandwich": "{{ModId}}_Poultry 1 216 1 256 1/5 4/{{ModId}}_Sandwich/f Demetrius 4/"
+        "{{ModId}}_SalmonOnigiri": "423 1 152 1 139 1/5 4/{{ModId}}_SalmonOnigiri/f Harvey 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HeartShavedIce": "245 1 829 1 597 1/5 4/{{ModId}}_HeartShavedIce/f Alex 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Chili": "{{ModId}}_Poultry 1 256 1 248 1 260 1/5 4/{{ModId}}_Chili/f George 4/"
       }
     },
 
@@ -260,7 +343,47 @@
       "Action": "EditData",
       "Target": "Data/CookingRecipes",
       "Entries": {
-        "Sakura Cotton Candy": "245 1 {{ModId}}_CherryBlossom/5 4/{{ModId}}_SakuraCottonCandy/f Krobus 4/"
+        "{{ModId}}_Cheeseburger": "{{ModId}}_BoarMeat 1 216 1 424 1/5 4/{{ModId}}_Cheeseburger/f Robin 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Sandwich": "{{ModId}}_Poultry 1 216 1 256 1/5 4/{{ModId}}_Sandwich/f Demetrius 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Torikatsu": "{{ModId}}_Poultry 1 246 1 -5 1 /5 4/{{ModId}}_Torikatsu/f Linus 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_SakuraCottonCandy": "245 1 {{ModId}}_CherryBlossom/5 4/{{ModId}}_SakuraCottonCandy/f Krobus 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Chocolate": "245 1 {{ModId}}_CacaoPod 1 -6 1 /5 4/{{ModId}}_Chocolate/f Pam 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HarvestCider": "613 1 340 1 829 1 /5 4/{{ModId}}_HarvestCider/f Maru 4/"
       }
     },
 
@@ -271,7 +394,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_PirateBento": {
-          "Name": "Pirate Bento",
+          "Name": "{{ModId}}_PirateBento",
           "DisplayName": "Pirate Bento",
           "Description": "An excellent dish to store in your pockets for adventuring!",
           "Type": "Cooking",
@@ -326,7 +449,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Ramen": {
-          "Name": "Ramen",
+          "Name": "{{ModId}}_Ramen",
           "DisplayName": "Ramen",
           "Description": "A popular noodle dish covered with your favorite toppings!",
           "Type": "Cooking",
@@ -382,7 +505,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Paella": {
-          "Name": "Paella",
+          "Name": "{{ModId}}_Paella",
           "DisplayName": "Paella",
           "Description": "An exquisite, world famous seafood dish!",
           "Type": "Cooking",
@@ -438,7 +561,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Chili": {
-          "Name": "Chili",
+          "Name": "{{ModId}}_Chili",
           "DisplayName": "Chili",
           "Description": "A hearty, meaty dish and Una's personal favorite.",
           "Type": "Cooking",
@@ -494,7 +617,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_CoconutShrimp": {
-          "Name": "Coconut Shrimp",
+          "Name": "{{ModId}}_CoconutShrimp",
           "DisplayName": "Coconut Shrimp",
           "Description": "Crunchy shrimp with a spicy dipping sauce, Rose's favorite!",
           "Type": "Cooking",
@@ -550,7 +673,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_HeartShavedIce": {
-          "Name": "Heart Shaved Ice",
+          "Name": "{{ModId}}_HeartShavedIce",
           "DisplayName": "Heart Shaved Ice",
           "Description": "A fabulous sweet treat designed especially to help picky Minks with upset stomachs.",
           "Type": "Cooking",
@@ -607,9 +730,9 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Croquetas": {
-          "Name": "Croquetas",
+          "Name": "{{ModId}}_Croquetas",
           "DisplayName": "Croquetas",
-          "Description": "A homecooked savory dish made with leftover meats, Irene's favorite!'",
+          "Description": "A homecooked savory dish made with leftover meats, Irene's favorite!",
           "Type": "Cooking",
           "Category": -7,
           "Price": 300,
@@ -662,7 +785,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_SalmonOnigiri": {
-          "Name": "Salmon Onigiri",
+          "Name": "{{ModId}}_SalmonOnigiri",
           "DisplayName": "Salmon Onigiri",
           "Description": "A portable, filling riceball with a salty filling for those with refined tastes.",
           "Type": "Cooking",
@@ -718,7 +841,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Cheeseburger": {
-          "Name": "Cheeseburger",
+          "Name": "{{ModId}}_Cheeseburger",
           "DisplayName": "Cheeseburger",
           "Description": "Just a meat patty and some buns and a whole lot of cheese.",
           "Type": "Cooking",
@@ -775,7 +898,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_Sandwich": {
-          "Name": "Sandwich",
+          "Name": "{{ModId}}_Sandwich",
           "DisplayName": "Sandwich",
           "Description": "Delicate slices of meat, vegetables, and spreads layered between soft pieces of bread.",
           "Type": "Cooking",
@@ -831,7 +954,7 @@
       "Target": "Data/Objects",
       "Entries": {
         "{{ModId}}_SakuraCottonCandy": {
-          "Name": "Sakura Cotton Candy",
+          "Name": "{{ModId}}_SakuraCottonCandy",
           "DisplayName": "Sakura Cotton Candy",
           "Description": "Spun from sugar and cherry blossoms, this sweet treat is one of the most delicious things you've ever tasted!",
           "Type": "Cooking",
@@ -881,22 +1004,46 @@
         }
       }
     },
+
     {
       "Action": "EditData",
       "Target": "Data/Objects",
       "Entries": {
-        "222": {
-          "Name": "Joja Cherry Pie",
-          "DisplayName": "Joja Cherry Pie",
-          "Description": "Disclaimer: this cherry pie includes no real or artificial cherries.",
+        "{{ModId}}_HarvestCider": {
+          "Name": "{{ModId}}_HarvestCider",
+          "DisplayName": "Harvest Cider",
+          "Description": "The perfect spiced beverage for a cool autumn day.",
           "Type": "Cooking",
           "Category": -7,
-          "Price": 400,
-          "Texture": null,
-          "SpriteIndex": 222,
-          "Edibility": 86,
-          "IsDrink": false,
-          "Buffs": null,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 2,
+          "Edibility": 100,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
           "GeodeDropsDefaultItems": false,
           "GeodeDrops": null,
           "ArtifactSpotChances": null,
@@ -906,15 +1053,138 @@
           "ExcludeFromShippingCollection": false,
           "ExcludeFromRandomSale": false,
           "ContextTags": [
-            "color_red",
-            "food_bakery",
+            "color_orange",
             "food_sweet"
           ],
           "CustomFields": null
         }
       }
     },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Chocolate": {
+          "Name": "{{ModId}}_Chocolate",
+          "DisplayName": "Chocolate",
+          "Description": "A rich, luxurious item made from cacao.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 13,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Torikatsu": {
+          "Name": "{{ModId}}_Torikatsu",
+          "DisplayName": "Torikatsu",
+          "Description": "A crunchy breaded chicken dish served with a tangy sauce.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 16,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
     //Changing the names and descriptions of existing foods and recipes
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "222": {
+          "Name": "Joja Cherry Pie",
+          "DisplayName": "Joja Cherry Pie",
+          "Description": "Disclaimer: this cherry pie includes no real or artificial cherries."
+        }
+      }
+    },
+
     {
       "Action": "EditData",
       "Target": "Strings/Objects",
@@ -922,7 +1192,28 @@
         "Salmonberry_Name": "Raspberry",
         "Salmonberry_Description": "A sweet, spring-time berry with the flavor of the forest."
       }
-    }
+    },
 
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "296": {
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 11
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "167": {
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 17
+        }
+      }
+    }
   ]
 }
