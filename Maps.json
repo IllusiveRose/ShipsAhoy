@@ -6,31 +6,31 @@
 
     //MAP changes including new designs and tiled events for each map. All changes to animation and tile-based actions go here.
 
-    {
-      "Action": "Load",
-      "Target": "Mods/{{ModId}}/Tilesheets/Paths",
-      "FromFile": "assets/Maps/{{TargetWithoutPath}}.png" // assets/Maps/paths.png
-    },
+    //{
+    //  "Action": "Load",
+    //  "Target": "Mods/{{ModId}}/Tilesheets/Paths",
+    //  "FromFile": "assets/Maps/{{TargetWithoutPath}}.png" // assets/Maps/paths.png
+    //},
 
-    {
-      "Action": "EditMap",
-      "Target": "Maps/Island_N",
-      "MapTiles": [
-        {
-          "Position": {
-            "X": 18,
-            "Y": 36
-          },
-          "Layer": "Paths",
-          "SetTilesheet": "Mods/{{ModId}}/Tilesheets/Paths",
-          "SetIndex": "34",
-          "SetProperties": {
-            "SpawnTree": "fruit {{ModId}}_Cacaosapling"
-          }
-        }
-      ]
+    //{
+    //  "Action": "EditMap",
+    //  "Target": "Maps/Island_N",
+    //  "MapTiles": [
+    //    {
+    //      "Position": {
+    //        "X": 18,
+    //        "Y": 36
+    //      },
+    //      "Layer": "Paths",
+    //      "SetTilesheet": "Mods/{{ModId}}/Tilesheets/Paths",
+    //      "SetIndex": "34",
+    //      "SetProperties": {
+    //        "SpawnTree": "fruit {{ModId}}_Cacaosapling"
+    //      }
+    //    }
+    //  ]
 
-    },
+    //},
 
 
 

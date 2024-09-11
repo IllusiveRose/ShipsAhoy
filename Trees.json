@@ -1,0 +1,512 @@
+{
+  "Changes": [
+    //Changes the image loaded for all foods and recipes
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/FruitTrees",
+      "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/FruitTrees.png, assets/Objects.png
+    },
+
+
+    //Adding Bugs to the game
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_StagBeetle": {
+          "Name": "{{ModId}}_StagBeetle",
+          "DisplayName": "Stag Beetle",
+          "Description": "A rare beetle famous for their pincer-like mandibles!",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 500,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 42,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_blue",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_RhinocerosBeetle": {
+          "Name": "{{ModId}}_RhinocerosBeetle",
+          "DisplayName": "Rhinoceros Beetle",
+          "Description": "A popular beetle with an impressive horn.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 43,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_red",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HeraclesBeetle": {
+          "Name": "{{ModId}}_HeraclesBeetle",
+          "DisplayName": "Heracles Beetle",
+          "Description": "A strong beetle named for the famous hero.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 44,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_AtlasBeetle": {
+          "Name": "{{ModId}}_AtlasBeetle",
+          "DisplayName": "Atlas Beetle",
+          "Description": "A beetle with impressive horns and mandibles.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 45,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_green",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Butterfly": {
+          "Name": "{{ModId}}_Butterfly",
+          "DisplayName": "Butterfly",
+          "Description": "A stunning creature attracted to pollen.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 46,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_purple",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Dragonfly": {
+          "Name": "{{ModId}}_Dragonfly",
+          "DisplayName": "Dragonfly",
+          "Description": "An attractive insect that likes to hang out over water.",
+          "Type": "Basic",
+          "Category": -81,
+          "Price": 100,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 47,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": true,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_orange",
+            "insect_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    //Add a new blossoms and fruit to the game
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_CherryBlossom": {
+          "Name": "{{ModId}}_CherryBlossom",
+          "DisplayName": "Cherry Blossom",
+          "Description": "A beautiful, fragrant flower that only grows outdoors in early spring.",
+          "Category": -80,
+          "Price": 600,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 9,
+          "Edibility": 11,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_pink",
+            "dye_medium",
+            "flower_item",
+            "fruit_tree_item",
+            "category_fruits",
+            "fruit_item",
+            "season_spring"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_CacaoPod": {
+          "Name": "{{ModId}}_CacaoPod",
+          "DisplayName": "Cacao Pod",
+          "Description": "The highly-prized fruit of a cacao tree, used in making chocolate.",
+          "Category": -79,
+          "Price": 600,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 14,
+          "Edibility": -300,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_red",
+            "dye_medium",
+            "fruit_tree_item",
+            "category_fruits",
+            "season_summer"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    //make it fall from trees
+    // add cherry blossoms to fruit tree
+
+
+    {
+      "LogName": "Cherry Trees Produces",
+      "Action": "EditData",
+      "Target": "Data/FruitTrees",
+      "TargetField": [
+        "628",
+        "Fruit"
+      ],
+      "Entries": {
+        "{{ModId}}_CherryBlossom": {
+          "Season": "spring",
+          "Chance": 1,
+          "Id": "{{ModId}}_CherryBlossom",
+          "ItemId": "{{ModId}}_CherryBlossom"
+        }
+      },
+      "MoveEntries": [
+        {
+          "ID": "{{ModId}}_CherryBlossom",
+          "BeforeID": "Default"
+        }
+      ],
+      "When": {
+        "Season": "spring",
+        "Day": "0, 1, 2, 3, 4, 5"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+
+        "{{ModId}}_Cacaosapling": {
+          "Name": "{{ModId}}_Cacaosapling",
+          "DisplayName": "Cacao sapling",
+          "Description": "A cacao tree sapling.",
+          "Type": "Basic",
+          "Category": -74,
+          "Price": 2200,
+
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 41
+        }
+      }
+    },
+
+    // add fruit tree
+    {
+      "Action": "EditData",
+      "Target": "Data/FruitTrees",
+      "Entries": {
+        "{{ModId}}_Cacaosapling": {
+          "DisplayName": "Cacaosapling",
+          "Seasons": [ "summer" ],
+          "Fruit": [
+            {
+              "Id": "{{ModId}}_CacaoPod",
+              "ItemId": "{{ModId}}_CacaoPod"
+            }
+          ],
+          "Texture": "Mods/{{ModId}}/FruitTrees",
+          "TextureSpriteRow": 0
+        }
+      }
+    },
+
+    //Add things to wild oak and maple
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "1" ],
+      "Entries": {
+        "ChopItems": [
+          {
+            "Chance": 0.2,
+            "Condition": null,
+            "ForStump": true,
+            "Id": "{{ModId}}_RhinocerosBeetle",
+            "IsRecipe": false,
+            "ItemId": "{{ModId}}_RhinocerosBeetle",
+            "MaxItems": null,
+            "MaxSize": null,
+            "MaxStack": -1,
+            "MinSize": null,
+            "MinStack": 1,
+            "ModData": null,
+            "ObjectDisplayName": null,
+            "ObjectInternalName": null,
+            "PerItemCondition": null,
+            "Quality": -1,
+            "QualityModifierMode": "Stack",
+            "QualityModifiers": null,
+            "RandomItemId": null,
+            "Season": null,
+            "StackModifierMode": "Stack",
+            "StackModifiers": null,
+            "ToolUpgradeLevel": -1
+          }
+        ]
+      },
+      "When": {
+        "Season": "fall"
+
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "1" ],
+      "Entries": {
+        "ChopItems": [
+          {
+            "Chance": 0.2,
+            "Condition": null,
+            "ForStump": true,
+            "Id": "{{ModId}}_AtlasBeetle",
+            "IsRecipe": false,
+            "ItemId": "{{ModId}}_AtlasBeetle",
+            "MaxItems": null,
+            "MaxSize": null,
+            "MaxStack": -1,
+            "MinSize": null,
+            "MinStack": 1,
+            "ModData": null,
+            "ObjectDisplayName": null,
+            "ObjectInternalName": null,
+            "PerItemCondition": null,
+            "Quality": -1,
+            "QualityModifierMode": "Stack",
+            "QualityModifiers": null,
+            "RandomItemId": null,
+            "Season": null,
+            "StackModifierMode": "Stack",
+            "StackModifiers": null,
+            "ToolUpgradeLevel": -1
+          }
+        ]
+      },
+      "When": {
+        "Season": "spring"
+
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "1" ],
+      "Entries": {
+        "ChopItems": [
+          {
+            "Chance": 0.2,
+            "Condition": null,
+            "ForStump": true,
+            "Id": "{{ModId}}_HeraclesBeetle",
+            "IsRecipe": false,
+            "ItemId": "{{ModId}}_HeraclesBeetle",
+            "MaxItems": null,
+            "MaxSize": null,
+            "MaxStack": -1,
+            "MinSize": null,
+            "MinStack": 1,
+            "ModData": null,
+            "ObjectDisplayName": null,
+            "ObjectInternalName": null,
+            "PerItemCondition": null,
+            "Quality": -1,
+            "QualityModifierMode": "Stack",
+            "QualityModifiers": null,
+            "RandomItemId": null,
+            "Season": null,
+            "StackModifierMode": "Stack",
+            "StackModifiers": null,
+            "ToolUpgradeLevel": -1
+          }
+        ]
+      },
+      "When": {
+        "Season": "summer"
+
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "2" ],
+      "Entries": {
+        "ChopItems": [
+          {
+            "Chance": 0.05,
+            "Condition": null,
+            "ForStump": true,
+            "Id": "{{ModId}}_StagBeetle",
+            "IsRecipe": false,
+            "ItemId": "{{ModId}}_StagBeetle",
+            "MaxItems": null,
+            "MaxSize": null,
+            "MaxStack": -1,
+            "MinSize": null,
+            "MinStack": 1,
+            "ModData": null,
+            "ObjectDisplayName": null,
+            "ObjectInternalName": null,
+            "PerItemCondition": null,
+            "Quality": -1,
+            "QualityModifierMode": "Stack",
+            "QualityModifiers": null,
+            "RandomItemId": null,
+            "Season": null,
+            "StackModifierMode": "Stack",
+            "StackModifiers": null,
+            "ToolUpgradeLevel": -1
+          }
+        ]
+      },
+      "When": {
+        "Season": "summer, spring, fall"
+
+      }
+    }
+
+  ] 
+
+}

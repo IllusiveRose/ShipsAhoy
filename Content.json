@@ -16,8 +16,10 @@
     },
     {
       "Action": "Include",
-      "FromFile": "Objects.json"
+      "FromFile": "Food.json"
     },
+
+
 
     {
       "Action": "Include",
@@ -26,6 +28,10 @@
     {
       "Action": "Include",
       "FromFile": "NPCGiftTastes.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "Trees.json"
     }
   ]
 }
