@@ -36,7 +36,111 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Demetrius_Beach",
 			"FromFile": "assets/Portraits/Custom/Robin_Beach.png"
-		}
+		},
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+
+        "Demetrius": {
+          "DisplayName": "Robin",
+          "BirthSeason": "Winter",
+          "BirthDay": 6,
+          "HomeRegion": "Town",
+          "Language": "Default",
+          "Gender": "Female",
+          "Age": "Adult",
+          "Manner": "Polite",
+          "SocialAnxiety": "Neutral",
+          "Optimism": "Positive",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "Franky",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": null,
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "CanCommentOnPurchasedShopItems": null,
+          "CanVisitIsland": null,
+          "IntroductionsQuest": null,
+          "ItemDeliveryQuests": null,
+          "PerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "SpouseAdopts": null,
+          "SpouseWantsChildren": null,
+          "SpouseGiftJealousy": null,
+          "SpouseGiftJealousyFriendshipChange": -30,
+          "SpouseRoom": null,
+          "SpousePatio": null,
+          "SpouseFloors": [],
+          "SpouseWallpapers": [],
+          "DumpsterDiveFriendshipEffect": -25,
+          "DumpsterDiveEmote": null,
+          "FriendsAndFamily": {
+            "Robin": "[LocalizedText Strings\\Characters:Relative_Wife]",
+            "Maru": ""
+          },
+          "FlowerDanceCanDance": null,
+          "WinterStarGifts": [],
+          "WinterStarParticipant": null,
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "ScienceHouse",
+              "Tile": {
+                "X": 17,
+                "Y": 4
+              },
+              "Direction": "right"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": null,
+              "Season": "Winter",
+              "Indoors": false,
+              "Outdoors": true,
+              "Portrait": "Portraits/Demetrius_Winter",
+              "Sprite": "Characters/Demetrius_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "MugShotSourceRect": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Breather": true,
+          "BreathChestRect": null,
+          "BreathChestPosition": null,
+          "Shadow": null,
+          "EmoteOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "ShakePortraits": [],
+          "KissSpriteIndex": 28,
+          "KissSpriteFacingRight": true,
+          "HiddenProfileEmoteSound": null,
+          "HiddenProfileEmoteDuration": -1,
+          "HiddenProfileEmoteStartFrame": 30,
+          "HiddenProfileEmoteFrameCount": 2,
+          "HiddenProfileEmoteFrameDuration": 200.0,
+          "FormerCharacterNames": [],
+          "FestivalVanillaActorIndex": 3,
+          "CustomFields": null
+        }
+      }
+    }
 		//{
 		//	"Action": "EditData",
 		//	"Target": "Characters/schedules/Demetrius",

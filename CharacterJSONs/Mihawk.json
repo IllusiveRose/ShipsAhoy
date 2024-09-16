@@ -36,7 +36,175 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Clint_Beach",
 			"FromFile": "assets/Portraits/Custom/Mihawk_Beach.png"
-		}
+		},
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+
+
+        "Clint": {
+          "DisplayName": "Mihawk",
+          "BirthSeason": "Summer",
+          "BirthDay": 24,
+          "HomeRegion": "Town",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Shy",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "Perona",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": null,
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "CanCommentOnPurchasedShopItems": null,
+          "CanVisitIsland": "DAY_OF_WEEK Friday",
+          "IntroductionsQuest": null,
+          "ItemDeliveryQuests": null,
+          "PerfectionScore": true,
+          "EndSlideShow": "MainGroup",
+          "SpouseAdopts": null,
+          "SpouseWantsChildren": null,
+          "SpouseGiftJealousy": null,
+          "SpouseGiftJealousyFriendshipChange": -30,
+          "SpouseRoom": null,
+          "SpousePatio": null,
+          "SpouseFloors": [],
+          "SpouseWallpapers": [],
+          "DumpsterDiveFriendshipEffect": -25,
+          "DumpsterDiveEmote": null,
+          "FriendsAndFamily": {
+            "Emily": ""
+          },
+          "FlowerDanceCanDance": null,
+          "WinterStarGifts": [
+            {
+              "Condition": null,
+              "Id": "IridiumBar",
+              "ItemId": "(O)337",
+              "RandomItemId": null,
+              "MaxItems": null,
+              "MinStack": -1,
+              "MaxStack": -1,
+              "Quality": -1,
+              "ObjectInternalName": null,
+              "ObjectDisplayName": null,
+              "ToolUpgradeLevel": -1,
+              "IsRecipe": false,
+              "StackModifiers": null,
+              "StackModifierMode": "Stack",
+              "QualityModifiers": null,
+              "QualityModifierMode": "Stack",
+              "ModData": null,
+              "PerItemCondition": null
+            },
+            {
+              "Condition": null,
+              "Id": "GoldBars",
+              "ItemId": "(O)336",
+              "RandomItemId": null,
+              "MaxItems": null,
+              "MinStack": 5,
+              "MaxStack": -1,
+              "Quality": -1,
+              "ObjectInternalName": null,
+              "ObjectDisplayName": null,
+              "ToolUpgradeLevel": -1,
+              "IsRecipe": false,
+              "StackModifiers": null,
+              "StackModifierMode": "Stack",
+              "QualityModifiers": null,
+              "QualityModifierMode": "Stack",
+              "ModData": null,
+              "PerItemCondition": null
+            },
+            {
+              "Condition": null,
+              "Id": "Default",
+              "ItemId": null,
+              "RandomItemId": [
+                "(O)535",
+                "(O)536",
+                "(O)537"
+              ],
+              "MaxItems": null,
+              "MinStack": 5,
+              "MaxStack": -1,
+              "Quality": -1,
+              "ObjectInternalName": null,
+              "ObjectDisplayName": null,
+              "ToolUpgradeLevel": -1,
+              "IsRecipe": false,
+              "StackModifiers": null,
+              "StackModifierMode": "Stack",
+              "QualityModifiers": null,
+              "QualityModifierMode": "Stack",
+              "ModData": null,
+              "PerItemCondition": null
+            }
+          ],
+          "WinterStarParticipant": null,
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "Blacksmith",
+              "Tile": {
+                "X": 3,
+                "Y": 13
+              },
+              "Direction": "down"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [
+            {
+              "Id": "Winter",
+              "Condition": null,
+              "Season": "Winter",
+              "Indoors": false,
+              "Outdoors": true,
+              "Portrait": "Portraits/Clint_Winter",
+              "Sprite": "Characters/Clint_Winter",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            }
+          ],
+          "MugShotSourceRect": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Breather": true,
+          "BreathChestRect": null,
+          "BreathChestPosition": null,
+          "Shadow": null,
+          "EmoteOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "ShakePortraits": [],
+          "KissSpriteIndex": 28,
+          "KissSpriteFacingRight": true,
+          "HiddenProfileEmoteSound": null,
+          "HiddenProfileEmoteDuration": -1,
+          "HiddenProfileEmoteStartFrame": 39,
+          "HiddenProfileEmoteFrameCount": 1,
+          "HiddenProfileEmoteFrameDuration": 200.0,
+          "FormerCharacterNames": [],
+          "FestivalVanillaActorIndex": 2,
+          "CustomFields": null
+        }
+      }
+    }
 		//{
 		//	"Action": "EditData",
 		//	"Target": "Characters/schedules/Penny",

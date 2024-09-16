@@ -31,25 +31,210 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Sam_Beach",
 			"FromFile": "assets/Portraits/Custom/Ace_Beach.png"
+		},
+
+
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+				"Sam": {
+					"DisplayName": "Ace",
+					"BirthSeason": "Summer",
+					"BirthDay": 17,
+					"HomeRegion": "Town",
+					"Language": "Default",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Polite",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"IsDarkSkinned": false,
+					"CanBeRomanced": true,
+					"LoveInterest": "Yamato",
+					"Calendar": "AlwaysShown",
+					"SocialTab": "UnknownUntilMet",
+					"CanSocialize": null,
+					"CanReceiveGifts": true,
+					"CanGreetNearbyCharacters": true,
+					"CanCommentOnPurchasedShopItems": null,
+					"CanVisitIsland": null,
+					"IntroductionsQuest": null,
+					"ItemDeliveryQuests": null,
+					"PerfectionScore": true,
+					"EndSlideShow": "MainGroup",
+					"SpouseAdopts": null,
+					"SpouseWantsChildren": null,
+					"SpouseGiftJealousy": null,
+					"SpouseGiftJealousyFriendshipChange": -30,
+					"SpouseRoom": {
+						"MapAsset": null,
+						"MapSourceRect": {
+							"X": 24,
+							"Y": 9,
+							"Width": 6,
+							"Height": 9
+						}
+					},
+					"SpousePatio": {
+						"MapAsset": null,
+						"MapSourceRect": {
+							"X": 16,
+							"Y": 4,
+							"Width": 4,
+							"Height": 4
+						},
+						"SpriteAnimationFrames": [
+							[
+								25,
+								3000
+							],
+							[
+								27,
+								500
+							],
+							[
+								26,
+								100
+							],
+							[
+								28,
+								100
+							],
+							[
+								27,
+								500
+							],
+							[
+								25,
+								2000
+							],
+							[
+								27,
+								500
+							],
+							[
+								26,
+								100
+							],
+							[
+								29,
+								100
+							],
+							[
+								30,
+								100
+							],
+							[
+								32,
+								500
+							],
+							[
+								31,
+								1000
+							],
+							[
+								30,
+								100
+							],
+							[
+								29,
+								100
+							]
+						],
+						"SpriteAnimationPixelOffset": {
+							"X": 0,
+							"Y": 0
+						}
+					},
+					"SpouseFloors": [],
+					"SpouseWallpapers": [],
+					"DumpsterDiveFriendshipEffect": -25,
+					"DumpsterDiveEmote": null,
+					"FriendsAndFamily": {
+						"Vincent": "[LocalizedText Strings\\Characters:Relative_LittleBrother]",
+						"Jodi": "[LocalizedText Strings\\Characters:Relative_Mom]",
+						"Kent": "[LocalizedText Strings\\Characters:Relative_Dad]",
+						"Sebastian": ""
+					},
+					"FlowerDanceCanDance": null,
+					"WinterStarGifts": [],
+					"WinterStarParticipant": null,
+					"UnlockConditions": null,
+					"SpawnIfMissing": true,
+					"Home": [
+						{
+							"Id": "Default",
+							"Condition": null,
+							"Location": "SamHouse",
+							"Tile": {
+								"X": 14,
+								"Y": 4
+							},
+							"Direction": "right"
+						}
+					],
+					"TextureName": null,
+					"Appearance": [
+						{
+							"Id": "Winter",
+							"Condition": null,
+							"Season": "Winter",
+							"Indoors": false,
+							"Outdoors": true,
+							"Portrait": "Portraits/Sam_Winter",
+							"Sprite": "Characters/Sam_Winter",
+							"IsIslandAttire": false,
+							"Precedence": -100,
+							"Weight": 0
+						}
+					],
+					"MugShotSourceRect": null,
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"BreathChestRect": null,
+					"BreathChestPosition": null,
+					"Shadow": null,
+					"EmoteOffset": {
+						"X": 0,
+						"Y": 0
+					},
+					"ShakePortraits": [],
+					"KissSpriteIndex": 36,
+					"KissSpriteFacingRight": true,
+					"HiddenProfileEmoteSound": null,
+					"HiddenProfileEmoteDuration": -1,
+					"HiddenProfileEmoteStartFrame": 20,
+					"HiddenProfileEmoteFrameCount": 2,
+					"HiddenProfileEmoteFrameDuration": 300.0,
+					"FormerCharacterNames": [],
+					"FestivalVanillaActorIndex": 26,
+					"CustomFields": null
+				}
+
+			}
 		}
-		//{
-		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
-		//	"Entries": {}
+				//{
+				//	"Action": "EditData",
+				//	"Target": "Characters/schedules/Penny",
+				//	"Entries": {}
 
-		//}
+				//}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+				//{
+				//	"Action": "Load",
+				//	"Target": "Characters/Penny",
+				//	"FromFile": "assets/Characters/Nami.png"
+				//},
+				//{
+				//	"Action": "Load",
+				//	"Target": "Portraits/Penny",
+				//	"FromFile": "assets/Characters/Nami.png"
+				//},
 	]
 
 }
