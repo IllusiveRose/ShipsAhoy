@@ -1,0 +1,120 @@
+{
+	"Changes": [
+		
+		//{
+		//	"Action": "EditImage",
+		//	"Target": "Characters/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Marlon",
+      "FromFile": "assets/Portraits/Custom/Kid.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Characters",
+      "Entries": {
+        "Marlon": {
+          "DisplayName": "Killer",
+          "BirthSeason": null,
+          "BirthDay": 0,
+          "HomeRegion": "Town",
+          "Language": "Default",
+          "Gender": "Male",
+          "Age": "Adult",
+          "Manner": "Neutral",
+          "SocialAnxiety": "Outgoing",
+          "Optimism": "Neutral",
+          "IsDarkSkinned": false,
+          "CanBeRomanced": true,
+          "LoveInterest": "Marnie",
+          "Calendar": "AlwaysShown",
+          "SocialTab": "UnknownUntilMet",
+          "CanSocialize": null,
+          "CanReceiveGifts": true,
+          "CanGreetNearbyCharacters": true,
+          "CanCommentOnPurchasedShopItems": null,
+          "CanVisitIsland": null,
+          "IntroductionsQuest": false,
+          "ItemDeliveryQuests": "FALSE",
+          "PerfectionScore": false,
+          "EndSlideShow": "Hidden",
+          "SpouseAdopts": null,
+          "SpouseWantsChildren": null,
+          "SpouseGiftJealousy": null,
+          "SpouseGiftJealousyFriendshipChange": -30,
+          "SpouseRoom": null,
+          "SpousePatio": null,
+          "SpouseFloors": [],
+          "SpouseWallpapers": [],
+          "DumpsterDiveFriendshipEffect": -25,
+          "DumpsterDiveEmote": null,
+          "FriendsAndFamily": {},
+          "FlowerDanceCanDance": null,
+          "WinterStarGifts": [],
+          "WinterStarParticipant": null,
+          "UnlockConditions": null,
+          "SpawnIfMissing": true,
+          "Home": [
+            {
+              "Id": "Default",
+              "Condition": null,
+              "Location": "AdventureGuild",
+              "Tile": {
+                "X": 5,
+                "Y": 11
+              },
+              "Direction": "down"
+            }
+          ],
+          "TextureName": null,
+          "Appearance": [],
+          "MugShotSourceRect": null,
+          "Size": {
+            "X": 16,
+            "Y": 32
+          },
+          "Breather": true,
+          "BreathChestRect": null,
+          "BreathChestPosition": null,
+          "Shadow": null,
+          "EmoteOffset": {
+            "X": 0,
+            "Y": 0
+          },
+          "ShakePortraits": [],
+          "KissSpriteIndex": 28,
+          "KissSpriteFacingRight": true,
+          "HiddenProfileEmoteSound": null,
+          "HiddenProfileEmoteDuration": -1,
+          "HiddenProfileEmoteStartFrame": -1,
+          "HiddenProfileEmoteFrameCount": 1,
+          "HiddenProfileEmoteFrameDuration": 200.0,
+          "FormerCharacterNames": [],
+          "FestivalVanillaActorIndex": 19,
+          "CustomFields": null
+        }
+      }
+    }
+        //{
+        //	"Action": "EditData",
+        //	"Target": "Characters/schedules/Penny",
+        //	"Entries": {}
+
+        //}
+
+
+        //{
+        //	"Action": "Load",
+        //	"Target": "Characters/Penny",
+        //	"FromFile": "assets/Characters/Nami.png"
+        //},
+        //{
+        //	"Action": "Load",
+        //	"Target": "Portraits/Penny",
+        //	"FromFile": "assets/Characters/Nami.png"
+        //},
+	]
+
+}

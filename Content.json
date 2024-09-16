@@ -12,13 +12,12 @@
 
     {
       "Action": "Include",
-      "FromFile": "CharacterJSONs/Luffy.json, CharacterJSONs/Hancock.json, CharacterJSONs/Shirahoshi.json"
+      "FromFile": "CharacterJSONs/Ace.json, CharacterJSONs/Bartolomeo.json, CharacterJSONs/Bepo.json, CharacterJSONs/Blackbeard.json, CharacterJSONs/Bonney.json, CharacterJSONs/Brook.json, CharacterJSONs/Chopper.json, CharacterJSONs/Franky.json, CharacterJSONs/Hancock.json, CharacterJSONs/Igaram.json, CharacterJSONs/Jinbe.json, CharacterJSONs/Kid.json, CharacterJSONs/Killer.json, CharacterJSONs/Kuma.json, CharacterJSONs/Law.json, CharacterJSONs/Luffy.json, CharacterJSONs/Mihawk.json, CharacterJSONs/Nami.json, CharacterJSONs/Nojiko.json, CharacterJSONs/Penguin.json, CharacterJSONs/Perona.json, CharacterJSONs/Pudding.json, CharacterJSONs/Rayleigh.json, CharacterJSONs/Robin.json, CharacterJSONs/Sabo.json, CharacterJSONs/Sanji.json, CharacterJSONs/Shachi.json, CharacterJSONs/Shakky.json, CharacterJSONs/Shirahoshi.json, CharacterJSONs/Tama.json, CharacterJSONs/Usopp.json, CharacterJSONs/Vivi.json, CharacterJSONs/Whitebeard.json, CharacterJSONs/Yamato.json, CharacterJSONs/Zeff.json, CharacterJSONs/Zoro.json"
     },
     {
       "Action": "Include",
-      "FromFile": "Food.json"
+      "FromFile": "Food.json, Furniture.json"
     },
-
 
 
     {
@@ -32,6 +31,10 @@
     {
       "Action": "Include",
       "FromFile": "Trees.json"
+    },
+    {
+      "Action": "Include",
+      "FromFile": "Shops.json"
     }
   ]
 }

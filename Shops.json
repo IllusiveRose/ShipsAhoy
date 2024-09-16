@@ -1,0 +1,313 @@
+{
+  "Changes": [
+    //Pudding's Bakery, Perona's plushies, Shachi and Penguin's foodtruck
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_Pudding": {
+          "Owners": [
+            {
+              "Name": "Elliott",
+              "Dialogues": [
+                // dialogue on sunny summer days
+                {
+                  "Id": "{{ModId}}_PuddingWinter",
+                  "Condition": "SEASON Winter",
+                  "Dialogue": "It's the perfect time of year for a nice cup of cocoa!"
+                },
+
+                // dialogue any other time
+                {
+                  "Id": "{{ModId}}_PuddingDefault",
+                  "RandomDialogue": [
+                    "This is the only place to be if you're a chocolate lover! Let me know when you're ready to order.",
+                    "I'm always working on new recipes. Have a look around!",
+                    "I just love the smell of chocolate. Don't you?"
+                  ]
+                }
+              ]
+            }
+          ],
+
+          "Items": [
+            // Stock
+            {
+              "Id": "{{ModId}}_Chocolate",
+              "ItemId": "{{ModId}}_Chocolate",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player"
+            },
+            {
+              "Id": "{{ModId}}_Cacaosapling",
+              "ItemId": "{{ModId}}_Cacaosapling"
+            },
+            {
+              "Id": "220",
+              "ItemId": "(0)220",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player"
+            },
+            {
+              "Id": "223",
+              "ItemId": "(0)223",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player"
+            }
+
+          ]
+        }
+      }
+    },
+
+    //PUDDING's house and shop
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ElliottHouse",
+      "FromFile": "assets/Maps/ElliottHouse.tmx",
+      "MapProperties": {
+        "DayTiles": "Front 6 1 469 Front 6 2 501 Front 11 1 469 Front 11 2 501 Back 6 4 35 Back 11 4 35",
+        "NightTiles": "Front 6 1 1219 Front 6 2 1251 Front 11 1 1219 Front 11 2 1251 Back 6 4 52 Back 11 4 52",
+        "Light": "1 7 4 14 3 4"
+      },
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 3,
+            "Y": 6
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Pudding down 1000 1500 1 4 13 5"
+          }
+        }
+      ]
+    },
+    //Stolen Item Mail flag
+    {
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "STOLEN": ""
+      }
+    },
+
+
+
+    //Pudding's Bakery, Perona's plushies, Shachi and Penguin's foodtruck
+    {
+      "Action": "EditData",
+      "Target": "Data/Shops",
+      "Entries": {
+        "{{ModId}}_Foodtruck": {
+          "Owners": [
+            {
+              "Name": "Evelyn",
+              "Dialogues": [
+                // dialogue on sunny summer days
+                {
+                  "Id": "{{ModId}}_EvelynWinter",
+                  "Condition": "SEASON Winter",
+                  "Dialogue": "Hey @! We've got Bepo's favorite right now."
+                },
+
+                // dialogue any other time
+                {
+                  "Id": "{{ModId}}_EvelynDefault",
+                  "RandomDialogue": [
+                    "Have a look at our menu!",
+                    "Hopefully nobody notices their stuff is missing.",
+                    "Maybe don't advertise where you got these..."
+                  ]
+                }
+              ]
+            },
+            {
+              "Name": "George",
+              "Dialogues": [
+                // dialogue on sunny summer days
+                {
+                  "Id": "{{ModId}}_GeorgeWinter",
+                  "Condition": "SEASON Winter",
+                  "Dialogue": "Don't ask me why we serve cold things in winter. I didn't pick it."
+                },
+
+                // dialogue any other time
+                {
+                  "Id": "{{ModId}}_GeorgeDefault",
+                  "RandomDialogue": [
+                    "Have a look at our menu!",
+                    "Hopefully nobody notices their stuff is missing."
+                  ]
+                }
+              ]
+            }
+          ],
+
+          "Items": [
+            // Stock
+            {
+              "Id": "{{ModId}}_SalmonOnigiri",
+              "ItemId": "{{ModId}}_SalmonOnigiri",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON fall"
+            },
+            {
+              "Id": "{{ModId}}_HeartShavedIce",
+              "ItemId": "{{ModId}}_HeartShavedIce",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON winter"
+            },
+            {
+              "Id": "921",
+              "ItemId": "(0)921",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON spring"
+            },
+            {
+              "Id": "213",
+              "ItemId": "(0)213",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON summer"
+            },
+            {
+              "Id": "{{ModId}}_LawDDM",
+              "ItemId": "{{ModId}}_LawDDM",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Harvey 8"
+            },
+            {
+              "Id": "{{ModId}}_LawF",
+              "ItemId": "{{ModId}}_LawF",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Harvey 6"
+            },
+
+            {
+              "Id": "{{ModId}}_LuffyF",
+              "ItemId": "{{ModId}}_LuffyF",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Sebastian 6",
+              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+            },
+
+            {
+              "Id": "{{ModId}}_AceF",
+              "ItemId": "{{ModId}}_AceF",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Sam 6",
+              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+            },
+
+            {
+              "Id": "{{ModId}}_ShirahoshiF",
+              "ItemId": "{{ModId}}_ShirahoshiF",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Abigail 6",
+              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+            }
+          ]
+        }
+      }
+    },
+
+
+
+    //Add Foodtruck to map
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "assets/Maps/Foodtruck.tmx",
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 8,
+        "Height": 5
+      },
+      "ToArea": {
+        "X": 84,
+        "Y": 88,
+        "Width": 8,
+        "Height": 5
+      },
+      "MapTiles": [
+        {
+          "Position": {
+            "X": 84,
+            "Y": 92
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Foodtruck down 1200 2500 84 88 8 5"
+          }
+        },
+        {
+          "Position": {
+            "X": 85,
+            "Y": 92
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Foodtruck down 1200 2500 84 88 8 5"
+          }
+        },
+        {
+          "Position": {
+            "X": 86,
+            "Y": 92
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Foodtruck down 1200 2500 84 88 8 5"
+          }
+        },
+        {
+          "Position": {
+            "X": 87,
+            "Y": 92
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Foodtruck down 1200 2500 84 88 8 5"
+          }
+        },
+        {
+          "Position": {
+            "X": 88,
+            "Y": 92
+          },
+          "Layer": "Buildings",
+          "SetProperties": {
+            "Action": "OpenShop {{ModId}}_Foodtruck down 1200 2500 84 88 8 5"
+          }
+        }
+      ],
+      "When": {
+        "HasFlag": "ccMovieTheater, ccMovieTheaterJoja"
+      }
+    },
+    //add mail about store openings
+
+
+
+    //Food truck event where everyone in town is complaining about missing items. Nami wants her cut of the money.
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 / faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / pause 1000 emote farmer 16 / speak Lewis \"Nice try. #$b# @ is a pillar of this community.\"/ pause 500 / speak Penny \"Don't think you're getting out of this without paying my cut plus interest. $5 #$b# Hand over the books... $3\"/ pause 1000 / speak Penny \"I'm going to be so rich!$6\"/ pause 500 end"
+      }
+
+    }
+
+  ]
+}

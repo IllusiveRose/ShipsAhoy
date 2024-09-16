@@ -1,0 +1,103 @@
+{
+  "Changes": [
+    //Denden collectable and character furniture inventory
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Furniture",
+      "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Craftables.png, assets/Objects.png
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Furniture",
+      "Entries": {
+        "{{ModId}}_LawDDM": "{{ModId}}_LawDDM/decor/1 2/1 1/1/1000/2/Law's Replica Denden Mushi/3/Mods\\{{ModId}}\\Furniture/true/collection_dendenmushi",
+        "{{ModId}}_LuffyF": "{{ModId}}_LuffyF/painting/3 2/-1/1/1000/2/Luffy's Flag/68/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
+        "{{ModId}}_AceF": "{{ModId}}_AceF/painting/2 2/-1/1/1000/2/Ace's Flag/71/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
+        "{{ModId}}_ShirahoshiF": "{{ModId}}_ShirahoshiF/bed/3 4/3 3/1/1000/-1/Shirahoshi's Bed/8/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
+        "{{ModId}}_LawF": "{{ModId}}_LawF/painting/2 3/2 3/1/1000/2/Law's Sora Poster/73/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems"
+
+      }
+    },
+
+    //Adding spouse phones
+
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/Craftables",
+      "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/Craftables.png, assets/Objects.png
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+
+        "214": {
+          "Name": "214",
+          "DisplayName": "Law's Denden Mushi",
+          "Description": "[LocalizedText Strings\\BigCraftables:Telephone_Description]",
+          "Price": 2000,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods/{{ModId}}/Craftables",
+          "SpriteIndex": 2,
+          "ContextTags": null,
+          "CustomFields": null
+        }
+      },
+      "When": {
+        "Spouse": "Harvey"
+      }
+    },
+   
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+        "214": {
+          "Name": "214",
+          "DisplayName": "Luffy's Denden Mushi",
+          "Description": "[LocalizedText Strings\\BigCraftables:Telephone_Description]",
+          "Price": 2000,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods/{{ModId}}/Craftables",
+          "SpriteIndex": 4,
+          "ContextTags": null,
+          "CustomFields": null
+        }
+      },
+      "When": {
+        "Spouse": "Sebastian"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/BigCraftables",
+      "Entries": {
+
+        "214": {
+          "Name": "214",
+          "DisplayName": "DenDen Mushi",
+          "Description": "[LocalizedText Strings\\BigCraftables:Telephone_Description]",
+          "Price": 1000,
+          "Fragility": 0,
+          "CanBePlacedOutdoors": true,
+          "CanBePlacedIndoors": true,
+          "IsLamp": false,
+          "Texture": "Mods/{{ModId}}/Craftables",
+          "SpriteIndex": 0,
+          "ContextTags": null,
+          "CustomFields": null
+        }
+      },
+      "When": {
+        "HasValue:{{spouse}}": "false"
+      }
+    }
+  ]
+
+}

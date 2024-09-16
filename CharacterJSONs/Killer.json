@@ -1,0 +1,131 @@
+{
+	"Changes": [
+
+		//{
+		//	"Action": "EditImage",
+		//	"Target": "Characters/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Gil",
+			"FromFile": "assets/Portraits/Custom/Killer.png"
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+				"Gil": {
+					"DisplayName": "Killer",
+					"BirthSeason": "Fall",
+					"BirthDay": 10,
+					"HomeRegion": "Other",
+					"Language": "Default",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Rude",
+					"SocialAnxiety": "Shy",
+					"Optimism": "Neutral",
+					"IsDarkSkinned": false,
+					"CanBeRomanced": false,
+					"LoveInterest": null,
+					"Calendar": "AlwaysShown",
+					"SocialTab": "HiddenAlways",
+					"CanSocialize": null,
+					"CanReceiveGifts": true,
+					"CanGreetNearbyCharacters": true,
+					"CanCommentOnPurchasedShopItems": null,
+					"CanVisitIsland": null,
+					"IntroductionsQuest": false,
+					"ItemDeliveryQuests": null,
+					"PerfectionScore": false,
+					"EndSlideShow": "Hidden",
+					"SpouseAdopts": null,
+					"SpouseWantsChildren": null,
+					"SpouseGiftJealousy": null,
+					"SpouseGiftJealousyFriendshipChange": -30,
+					"SpouseRoom": null,
+					"SpousePatio": null,
+					"SpouseFloors": [],
+					"SpouseWallpapers": [],
+					"DumpsterDiveFriendshipEffect": -25,
+					"DumpsterDiveEmote": null,
+					"FriendsAndFamily": {},
+					"FlowerDanceCanDance": null,
+					"WinterStarGifts": [],
+					"WinterStarParticipant": null,
+					"UnlockConditions": null,
+					"SpawnIfMissing": false,
+					"Home": [
+						{
+							"Id": "Default",
+							"Condition": null,
+							"Location": "AdventureGuild",
+							"Tile": {
+								"X": 0,
+								"Y": 0
+							},
+							"Direction": "up"
+						}
+					],
+					"TextureName": null,
+					"Appearance": [],
+					"MugShotSourceRect": null,
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"BreathChestRect": null,
+					"BreathChestPosition": null,
+					"Shadow": null,
+					"EmoteOffset": {
+						"X": 0,
+						"Y": 0
+					},
+					"ShakePortraits": [],
+					"KissSpriteIndex": 28,
+					"KissSpriteFacingRight": true,
+					"HiddenProfileEmoteSound": null,
+					"HiddenProfileEmoteDuration": -1,
+					"HiddenProfileEmoteStartFrame": -1,
+					"HiddenProfileEmoteFrameCount": 1,
+					"HiddenProfileEmoteFrameDuration": 200.0,
+					"FormerCharacterNames": [],
+					"FestivalVanillaActorIndex": -1,
+					"CustomFields": null
+				}
+			}
+		},
+		//Dialogue
+		{
+			"Action": "EditData",
+			"Target": "Characters/Dialogue/Gil",
+			"Entries": {
+				"Monday": "I'm not looking for friends.",
+				"AcceptBirthdayGift_Positive": "You got me something for my birthday? $3",
+				"AcceptBirthdayGift_Negative": "...",
+				"Tuesday": "You're weak as hell."
+			}
+		}
+		//{
+		//	"Action": "EditData",
+		//	"Target": "Characters/schedules/Penny",
+		//	"Entries": {}
+
+		//}
+
+
+		//{
+		//	"Action": "Load",
+		//	"Target": "Characters/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
+		//{
+		//	"Action": "Load",
+		//	"Target": "Portraits/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
+	]
+
+}

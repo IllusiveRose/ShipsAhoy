@@ -1,0 +1,44 @@
+{
+  "Changes": [
+    
+   
+    {
+      "Action": "EditImage",
+      "Target": "Characters/George",
+      "FromFile": "assets/Characters/Shachi.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/George",
+      "FromFile": "assets/Portraits/Custom/Shachi.png"
+    },
+    {
+      "Action": "EditData",
+      "Target": "Characters/schedules/George",
+      "Entries": {
+        "rain": "GOTO spring",
+        "GreenRain": "GOTO spring",
+        "DesertFestival_3": "610 JoshHouse 16 22 0/a1000 Desert 28 31 0 \"Strings\\1_6_Strings:DesertFestival_George\"/2250 bed",
+        "23": "630 JoshHouse 5 21 3 \"Strings\\schedules\\George:23.000\"/1030 Hospital 10 15 0 \"Strings\\schedules\\George:23.001\"/1330 Hospital 4 6 1 \"Strings\\schedules\\George:23.002\"/1600 JoshHouse 16 22 0/2000 JoshHouse 3 5 0 george_sleep",
+        "winter_17": "GOTO spring",
+        "summer_Fri": "GOTO spring",
+        "Sun": "GOTO spring",
+        "Sun_normal": "GOTO spring",
+        "spring": "630 JoshHouse 16 22 0/1200 Town  87 91 2/2500 JoshHouse 16 22 0/2550 JoshHouse 3 5 0 george_sleep"
+      }
+      }
+
+    
+    //{
+    //	"Action": "Load",
+    //	"Target": "Characters/Shane",
+    //	"FromFile": "assets/Characters/Hancock.png"
+    //},
+    //{
+    //	"Action": "Load",
+    //	"Target": "Portraits/Shane",
+    //	"FromFile": "assets/Characters/Hancock.png"
+    //},
+  ]
+
+}

@@ -16,7 +16,7 @@
         "{{ModId}}_StagBeetle": {
           "Name": "{{ModId}}_StagBeetle",
           "DisplayName": "Stag Beetle",
-          "Description": "A rare beetle famous for their pincer-like mandibles!",
+          "Description": "A rare beetle famous for their pincer-like mandibles",
           "Type": "Basic",
           "Category": -81,
           "Price": 500,
@@ -147,7 +147,7 @@
         "{{ModId}}_Butterfly": {
           "Name": "{{ModId}}_Butterfly",
           "DisplayName": "Butterfly",
-          "Description": "A stunning creature attracted to pollen.",
+          "Description": "A stunning, delicate creature that lays its eggs in certain trees.",
           "Type": "Basic",
           "Category": -81,
           "Price": 100,
@@ -180,7 +180,7 @@
         "{{ModId}}_Dragonfly": {
           "Name": "{{ModId}}_Dragonfly",
           "DisplayName": "Dragonfly",
-          "Description": "An attractive insect that likes to hang out over water.",
+          "Description": "A glittering insect that loves feasting on mosquitos in water.",
           "Type": "Basic",
           "Category": -81,
           "Price": 100,
@@ -356,158 +356,382 @@
     {
       "Action": "EditData",
       "Target": "Data/WildTrees",
-      "TargetField": [ "1" ],
+      "TargetFields": [ "1", "ChopItems" ],
       "Entries": {
-        "ChopItems": [
-          {
-            "Chance": 0.2,
-            "Condition": null,
-            "ForStump": true,
-            "Id": "{{ModId}}_RhinocerosBeetle",
-            "IsRecipe": false,
-            "ItemId": "{{ModId}}_RhinocerosBeetle",
-            "MaxItems": null,
-            "MaxSize": null,
-            "MaxStack": -1,
-            "MinSize": null,
-            "MinStack": 1,
-            "ModData": null,
-            "ObjectDisplayName": null,
-            "ObjectInternalName": null,
-            "PerItemCondition": null,
-            "Quality": -1,
-            "QualityModifierMode": "Stack",
-            "QualityModifiers": null,
-            "RandomItemId": null,
-            "Season": null,
-            "StackModifierMode": "Stack",
-            "StackModifiers": null,
-            "ToolUpgradeLevel": -1
-          }
-        ]
-      },
-      "When": {
-        "Season": "fall"
+        "{{ModId}}_RhinocerosBeetle": {
+          "Chance": 0.2,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_RhinocerosBeetle",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_RhinocerosBeetle",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
 
+      },
+      "Update": "OnTimeChange",
+      "When": {
+        "Season": "fall",
+        "Time": "{{Range: 1800, 2600}}"
       }
     },
 
     {
       "Action": "EditData",
       "Target": "Data/WildTrees",
-      "TargetField": [ "1" ],
+      "TargetField": [ "1", "ChopItems" ],
       "Entries": {
-        "ChopItems": [
-          {
-            "Chance": 0.2,
-            "Condition": null,
-            "ForStump": true,
-            "Id": "{{ModId}}_AtlasBeetle",
-            "IsRecipe": false,
-            "ItemId": "{{ModId}}_AtlasBeetle",
-            "MaxItems": null,
-            "MaxSize": null,
-            "MaxStack": -1,
-            "MinSize": null,
-            "MinStack": 1,
-            "ModData": null,
-            "ObjectDisplayName": null,
-            "ObjectInternalName": null,
-            "PerItemCondition": null,
-            "Quality": -1,
-            "QualityModifierMode": "Stack",
-            "QualityModifiers": null,
-            "RandomItemId": null,
-            "Season": null,
-            "StackModifierMode": "Stack",
-            "StackModifiers": null,
-            "ToolUpgradeLevel": -1
-          }
-        ]
+        "{{ModId}}_AtlasBeetle": {
+          "Chance": 0.2,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_AtlasBeetle",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_AtlasBeetle",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
+      },
+      "Update": "OnTimeChange",
+      "When": {
+        "Season": "spring",
+        "Time": "{{Range: 1200, 1700}}"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "1", "ChopItems" ],
+      "Entries": {
+        "{{ModId}}_HeraclesBeetle": {
+          "Chance": 0.2,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_HeraclesBeetle",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_HeraclesBeetle",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
+      },
+      "Update": "OnTimeChange",
+      "When": {
+        "Season": "Summer",
+        "Time": "{{Range: 2000, 2600}}"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/WildTrees",
+      "TargetField": [ "8", "ChopItems" ],
+      "Entries": {
+        "{{ModId}}_Butterfly": {
+          "Chance": 0.2,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_Butterfly",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_Butterfly",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
       },
       "When": {
-        "Season": "spring"
-
+        "Season": "summer",
+        "Weather": "Sun, Wind"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/WildTrees",
-      "TargetField": [ "1" ],
+      "TargetField": [ "10", "ChopItems" ],
       "Entries": {
-        "ChopItems": [
-          {
-            "Chance": 0.2,
-            "Condition": null,
-            "ForStump": true,
-            "Id": "{{ModId}}_HeraclesBeetle",
-            "IsRecipe": false,
-            "ItemId": "{{ModId}}_HeraclesBeetle",
-            "MaxItems": null,
-            "MaxSize": null,
-            "MaxStack": -1,
-            "MinSize": null,
-            "MinStack": 1,
-            "ModData": null,
-            "ObjectDisplayName": null,
-            "ObjectInternalName": null,
-            "PerItemCondition": null,
-            "Quality": -1,
-            "QualityModifierMode": "Stack",
-            "QualityModifiers": null,
-            "RandomItemId": null,
-            "Season": null,
-            "StackModifierMode": "Stack",
-            "StackModifiers": null,
-            "ToolUpgradeLevel": -1
-          }
-        ]
+        "{{ModId}}_Dragonfly": {
+          "Chance": 0.2,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_Dragonfly",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_Dragonfly",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
       },
       "When": {
-        "Season": "summer"
-
+        "Season": "summer, fall",
+        "Weather": "Rain, Storm, GreenRain"
       }
     },
     {
       "Action": "EditData",
       "Target": "Data/WildTrees",
-      "TargetField": [ "2" ],
+      "TargetField": [ "2", "ChopItems" ],
       "Entries": {
-        "ChopItems": [
-          {
-            "Chance": 0.05,
-            "Condition": null,
-            "ForStump": true,
-            "Id": "{{ModId}}_StagBeetle",
-            "IsRecipe": false,
-            "ItemId": "{{ModId}}_StagBeetle",
-            "MaxItems": null,
-            "MaxSize": null,
-            "MaxStack": -1,
-            "MinSize": null,
-            "MinStack": 1,
-            "ModData": null,
-            "ObjectDisplayName": null,
-            "ObjectInternalName": null,
-            "PerItemCondition": null,
-            "Quality": -1,
-            "QualityModifierMode": "Stack",
-            "QualityModifiers": null,
-            "RandomItemId": null,
-            "Season": null,
-            "StackModifierMode": "Stack",
-            "StackModifiers": null,
-            "ToolUpgradeLevel": -1
-          }
-        ]
+        "{{ModId}}_StagBeetle": {
+          "Chance": 0.1,
+          "Condition": null,
+          "ForStump": true,
+          "Id": "{{ModId}}_StagBeetle",
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_StagBeetle",
+          "MaxItems": null,
+          "MaxSize": null,
+          "MaxStack": -1,
+          "MinSize": null,
+          "MinStack": 1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "Season": null,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1
+        }
       },
+      "Update": "OnTimeChange",
       "When": {
-        "Season": "summer, spring, fall"
-
+        "Season": "summer, spring, fall",
+        "Time": "{{Range: 0600, 900}}"
       }
-    }
+    },
 
     //Adds butterflies and dragonflies to sweet peas and fishing
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "Mountain", "Fish" ],
+      "Entries": {
+        "{{ModId}}_Dragonfly": {
+          "ApplyDailyLuck": false,
+          "BobberPosition": null,
+          "CanBeInherited": true,
+          "CanUseTrainingRod": null,
+          "CatchLimit": -1,
+          "Chance": 0.2,
+          "ChanceBoostPerLuckLevel": 0.05,
+          "ChanceModifierMode": "Stack",
+          "ChanceModifiers": null,
+          "Condition": null,
+          "CuriosityLureBuff": -1.0,
+          "FishAreaId": null,
+          "Id": "{{ModId}}_Dragonfly",
+          "IgnoreFishDataRequirements": true,
+          "IsBossFish": false,
+          "IsRecipe": false,
+          "ItemId": "{{ModId}}_Dragonfly",
+          "MaxDistanceFromShore": -1,
+          "MaxItems": null,
+          "MaxStack": -1,
+          "MinDistanceFromShore": 0,
+          "MinFishingLevel": 0,
+          "MinStack": -1,
+          "ModData": null,
+          "ObjectDisplayName": null,
+          "ObjectInternalName": null,
+          "PerItemCondition": null,
+          "PlayerPosition": null,
+          "Precedence": 0,
+          "Quality": -1,
+          "QualityModifierMode": "Stack",
+          "QualityModifiers": null,
+          "RandomItemId": null,
+          "RequireMagicBait": false,
+          "Season": "Fall",
+          "SetFlagOnCatch": null,
+          "SpecificBaitBuff": 0.0,
+          "SpecificBaitMultiplier": 1.66,
+          "StackModifierMode": "Stack",
+          "StackModifiers": null,
+          "ToolUpgradeLevel": -1,
+          "UseFishCaughtSeededRandom": true
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "Forest", "Fish" ],
+      "Entries": {
+        "{{ModId}}_Dragonfly": {
+          "Chance": 0.1,
+          "Season": "Fall, Summer",
+          "FishAreaId": null,
+          "BobberPosition": null,
+          "PlayerPosition": null,
+          "MinFishingLevel": 0,
+          "MinDistanceFromShore": 0,
+          "MaxDistanceFromShore": -1,
+          "ApplyDailyLuck": false,
+          "CuriosityLureBuff": -1.0,
+          "SpecificBaitBuff": 0.0,
+          "SpecificBaitMultiplier": 1.66,
+          "CatchLimit": -1,
+          "CanUseTrainingRod": null,
+          "IsBossFish": false,
+          "SetFlagOnCatch": null,
+          "RequireMagicBait": false,
+          "Precedence": 0,
+          "IgnoreFishDataRequirements": true,
+          "CanBeInherited": true,
+          "ChanceModifiers": null,
+          "ChanceModifierMode": "Stack",
+          "ChanceBoostPerLuckLevel": 0.05,
+          "UseFishCaughtSeededRandom": true,
+          "Condition": null,
+          "Id": "{{ModId}}_Dragonfly",
+          "ItemId": "{{ModId}}_Dragonfly",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": -1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": "Stack",
+          "QualityModifiers": null,
+          "QualityModifierMode": "Stack",
+          "ModData": null,
+          "PerItemCondition": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Locations",
+      "TargetField": [ "Woods", "Forage" ],
+      "Entries": {
+        "{{ModId}}_Butterfly": {
+          "Chance": 0.05,
+          "Season": "Summer",
+          "Condition": null,
+          "Id": "{{ModId}}_Butterfly",
+          "ItemId": "{{ModId}}_Butterfly",
+          "RandomItemId": null,
+          "MaxItems": null,
+          "MinStack": -1,
+          "MaxStack": -1,
+          "Quality": -1,
+          "ObjectInternalName": null,
+          "ObjectDisplayName": null,
+          "ToolUpgradeLevel": -1,
+          "IsRecipe": false,
+          "StackModifiers": null,
+          "StackModifierMode": "Stack",
+          "QualityModifiers": null,
+          "QualityModifierMode": "Stack",
+          "ModData": null,
+          "PerItemCondition": null
+        }
+      },
+      "When": {
+        "Weather": "Sun, Wind"
+      }
+    },
+    //Getting your first Cacao tree
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "00011/t 600 1130/Hn ccPantry/A cc_Greenhouse/f Elliott 4": "continue/64 15/farmer 64 16 2 Elliott 64 18 0/pause 1500/speak Elliott \"Hi @! Love the new greenhouse. $0#$b# I actually have a favor to ask... $1#$b# My brother has been traveling abroad and he got me this amazing Cacao tree, but the thing is...$2#$b# I have nowhere to grow it. I have no idea what he was thinking.$3#$b# Any chance you'd consider growing it for me? $0#$b# Maybe I can come by for Cacao Pods some time.$4\"/pause 500/ itemAboveHead {{ModId}}_Cacaosapling /playSound getNewSpecialItem/pause 3300/awardFestivalPrize {{ModId}}_Cacaosapling/pause 200/message \"Received a 'Cacao Sapling'\"/pause 800/ end"
+      }
+    },
+    //Adding bugs to bundles
+    {
+      "Action": "EditData",
+      "Target": "Data/Bundles",
+      "Entries": {
+        "Bulletin Board/34": "Bug Catcher/BO 25 1/{{ModId}}_Dragonfly 1 0 {{ModId}}_Butterfly 1 0 {{ModId}}_StagBeetle 1 0 {{ModId}}_AtlasBeetle 1 0 {{ModId}}_RhinocerosBeetle 1 0 {{ModId}}_HeraclesBeetle 1 0 /6///Bug Catcher"
+      }
+    }
   ] 
 
 }
