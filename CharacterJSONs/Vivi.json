@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Sandy",
+		//	"FromFile": "assets/Characters/Vivi.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sandy",
+			"FromFile": "assets/Characters/Vivi.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sandy",
 			"FromFile": "assets/Portraits/Custom/Vivi.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sandy_Winter",
+			"FromFile": "assets/Characters/Vivi_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Sandy_Winter",
+			"FromFile": "assets/Portraits/Custom/Vivi_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sandy_Beach",
+			"FromFile": "assets/Characters/Vivi_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Sandy_Beach",
+			"FromFile": "assets/Portraits/Custom/Vivi_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Sandy",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Sandy",
+		//	"FromFile": "assets/Characters/Vivi.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Sandy",
+		//	"FromFile": "assets/Characters/Vivi.png"
 		//},
 	]
 

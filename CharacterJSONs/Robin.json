@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Demetrius",
+		//	"FromFile": "assets/Characters/Robin.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Demetrius",
+			"FromFile": "assets/Characters/Robin.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Demetrius",
 			"FromFile": "assets/Portraits/Custom/Robin.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Demetrius_Winter",
+			"FromFile": "assets/Characters/Robin_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Demetrius_Winter",
+			"FromFile": "assets/Portraits/Custom/Robin_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Demetrius_Beach",
+			"FromFile": "assets/Characters/Robin_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Demetrius_Beach",
+			"FromFile": "assets/Portraits/Custom/Robin_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Demetrius",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Demetrius",
+		//	"FromFile": "assets/Characters/Robin.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Demetrius",
+		//	"FromFile": "assets/Characters/Robin.png"
 		//},
 	]
 

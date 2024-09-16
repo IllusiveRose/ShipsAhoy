@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Maru",
+		//	"FromFile": "assets/Characters/Usopp.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Maru",
+			"FromFile": "assets/Characters/Usopp.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Maru",
 			"FromFile": "assets/Portraits/Custom/Usopp.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Maru_Winter",
+			"FromFile": "assets/Characters/Usopp_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Maru_Winter",
+			"FromFile": "assets/Portraits/Custom/Usopp_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Maru_Beach",
+			"FromFile": "assets/Characters/Usopp_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Maru_Beach",
+			"FromFile": "assets/Portraits/Custom/Usopp_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Maru",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Maru",
+		//	"FromFile": "assets/Characters/Usopp.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Maru",
+		//	"FromFile": "assets/Characters/Usopp.png"
 		//},
 	]
 

@@ -1,7 +1,7 @@
 {
   "Changes": [
-    
-   
+
+
     {
       "Action": "EditImage",
       "Target": "Characters/George",
@@ -11,6 +11,27 @@
       "Action": "EditImage",
       "Target": "Portraits/George",
       "FromFile": "assets/Portraits/Custom/Shachi.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/George_Winter",
+      "FromFile": "assets/Characters/Shachi_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/George_Winter",
+      "FromFile": "assets/Portraits/Custom/Shachi_Winter.png"
+    },
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/George_Beach",
+      "FromFile": "assets/Characters/Shachi_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/George_Beach",
+      "FromFile": "assets/Portraits/Custom/Shachi_Beach.png"
     },
     {
       "Action": "EditData",
@@ -26,9 +47,9 @@
         "Sun_normal": "GOTO spring",
         "spring": "630 JoshHouse 16 22 0/1200 Town  87 91 2/2500 JoshHouse 16 22 0/2550 JoshHouse 3 5 0 george_sleep"
       }
-      }
+    }
 
-    
+
     //{
     //	"Action": "Load",
     //	"Target": "Characters/Shane",

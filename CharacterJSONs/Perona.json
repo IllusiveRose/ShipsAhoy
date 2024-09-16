@@ -8,8 +8,34 @@
     //},
     {
       "Action": "EditImage",
+      "Target": "Characters/Leah",
+      "FromFile": "assets/Characters/Perona.png"
+    },
+    {
+      "Action": "EditImage",
       "Target": "Portraits/Leah",
       "FromFile": "assets/Portraits/Custom/Perona.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Leah_Winter",
+      "FromFile": "assets/Characters/Perona_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Leah_Winter",
+      "FromFile": "assets/Portraits/Custom/Perona_Winter.png"
+    },
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Leah_Beach",
+      "FromFile": "assets/Characters/Perona_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Leah_Beach",
+      "FromFile": "assets/Portraits/Custom/Perona_Beach.png"
     }
     //{
     //	"Action": "EditData",

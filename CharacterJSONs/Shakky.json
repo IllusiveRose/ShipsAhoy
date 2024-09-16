@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Pierre",
+		//	"FromFile": "assets/Characters/Shakky.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Pierre",
+			"FromFile": "assets/Characters/Shakky.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Pierre",
 			"FromFile": "assets/Portraits/Custom/Shakky.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Pierre_Winter",
+			"FromFile": "assets/Characters/Shakky_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Pierre_Winter",
+			"FromFile": "assets/Portraits/Custom/Shakky_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Pierre_Beach",
+			"FromFile": "assets/Characters/Shakky_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Pierre_Beach",
+			"FromFile": "assets/Portraits/Custom/Shakky_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Pierre",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Pierre",
+		//	"FromFile": "assets/Characters/Shakky.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Pierre",
+		//	"FromFile": "assets/Characters/Shakky.png"
 		//},
 	]
 

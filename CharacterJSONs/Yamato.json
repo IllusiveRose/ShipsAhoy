@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Jodi",
+		//	"FromFile": "assets/Characters/Yamato.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jodi",
+			"FromFile": "assets/Characters/Yamato.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Jodi",
 			"FromFile": "assets/Portraits/Custom/Yamato.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jodi_Winter",
+			"FromFile": "assets/Characters/Yamato_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jodi_Winter",
+			"FromFile": "assets/Portraits/Custom/Yamato_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jodi_Beach",
+			"FromFile": "assets/Characters/Yamato_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jodi_Beach",
+			"FromFile": "assets/Portraits/Custom/Yamato_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Jodi",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Jodi",
+		//	"FromFile": "assets/Characters/Yamato.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Jodi",
+		//	"FromFile": "assets/Characters/Yamato.png"
 		//},
 	]
 

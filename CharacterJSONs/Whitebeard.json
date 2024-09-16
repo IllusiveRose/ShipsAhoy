@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Lewis",
+		//	"FromFile": "assets/Characters/Whitebeard.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Lewis",
+			"FromFile": "assets/Characters/Whitebeard.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Lewis",
 			"FromFile": "assets/Portraits/Custom/Whitebeard.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Lewis_Winter",
+			"FromFile": "assets/Characters/Whitebeard_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lewis_Winter",
+			"FromFile": "assets/Portraits/Custom/Whitebeard_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Lewis_Beach",
+			"FromFile": "assets/Characters/Whitebeard_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Lewis_Beach",
+			"FromFile": "assets/Portraits/Custom/Whitebeard_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Lewis",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Lewis",
+		//	"FromFile": "assets/Characters/Whitebeard.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Lewis",
+		//	"FromFile": "assets/Characters/Whitebeard.png"
 		//},
 	]
 

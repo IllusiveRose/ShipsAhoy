@@ -1,19 +1,45 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Kent",
+		//	"FromFile": "assets/Characters/Sabo.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Kent",
+			"FromFile": "assets/Characters/Sabo.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Kent",
 			"FromFile": "assets/Portraits/Custom/Sabo.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Kent_Winter",
+			"FromFile": "assets/Characters/Sabo_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kent_Winter",
+			"FromFile": "assets/Portraits/Custom/Sabo_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Kent_Beach",
+			"FromFile": "assets/Characters/Sabo_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Kent_Beach",
+			"FromFile": "assets/Portraits/Custom/Sabo_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Kent",
 		//	"Entries": {}
 
 		//}
@@ -21,13 +47,13 @@
 
 		//{
 		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Kent",
+		//	"FromFile": "assets/Characters/Sabo.png"
 		//},
 		//{
 		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Portraits/Kent",
+		//	"FromFile": "assets/Characters/Sabo.png"
 		//},
 	]
 

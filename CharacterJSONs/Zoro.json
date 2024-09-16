@@ -1,34 +1,50 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
+		//	"Target": "Characters/Haley",
+		//	"FromFile": "assets/Characters/Zoro.png"
 		//},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Haley",
+			"FromFile": "assets/Characters/Zoro.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Haley",
 			"FromFile": "assets/Portraits/Custom/Zoro.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Haley_Winter",
+			"FromFile": "assets/Characters/Zoro_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Haley_Winter",
+			"FromFile": "assets/Portraits/Custom/Zoro_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Haley_Beach",
+			"FromFile": "assets/Characters/Zoro_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Haley_Beach",
+			"FromFile": "assets/Portraits/Custom/Zoro_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
+		//	"Target": "Characters/schedules/Haley",
 		//	"Entries": {}
 
 		//}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
 	]
 
 }
