@@ -1,7 +1,7 @@
 {
   "Changes": [
-    
-   
+
+
     {
       "Action": "EditImage",
       "Target": "Characters/Evelyn",
@@ -11,6 +11,27 @@
       "Action": "EditImage",
       "Target": "Portraits/Evelyn",
       "FromFile": "assets/Portraits/Custom/Penguin.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Evelyn_Winter",
+      "FromFile": "assets/Characters/Penguin_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Evelyn_Winter",
+      "FromFile": "assets/Portraits/Custom/Penguin_Winter.png"
+    },
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Evelyn_Beach",
+      "FromFile": "assets/Characters/Penguin_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Evelyn_Beach",
+      "FromFile": "assets/Portraits/Custom/Penguin_Beach.png"
     },
     {
       "Action": "EditData",

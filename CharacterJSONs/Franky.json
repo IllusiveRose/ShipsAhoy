@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
 		{
 			"Action": "EditImage",
-			"Target": "Portraits/Penny",
-			"FromFile": "assets/Portraits/Custom/Nami.png"
+			"Target": "Characters/Robin",
+			"FromFile": "assets/Characters/Franky.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Robin",
+			"FromFile": "assets/Portraits/Custom/Franky.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Robin_Winter",
+			"FromFile": "assets/Characters/Franky_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Robin_Winter",
+			"FromFile": "assets/Portraits/Custom/Franky_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Robin_Beach",
+			"FromFile": "assets/Characters/Franky_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Robin_Beach",
+			"FromFile": "assets/Portraits/Custom/Franky_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

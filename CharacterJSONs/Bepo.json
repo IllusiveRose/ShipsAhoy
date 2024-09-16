@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Alex",
+			"FromFile": "assets/Characters/Bepo.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Alex",
 			"FromFile": "assets/Portraits/Custom/Bepo.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Alex_Winter",
+			"FromFile": "assets/Characters/Bepo_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Alex_Winter",
+			"FromFile": "assets/Portraits/Custom/Bepo_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Alex_Beach",
+			"FromFile": "assets/Characters/Bepo_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Alex_Beach",
+			"FromFile": "assets/Portraits/Custom/Bepo_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

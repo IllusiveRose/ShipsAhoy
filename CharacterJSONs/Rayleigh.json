@@ -1,6 +1,6 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
 		//	"Target": "Characters/Penny",
@@ -8,9 +8,35 @@
 		//},
 		{
 			"Action": "EditImage",
+			"Target": "Characters/Caroline",
+			"FromFile": "assets/Characters/Rayleigh.png"
+		},
+		{
+			"Action": "EditImage",
 			"Target": "Portraits/Caroline",
 			"FromFile": "assets/Portraits/Custom/Rayleigh.png"
-		}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Caroline_Winter",
+			"FromFile": "assets/Characters/Rayleigh_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Winter",
+			"FromFile": "assets/Portraits/Custom/Rayleigh_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Caroline_Beach",
+			"FromFile": "assets/Characters/Rayleigh_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Caroline_Beach",
+			"FromFile": "assets/Portraits/Custom/Rayleigh_Beach.png"
+		},
 		//{
 		//	"Action": "EditData",
 		//	"Target": "Characters/schedules/Penny",
@@ -19,16 +45,109 @@
 		//}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+		{
+			"Action": "EditData",
+			"Target": "Data/Characters",
+			"Entries": {
+
+				"Caroline": {
+					"DisplayName": "Rayleigh",
+					"BirthSeason": "Spring",
+					"BirthDay": 13,
+					"HomeRegion": "Town",
+					"Language": "Default",
+					"Gender": "Male",
+					"Age": "Adult",
+					"Manner": "Rude",
+					"SocialAnxiety": "Outgoing",
+					"Optimism": "Positive",
+					"IsDarkSkinned": false,
+					"CanBeRomanced": true,
+					"LoveInterest": "Shakky",
+					"Calendar": "AlwaysShown",
+					"SocialTab": "UnknownUntilMet",
+					"CanSocialize": null,
+					"CanReceiveGifts": true,
+					"CanGreetNearbyCharacters": true,
+					"CanCommentOnPurchasedShopItems": null,
+					"CanVisitIsland": null,
+					"IntroductionsQuest": null,
+					"ItemDeliveryQuests": null,
+					"PerfectionScore": true,
+					"EndSlideShow": "MainGroup",
+					"SpouseAdopts": null,
+					"SpouseWantsChildren": null,
+					"SpouseGiftJealousy": null,
+					"SpouseGiftJealousyFriendshipChange": -30,
+					"SpouseRoom": null,
+					"SpousePatio": null,
+					"SpouseFloors": [],
+					"SpouseWallpapers": [],
+					"DumpsterDiveFriendshipEffect": -25,
+					"DumpsterDiveEmote": null,
+					"FriendsAndFamily": {
+						"Pierre": "[LocalizedText Strings\\Characters:Relative_Husband]",
+						"Abigail": ""
+					},
+					"FlowerDanceCanDance": null,
+					"WinterStarGifts": [],
+					"WinterStarParticipant": null,
+					"UnlockConditions": null,
+					"SpawnIfMissing": true,
+					"Home": [
+						{
+							"Id": "Default",
+							"Condition": null,
+							"Location": "SeedShop",
+							"Tile": {
+								"X": 22,
+								"Y": 5
+							},
+							"Direction": "down"
+						}
+					],
+					"TextureName": null,
+					"Appearance": [
+						{
+							"Id": "Winter",
+							"Condition": null,
+							"Season": "Winter",
+							"Indoors": true,
+							"Outdoors": true,
+							"Portrait": "Portraits/Caroline_Winter",
+							"Sprite": "Characters/Caroline_Winter",
+							"IsIslandAttire": false,
+							"Precedence": -100,
+							"Weight": 0
+						}
+					],
+					"MugShotSourceRect": null,
+					"Size": {
+						"X": 16,
+						"Y": 32
+					},
+					"Breather": true,
+					"BreathChestRect": null,
+					"BreathChestPosition": null,
+					"Shadow": null,
+					"EmoteOffset": {
+						"X": 0,
+						"Y": 0
+					},
+					"ShakePortraits": [],
+					"KissSpriteIndex": 28,
+					"KissSpriteFacingRight": true,
+					"HiddenProfileEmoteSound": null,
+					"HiddenProfileEmoteDuration": -1,
+					"HiddenProfileEmoteStartFrame": 19,
+					"HiddenProfileEmoteFrameCount": 1,
+					"HiddenProfileEmoteFrameDuration": 200.0,
+					"FormerCharacterNames": [],
+					"FestivalVanillaActorIndex": 1,
+					"CustomFields": null
+				}
+			}
+		}
 	]
 
 }

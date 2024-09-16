@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jas",
+			"FromFile": "assets/Characters/Bonney.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Jas",
 			"FromFile": "assets/Portraits/Custom/Bonney.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jas_Winter",
+			"FromFile": "assets/Characters/Bonney_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jas_Winter",
+			"FromFile": "assets/Portraits/Custom/Bonney_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Jas_Beach",
+			"FromFile": "assets/Characters/Bonney_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Jas_Beach",
+			"FromFile": "assets/Portraits/Custom/Bonney_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

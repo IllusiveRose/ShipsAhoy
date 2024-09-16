@@ -64,7 +64,7 @@
     {
       "Action": "EditMap",
       "Target": "Maps/ElliottHouse",
-      "FromFile": "assets/Maps/ElliottHouse.tmx",
+      "FromFile": "assets/Maps/PuddingShop.tmx",
       "MapProperties": {
         "DayTiles": "Front 6 1 469 Front 6 2 501 Front 11 1 469 Front 11 2 501 Back 6 4 35 Back 11 4 35",
         "NightTiles": "Front 6 1 1219 Front 6 2 1251 Front 11 1 1219 Front 11 2 1251 Back 6 4 52 Back 11 4 52",
@@ -78,17 +78,21 @@
           },
           "Layer": "Buildings",
           "SetProperties": {
-            "Action": "OpenShop {{ModId}}_Pudding down 1000 1500 1 4 13 5"
+            "Action": "OpenShop {{ModId}}_Pudding down 900 1700 1 4 13 5"
           }
         }
-      ]
+      ],
+      "When": {
+        "HasFlag": "CHARLOTTE"
+      }
     },
     //Stolen Item Mail flag
     {
       "Action": "EditData",
       "Target": "Data/Mail",
       "Entries": {
-        "STOLEN": ""
+        "STOLEN": "",
+        "CACAO": ""
       }
     },
 
@@ -295,16 +299,98 @@
         "HasFlag": "ccMovieTheater, ccMovieTheaterJoja"
       }
     },
+
+    //Add special orders to start store
+    {
+      "Action": "EditData",
+      "Target": "Data/SpecialOrders",
+      "Entries": {
+        "{{ModId}}_Pudding": {
+          "Name": "Pudding's Cacao Pods",
+          "Requester": "Elliot",
+          "Duration": "Month",
+          "Repeatable": true,
+          "RequiredTags": "CACAO",
+          "Condition": "",
+          "OrderType": "",
+          "SpecialRule": "",
+          "Text": "Pudding needs 10 cacao pods for a special project.",
+          "ItemToRemoveOnEnd": null,
+          "MailToRemoveOnEnd": "CACAO",
+          "RandomizedElements": null,
+          "Objectives": [
+            {
+              "Type": "Collect",
+              "Text": "Collect 10 cacao pods.",
+              "RequiredCount": "10",
+              "Data": {
+                "AcceptedContextTags": "item_cacao"
+              }
+            },
+            {
+              "Type": "Deliver",
+              "Text": "Give Pudding 10 cacao pods.",
+              "RequiredCount": "10",
+              "Data": {
+                "TargetName": "Elliot",
+                "AcceptedContextTags": "item_cacao"
+              }
+            }
+          ],
+          "Rewards": [
+            {
+              "Type": "Money",
+              "Data": {
+                "Amount": "3000"
+              }
+            },
+            {
+              "Type": "Mail",
+              "Data": {
+                "MailReceived": "CHARLOTTE",
+                "Host": "true",
+                "NoLetter": "false"
+              }
+            }
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+
     //add mail about store openings
 
+    {
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "FOODTRUCK": "Come buy our stuff! It's awesome!^^^ - Shachi & Penguin ^ P.S. We're talking about the foodtruck next to the blacksmith's. You can't miss it!",
+        "CHARLOTTE": "Dear @,^^ Please join us for the grand opening of Charlotte Chocolat in the cottage by the sea, Stardew Valley's first chocolatier! Store hours are from 9am to 5pm. Please enjoy this free sample! ^^ Sincerely yours, Pudding %item id (O)ShipsAhoy_Chocolate 1 %%[#] Pudding Store Opening"
+      }
+    },
 
-
-    //Food truck event where everyone in town is complaining about missing items. Nami wants her cut of the money.
+    //Food truck event where everyone in town is complaining about missing items. Nami wants her cut of the money.This event needs some choreographing and writing out normally to make it make sense.
     {
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 / faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / pause 1000 emote farmer 16 / speak Lewis \"Nice try. #$b# @ is a pillar of this community.\"/ pause 500 / speak Penny \"Don't think you're getting out of this without paying my cut plus interest. $5 #$b# Hand over the books... $3\"/ pause 1000 / speak Penny \"I'm going to be so rich!$6\"/ pause 500 end"
+        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"Nice try. #$b# @ is a pillar of this community.\"/ pause 500 / faceDirection Sebastian 1 / faceDirection Demetrius 1 / faceDirection Lewis 3 / faceDirection Penny 0 / faceDirection Harvey 0 / faceDirection Maru 1 / endSimultaneousCommand / speak Penny \"Don't think you're getting out of this without paying my cut plus interest. $5 #$b# Hand over the books... $3\"/ pause 1000 / emote Penny 16 / speak Penny \"I'm going to be so rich!$6\"/ pause 500 end"
+      },
+      "When": {
+        "HasFlag": "ccMovieTheater"
+      }
+
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Town",
+      "Entries": {
+        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"I should have known. You've been playing into Blackbeard's hands since the beginning, @.\"/ pause 500 /  speak Penny \"Don't think you're getting out of this without paying me back, @ $5\"/ pause 500 / end"
+      },
+      "When": {
+        "HasFlag": "ccMovieTheaterJoja"
       }
 
     }

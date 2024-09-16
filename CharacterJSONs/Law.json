@@ -1,6 +1,6 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
 		//	"Target": "Characters/Penny",
@@ -8,8 +8,34 @@
 		//},
 		{
 			"Action": "EditImage",
-			"Target": "Portraits/Robin",
-			"FromFile": "assets/Portraits/Custom/Franky.png"
+			"Target": "Characters/Harvey",
+			"FromFile": "assets/Characters/Law.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Harvey",
+			"FromFile": "assets/Portraits/Custom/Law.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Harvey_Winter",
+			"FromFile": "assets/Characters/Law_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Harvey_Winter",
+			"FromFile": "assets/Portraits/Custom/Law_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Harvey_Beach",
+			"FromFile": "assets/Characters/Law_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Harvey_Beach",
+			"FromFile": "assets/Portraits/Custom/Law_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

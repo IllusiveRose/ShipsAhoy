@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Linus",
+			"FromFile": "assets/Characters/Bartolomeo.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Linus",
 			"FromFile": "assets/Portraits/Custom/Bartolomeo.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Linus_Winter",
+			"FromFile": "assets/Characters/Bartolomeo_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Linus_Winter",
+			"FromFile": "assets/Portraits/Custom/Bartolomeo_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Linus_Beach",
+			"FromFile": "assets/Characters/Bartolomeo_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Linus_Beach",
+			"FromFile": "assets/Portraits/Custom/Bartolomeo_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sam",
+			"FromFile": "assets/Characters/Ace.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sam",
 			"FromFile": "assets/Portraits/Custom/Ace.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sam_Winter",
+			"FromFile": "assets/Characters/Ace_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Sam_Winter",
+			"FromFile": "assets/Portraits/Custom/Ace_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Sam_Beach",
+			"FromFile": "assets/Characters/Ace_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Sam_Beach",
+			"FromFile": "assets/Portraits/Custom/Ace_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

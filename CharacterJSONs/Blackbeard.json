@@ -1,15 +1,36 @@
 {
 	"Changes": [
-		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Morris",
+			"FromFile": "assets/Characters/Blackbeard.png"
+		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Morris",
 			"FromFile": "assets/Portraits/Custom/Blackbeard.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Morris_Winter",
+			"FromFile": "assets/Characters/Blackbeard_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Morris_Winter",
+			"FromFile": "assets/Portraits/Custom/Blackbeard_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Morris_Beach",
+			"FromFile": "assets/Characters/Blackbeard_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Morris_Beach",
+			"FromFile": "assets/Portraits/Custom/Blackbeard_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

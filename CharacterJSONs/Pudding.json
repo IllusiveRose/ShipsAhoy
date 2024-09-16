@@ -1,16 +1,50 @@
 {
   "Changes": [
-    
-      {
-        "Action": "EditImage",
-        "Target": "Characters/Elliott",
-        "FromFile": "assets/Characters/Pudding.png"
-      },
-      {
-        "Action": "EditImage",
-        "Target": "Portraits/Elliott",
-        "FromFile": "assets/Portraits/Custom/Pudding.png"
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Elliott",
+      "FromFile": "assets/Characters/Pudding.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Elliott",
+      "FromFile": "assets/Portraits/Custom/Pudding.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Elliott_Winter",
+      "FromFile": "assets/Characters/Pudding_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Elliott_Winter",
+      "FromFile": "assets/Portraits/Custom/Pudding_Winter.png"
+    },
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Elliott_Beach",
+      "FromFile": "assets/Characters/Pudding_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Elliott_Beach",
+      "FromFile": "assets/Portraits/Custom/Pudding_Beach.png"
+    },
+
+    //Map
+    {
+      "Action": "EditMap",
+      "Target": "Maps/ElliottHouse",
+      "FromFile": "assets/Maps/PuddingHouse.tmx",
+      "MapProperties": {
+        "DayTiles": "Front 6 1 469 Front 6 2 501 Front 11 1 469 Front 11 2 501 Back 6 4 35 Back 11 4 35",
+        "NightTiles": "Front 6 1 1219 Front 6 2 1251 Front 11 1 1219 Front 11 2 1251 Back 6 4 52 Back 11 4 52",
+        "Light": "1 7 4 14 3 4"
+
       }
-    
+    }
+
   ]
 }

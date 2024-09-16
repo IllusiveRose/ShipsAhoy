@@ -1,6 +1,6 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
 		//	"Target": "Characters/Penny",
@@ -8,8 +8,34 @@
 		//},
 		{
 			"Action": "EditImage",
+			"Target": "Characters/Penny",
+			"FromFile": "assets/Characters/Nami.png"
+		},
+		{
+			"Action": "EditImage",
 			"Target": "Portraits/Penny",
 			"FromFile": "assets/Portraits/Custom/Nami.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Penny_Winter",
+			"FromFile": "assets/Characters/Nami_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Penny_Winter",
+			"FromFile": "assets/Portraits/Custom/Nami_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Penny_Beach",
+			"FromFile": "assets/Characters/Nami_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Penny_Beach",
+			"FromFile": "assets/Portraits/Custom/Nami_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

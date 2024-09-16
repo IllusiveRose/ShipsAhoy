@@ -1,6 +1,6 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
 		//	"Target": "Characters/Penny",
@@ -8,8 +8,34 @@
 		//},
 		{
 			"Action": "EditImage",
+			"Target": "Characters/Marnie",
+			"FromFile": "assets/Characters/Kuma.png"
+		},
+		{
+			"Action": "EditImage",
 			"Target": "Portraits/Marnie",
 			"FromFile": "assets/Portraits/Custom/Kuma.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Marnie_Winter",
+			"FromFile": "assets/Characters/Kuma_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Marnie_Winter",
+			"FromFile": "assets/Portraits/Custom/Kuma_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Marnie_Beach",
+			"FromFile": "assets/Characters/Kuma_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Marnie_Beach",
+			"FromFile": "assets/Portraits/Custom/Kuma_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

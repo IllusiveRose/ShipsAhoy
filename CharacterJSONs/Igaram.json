@@ -10,6 +10,11 @@
 			"Action": "EditImage",
 			"Target": "Portraits/Bouncer",
 			"FromFile": "assets/Portraits/Custom/Igaram.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Bouncer",
+			"FromFile": "assets/Characters/Igaram.png"
 		}
 		//{
 		//	"Action": "EditData",

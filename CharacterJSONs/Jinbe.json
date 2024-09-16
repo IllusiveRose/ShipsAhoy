@@ -1,6 +1,6 @@
 {
 	"Changes": [
-		
+
 		//{
 		//	"Action": "EditImage",
 		//	"Target": "Characters/Penny",
@@ -8,8 +8,34 @@
 		//},
 		{
 			"Action": "EditImage",
+			"Target": "Characters/Willy",
+			"FromFile": "assets/Characters/Jinbe.png"
+		},
+		{
+			"Action": "EditImage",
 			"Target": "Portraits/Willy",
 			"FromFile": "assets/Portraits/Custom/Jinbe.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Willy_Winter",
+			"FromFile": "assets/Characters/Jinbe_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Willy_Winter",
+			"FromFile": "assets/Portraits/Custom/Jinbe_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Willy_Beach",
+			"FromFile": "assets/Characters/Jinbe_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Willy_Beach",
+			"FromFile": "assets/Portraits/Custom/Jinbe_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

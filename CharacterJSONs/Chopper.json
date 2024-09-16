@@ -1,15 +1,15 @@
 {
 	"Changes": [
 		
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
 		{
 			"Action": "EditImage",
-			"Target": "Portraits/Gunther",
-			"FromFile": "assets/Portraits/Custom/Brook.png"
+			"Target": "Characters/Krobus",
+			"FromFile": "assets/Characters/Chopper.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Krobus",
+			"FromFile": "assets/Portraits/Custom/Chopper.png"
 		}
 		//{
 		//	"Action": "EditData",

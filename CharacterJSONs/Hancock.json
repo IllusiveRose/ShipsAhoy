@@ -1,6 +1,38 @@
 {
 	"Changes": [
 		{
+			"Action": "EditImage",
+			"Target": "Characters/Shane",
+			"FromFile": "assets/Characters/Hancock.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Shane",
+			"FromFile": "assets/Portraits/Custom/Hancock.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Shane_Winter",
+			"FromFile": "assets/Characters/Hancock_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Shane_Winter",
+			"FromFile": "assets/Portraits/Custom/Hancock_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Shane_Beach",
+			"FromFile": "assets/Characters/Hancock_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Shane_Beach",
+			"FromFile": "assets/Portraits/Custom/Hancock_Beach.png"
+		},
+
+		{
 			"Action": "EditMap",
 			"Target": "Maps/SeedShop",
 			"MapTiles": [
@@ -144,8 +176,8 @@
 							"Season": "Winter",
 							"Indoors": true,
 							"Outdoors": true,
-							"Portrait": "Portraits/Abigail_Winter",
-							"Sprite": "Characters/Abigail_Winter",
+							"Portrait": "Portraits/Shane_Winter",
+							"Sprite": "Characters/Shane_Winter",
 							"IsIslandAttire": false,
 							"Precedence": -100,
 							"Weight": 0
@@ -180,16 +212,7 @@
 				}
 			}
 		},
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Shane",
-			"FromFile": "assets/Characters/Hancock.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Shane",
-			"FromFile": "assets/Portraits/Custom/Hancock.png"
-		},
+
 		{
 			"Action": "EditData",
 			"Target": "Characters/schedules/Shane",
