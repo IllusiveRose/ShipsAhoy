@@ -3,7 +3,7 @@
   "Changes": [
     {
       "Action": "Include",
-      "FromFile": "Maps.json"
+      "FromFile": "HouseMaps.json"
     },
     {
       "Action": "Include",

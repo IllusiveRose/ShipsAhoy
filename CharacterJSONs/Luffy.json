@@ -3,6 +3,59 @@
 //(List below with sample code).
 {
   "Changes": [
+
+
+    //Sprites
+    //https://stardewvalleywiki.com/Modding:NPC_data#Overworld_sprites ; https://stardewmodding.wiki.gg/wiki/Tutorial:_Adding_Seasonal_Outfits_via_Appearances
+
+
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Sebastian",
+      "FromFile": "assets/Characters/Luffy.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Sebastian",
+      "FromFile": "assets/Portraits/Custom/Luffy.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Sebastian_Winter",
+      "FromFile": "assets/Characters/Luffy_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Sebastian_Winter",
+      "FromFile": "assets/Portraits/Custom/Luffy_Winter.png"
+    },
+
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Sebastian_Beach",
+      "FromFile": "assets/Characters/Luffy_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Sebastian_Beach",
+      "FromFile": "assets/Portraits/Custom/Luffy_Beach.png"
+    },
+    //Adds hat/no hat mechanism
+    {
+      "Action": "Load",
+      "Target": "Characters/Sebastian_hat",
+      "FromFile": "assets/Characters/Luffy_hat.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Sebastian_hat",
+      "FromFile": "assets/Portraits/Custom/Luffy_hat.png"
+
+    },
+
+    // Character Data Entry
+
     {
       "Logname": "Luffy Character Data",
       "Action": "EditData",
@@ -144,8 +197,8 @@
           "DumpsterDiveFriendshipEffect": -25,
           "DumpsterDiveEmote": null,
           "FriendsAndFamily": {
-            "Robin": "[LocalizedText Strings\\Characters:Relative_Mom]",
-            "Maru": "[LocalizedText Strings\\Characters:Relative_HalfSister]",
+            "Robin": "[LocalizedText Strings\\Characters:Roommate]",
+            "Maru": "[LocalizedText Strings\\Characters:Roommate]",
             "Sam": ""
           },
           "FlowerDanceCanDance": null,
@@ -173,8 +226,8 @@
               "Season": "Winter",
               "Indoors": false,
               "Outdoors": true,
-              "Portrait": "Portraits/{{ModId}}_Luffyhat",
-              "Sprite": "Characters/{{ModId}}_Luffyhat",
+              "Portrait": "Portraits/Sebastian_Winter",
+              "Sprite": "Characters/Sebastian_Winter",
               "IsIslandAttire": false,
               "Precedence": -1000,
               "Weight": 0
@@ -185,10 +238,10 @@
               "Season": "Summer",
               "Indoors": false,
               "Outdoors": true,
-              "Portrait": "Portraits/{{ModId}}_Luffyhat",
-              "Sprite": "Characters/{{ModId}}_Luffyhat",
+              "Portrait": "Portraits/Sebastian_hat",
+              "Sprite": "Characters/Sebastian_hat",
+              "Weather": "Sun, Rain, Storm, GreenRain",
               "IsIslandAttire": false,
-              "Weather": "Sun, Storm, Rain, GreenRain",
               "Precedence": -1000,
               "Weight": 0
             },
@@ -198,10 +251,23 @@
               "Season": "Spring",
               "Indoors": false,
               "Outdoors": true,
-              "Portrait": "Portraits/{{ModId}}_Luffyhat",
-              "Sprite": "Characters/{{ModId}}_Luffyhat",
+              "Portrait": "Portraits/Sebastian_hat",
+              "Sprite": "Characters/Sebastian_hat",
+              "Weather": "Rain, Storm, GreenRain",
               "IsIslandAttire": true,
-              "Weather": "Storm, Rain, GreenRain",
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "Fall",
+              "Condition": null,
+              "Season": "Fall",
+              "Indoors": false,
+              "Outdoors": true,
+              "Portrait": "Portraits/Sebastian_hat",
+              "Sprite": "Characters/Sebastian_hat",
+              "Weather": "Rain, Storm, GreenRain",
+              "IsIslandAttire": false,
               "Precedence": -1000,
               "Weight": 0
             }
@@ -232,37 +298,6 @@
           "CustomFields": null
         }
       }
-    },
-
-    //Sprites
-    //https://stardewvalleywiki.com/Modding:NPC_data#Overworld_sprites ; https://stardewmodding.wiki.gg/wiki/Tutorial:_Adding_Seasonal_Outfits_via_Appearances
-
-
-
-    {
-      "Action": "Load",
-      "Target": "Characters/Sebastian",
-      "FromFile": "assets/Characters/Luffy_nohat.png"
-    },
-
-
-    {
-      "Action": "Load",
-      "Target": "Portraits/Sebastian",
-      "FromFile": "assets/Portraits/Custom/Luffy_nohat.png"
-
-    },
-    //Adds hat/no hat mechanism
-    {
-      "Action": "Load",
-      "Target": "Mods/{{ModId}}/Characters",
-      "FromFile": "assets/Characters/Luffy.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/{{ModId}}_Luffyhat",
-      "FromFile": "assets/Portraits/Custom/Luffy.png"
-
     },
 
     //Portraits

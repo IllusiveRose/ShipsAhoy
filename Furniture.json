@@ -14,7 +14,9 @@
         "{{ModId}}_LuffyF": "{{ModId}}_LuffyF/painting/3 2/-1/1/1000/2/Luffy's Flag/68/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
         "{{ModId}}_AceF": "{{ModId}}_AceF/painting/2 2/-1/1/1000/2/Ace's Flag/71/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
         "{{ModId}}_ShirahoshiF": "{{ModId}}_ShirahoshiF/bed/3 4/3 3/1/1000/-1/Shirahoshi's Bed/8/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
-        "{{ModId}}_LawF": "{{ModId}}_LawF/painting/2 3/2 3/1/1000/2/Law's Sora Poster/73/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems"
+        "{{ModId}}_LawF": "{{ModId}}_LawF/painting/2 3/2 3/1/1000/2/Law's Sora Poster/73/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems",
+        "{{ModId}}_PeronaF": "{{ModId}}_PeronaF/decor/2 3/2 1/1/1000/2/Perona's Bear/98/Mods\\{{ModId}}\\Furniture/true/collection_stolenitems"
+
 
       }
     },

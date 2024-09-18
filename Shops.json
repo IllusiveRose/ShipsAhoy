@@ -192,6 +192,13 @@
               "AvailableStockLimit": "Player",
               "Condition": "PLAYER_HEARTS Current Harvey 6"
             },
+            {
+              "Id": "{{ModId}}_LeahF",
+              "ItemId": "{{ModId}}_LeahF",
+              "AvailableStock": 1,
+              "AvailableStockLimit": "Player",
+              "Condition": "PLAYER_HEARTS Current Leah 6"
+            },
 
             {
               "Id": "{{ModId}}_LuffyF",
