@@ -53,8 +53,38 @@
       "FromFile": "assets/Portraits/Custom/Luffy_hat.png"
 
     },
+    {
+      "Action": "Load",
+      "Target": "Characters/Sebastian1",
+      "FromFile": "assets/Characters/Luffy1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Sebastian1",
+      "FromFile": "assets/Portraits/Custom/Luffy1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Sebastian2",
+      "FromFile": "assets/Characters/Luffy2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Sebastian1",
+      "FromFile": "assets/Portraits/Custom/Luffy1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Sebastian_Winter1",
+      "FromFile": "assets/Characters/Luffy_Winter1.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Portraits/Sebastian_Winter1",
+      "FromFile": "assets/Portraits/Custom/Luffy_Winter1.png"
+    },
 
-    // Character Data Entry
+    // Character Data Entry  - clothing change isn't quite working yet, tried changing precedence but I need to look that up
 
     {
       "Logname": "Luffy Character Data",
@@ -259,7 +289,20 @@
               "Weight": 0
             },
             {
-              "Id": "Fall",
+              "Id": "SpringSun",
+              "Condition": null,
+              "Season": "Spring",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Sebastian1",
+              "Sprite": "Characters/Sebastian1",
+              "Weather": "Sun, Wind",
+              "IsIslandAttire": true,
+              "Precedence": 1000,
+              "Weight": 0
+            },
+            {
+              "Id": "FallRain",
               "Condition": null,
               "Season": "Fall",
               "Indoors": false,
@@ -267,6 +310,31 @@
               "Portrait": "Portraits/Sebastian_hat",
               "Sprite": "Characters/Sebastian_hat",
               "Weather": "Rain, Storm, GreenRain",
+              "IsIslandAttire": false,
+              "Precedence": -1000,
+              "Weight": 0
+            },
+            {
+              "Id": "Fall",
+              "Condition": null,
+              "Season": "Fall",
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Sebastian2",
+              "Sprite": "Characters/Sebastian2",
+              "Weather": "Sun, Wind",
+              "IsIslandAttire": false,
+              "Precedence": 1000,
+              "Weight": 0
+            },
+            {
+              "Id": "WinterIndoor",
+              "Condition": null,
+              "Season": "Winter",
+              "Indoors": true,
+              "Outdoors": false,
+              "Portrait": "Portraits/Sebastian1",
+              "Sprite": "Characters/Sebastian1",
               "IsIslandAttire": false,
               "Precedence": -1000,
               "Weight": 0
@@ -340,6 +408,8 @@
         "NightTiles": "Back3 1 10 827"
       }
     },
+
+    //Make sure all this only applies if dating
     {
       "Action": "EditMap",
       "Target": "Maps/SebastianRoom",
@@ -359,7 +429,10 @@
             "TouchAction": "Sleep"
           }
         }
-      ]
+      ],
+      "When": {
+        "Relationship": "Current Sebastian dating"
+      }
     },
     // {
     //    "Action": "EditData",
@@ -407,6 +480,9 @@
         "00001/D Sebastian/t 2200 2600/p Sebastian/d Tue Fri Sat Sun": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00001 false / skippable / pause 500/ speak Sebastian \"Oh hey, @! You're just in time to play Pirate King!$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
         "00002/D Sebastian/t 2200 2600/p Sebastian/d Wed Thu Mon": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00002 false / skippable / pause 500/ speak Sebastian \"Hi @! What movie do you want to watch? Tonight I was thinking...$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
         "Yes": "pause 500 / emote Sebastian 32 / speak Sebastian \"Cool! You can't snuggle Kabutonosuke though. $4#$b# He's mine.$6\"/ move Sebastian 3 0 3/ move farmer 3 0 3/ end newDay"
+      },
+      "When": {
+        "Relationship": "Current Sebastian dating"
       }
     },
 

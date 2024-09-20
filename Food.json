@@ -7,1067 +7,1592 @@
       "FromFile": "assets/{{TargetWithoutPath}}.png" // assets/FruitTrees.png, assets/Objects.png
     },
 
-        //Add a new item to the game
+    //Add a new item to the game
 
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_BoarMeat": {
-              "Name": "{{ModId}}_BoarMeat",
-              "DisplayName": "Boar Meat",
-              "Description": "A big juicy cut of meat, still on the bone.",
-              "Type": "Basic",
-              "Category": -28,
-              "Price": 200,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 7,
-              "Edibility": 80,
-              "IsDrink": false,
-              "Buffs": null,
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": true,
-              "ContextTags": [
-                "color_red",
-                "category_fish"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Drumstick": {
-              "Name": "{{ModId}}_Drumstick",
-              "DisplayName": "Drumstick",
-              "Description": "A lighter type of meat, not to be eaten raw.",
-              "Type": "Basic",
-              "Category": -28,
-              "Price": 30,
-              "Texture": null,
-              "SpriteIndex": "643",
-              "Edibility": -10,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": "Nauseous",
-                  "IconTexture": null,
-                  "IconSpriteIndex": 25,
-                  "Duration": 1200,
-                  "IsDebuff": true,
-                  "GlowColor": "Green",
-                  "CustomAttributes": null,
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": true,
-              "ContextTags": [
-                "color_pink",
-                "fish_item",
-                "category_fish"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Poultry": {
-              "Name": "{{ModId}}_Poultry",
-              "DisplayName": "Poultry",
-              "Description": "A whole bird, excellent for smoking! Do not consume raw.",
-              "Type": "Basic",
-              "Category": -28,
-              "Price": 50,
-              "Texture": null,
-              "SpriteIndex": "620",
-              "Edibility": 90,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": "Nauseous",
-                  "IconTexture": null,
-                  "IconSpriteIndex": 25,
-                  "Duration": 1200,
-                  "IsDebuff": true,
-                  "GlowColor": "Green",
-                  "CustomAttributes": null,
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": true,
-              "ContextTags": [
-                "color_pink",
-                "category_fish"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-
-        //Changing the ingredients and conditions for obtaining a recipe
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Paella": "720 1 719 1 423 1 256 1/1 10/{{ModId}}_Paella/f Emily 7/"
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_PirateBento": "{{ModId}}_BoarMeat {{ModId}}_Poultry/1 10/{{ModId}}_PirateBento/f Sebastian 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Ramen": "246 1 174 1 {{ModId}}_BoarMeat 1/5 4/{{ModId}}_Ramen/f Kent 4/"
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_CoconutShrimp": "720 1 88 1 256 1 16 1/5 4/{{ModId}}_CoconutShrimp/f Leo 4/"
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Croquetas": "{{ModId}}_BoarMeat 1 -5 1 -6 1 246 1/5 4/{{ModId}}_Croquetas/f Marnie 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_SalmonOnigiri": "423 1 152 1 139 1/5 4/{{ModId}}_SalmonOnigiri/f Harvey 4/"
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_HeartShavedIce": "245 1 829 1 597 1/5 4/{{ModId}}_HeartShavedIce/f Alex 4/"
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Chili": "{{ModId}}_Poultry 1 256 1 248 1 260 1/5 4/{{ModId}}_Chili/f George 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Cheeseburger": "{{ModId}}_BoarMeat 1 216 1 424 1/5 4/{{ModId}}_Cheeseburger/f Robin 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Sandwich": "{{ModId}}_Poultry 1 216 1 256 1/5 4/{{ModId}}_Sandwich/f Demetrius 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Torikatsu": "{{ModId}}_Poultry 1 246 1 -5 1 /5 4/{{ModId}}_Torikatsu/f Linus 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_SakuraCottonCandy": "245 1 {{ModId}}_CherryBlossom/5 4/{{ModId}}_SakuraCottonCandy/f Krobus 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_Chocolate": "245 1 {{ModId}}_CacaoPod 1 -6 1 /5 4/{{ModId}}_Chocolate/f Pam 4/"
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/CookingRecipes",
-          "Entries": {
-            "{{ModId}}_HarvestCider": "613 1 340 1 829 1 /5 4/{{ModId}}_HarvestCider/f Maru 4/"
-          }
-        },
-
-        //add dishes
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_PirateBento": {
-              "Name": "{{ModId}}_PirateBento",
-              "DisplayName": "Pirate Bento",
-              "Description": "An excellent dish to store in your pockets for adventuring!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 600,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 6,
-              "Edibility": 140,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 0.0,
-                    "Attack": 1.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Ramen": {
-              "Name": "{{ModId}}_Ramen",
-              "DisplayName": "Ramen",
-              "Description": "A popular noodle dish covered with your favorite toppings!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 3,
-              "Edibility": 140,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 1.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Paella": {
-              "Name": "{{ModId}}_Paella",
-              "DisplayName": "Paella",
-              "Description": "An exquisite, world famous seafood dish!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 1000,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 10,
-              "Edibility": 240,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 2.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 1.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 0.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 0.0,
-                    "Attack": 1.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_yellow",
-                "food_seafood"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Chili": {
-              "Name": "{{ModId}}_Chili",
-              "DisplayName": "Chili",
-              "Description": "A hearty, meaty dish and Una's personal favorite.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": null,
-              "SpriteIndex": 662,
-              "Edibility": 240,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 0.0,
-                    "Attack": 1.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_CoconutShrimp": {
-              "Name": "{{ModId}}_CoconutShrimp",
-              "DisplayName": "Coconut Shrimp",
-              "Description": "Crunchy shrimp with a spicy dipping sauce, Rose's favorite!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 600,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 0,
-              "Edibility": 240,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 1.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 0.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 1.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_seafood"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_HeartShavedIce": {
-              "Name": "{{ModId}}_HeartShavedIce",
-              "DisplayName": "Heart Shaved Ice",
-              "Description": "A fabulous sweet treat designed especially to help picky Minks with upset stomachs.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 700,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 3,
-              "Edibility": 70,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 1.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 0.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 1.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_blue",
-                "ginger_item",
-                "food_sweet"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Croquetas": {
-              "Name": "{{ModId}}_Croquetas",
-              "DisplayName": "Croquetas",
-              "Description": "A homecooked savory dish made with leftover meats, Irene's favorite!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 1,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 1.0,
-                    "ForagingLevel": 1.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 1.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_yellow",
-                "food_meat"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_SalmonOnigiri": {
-              "Name": "{{ModId}}_SalmonOnigiri",
-              "DisplayName": "Salmon Onigiri",
-              "Description": "A portable, filling riceball with a salty filling for those with refined tastes.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 5,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 40.0,
-                    "Speed": 2.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_white",
-                "food_seafood"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Cheeseburger": {
-              "Name": "{{ModId}}_Cheeseburger",
-              "DisplayName": "Cheeseburger",
-              "Description": "Just a meat patty and some buns and a whole lot of cheese.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": null,
-              "SpriteIndex": 655,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 40.0,
-                    "Speed": 2.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat",
-                "food_sandwich"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Sandwich": {
-              "Name": "{{ModId}}_Sandwich",
-              "DisplayName": "Sandwich",
-              "Description": "Delicate slices of meat, vegetables, and spreads layered between soft pieces of bread.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 12,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 40.0,
-                    "Speed": 2.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat",
-                "food_sandwich"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_SakuraCottonCandy": {
-              "Name": "{{ModId}}_SakuraCottonCandy",
-              "DisplayName": "Sakura Cotton Candy",
-              "Description": "Spun from sugar and cherry blossoms, this sweet treat is one of the most delicious things you've ever tasted!",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 4,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 40.0,
-                    "Speed": 2.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_pink",
-                "food_sweet"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_HarvestCider": {
-              "Name": "{{ModId}}_HarvestCider",
-              "DisplayName": "Harvest Cider",
-              "Description": "The perfect spiced beverage for a cool autumn day.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 2,
-              "Edibility": 100,
-              "IsDrink": true,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 2.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 1.0,
-                    "MaxStamina": 0.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_orange",
-                "food_sweet",
-                "ginger_item"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Chocolate": {
-              "Name": "{{ModId}}_Chocolate",
-              "DisplayName": "Chocolate",
-              "Description": "A rich, luxurious item made from cacao.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 13,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 50.0,
-                    "MagneticRadius": 40.0,
-                    "Speed": 2.0,
-                    "Defense": 0.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_sweet"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "{{ModId}}_Torikatsu": {
-              "Name": "{{ModId}}_Torikatsu",
-              "DisplayName": "Torikatsu",
-              "Description": "A crunchy breaded chicken dish served with a tangy sauce.",
-              "Type": "Cooking",
-              "Category": -7,
-              "Price": 300,
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 16,
-              "Edibility": 200,
-              "IsDrink": false,
-              "Buffs": [
-                {
-                  "Id": "Food",
-                  "BuffId": null,
-                  "IconTexture": null,
-                  "IconSpriteIndex": 0,
-                  "Duration": 300,
-                  "IsDebuff": false,
-                  "GlowColor": null,
-                  "CustomAttributes": {
-                    "FarmingLevel": 0.0,
-                    "FishingLevel": 0.0,
-                    "MiningLevel": 0.0,
-                    "LuckLevel": 0.0,
-                    "ForagingLevel": 0.0,
-                    "MaxStamina": 0.0,
-                    "MagneticRadius": 0.0,
-                    "Speed": 0.0,
-                    "Defense": 3.0,
-                    "Attack": 0.0
-                  },
-                  "CustomFields": null
-                }
-              ],
-              "GeodeDropsDefaultItems": false,
-              "GeodeDrops": null,
-              "ArtifactSpotChances": null,
-              "CanBeGivenAsGift": true,
-              "CanBeTrashed": true,
-              "ExcludeFromFishingCollection": false,
-              "ExcludeFromShippingCollection": false,
-              "ExcludeFromRandomSale": false,
-              "ContextTags": [
-                "color_brown",
-                "food_meat"
-              ],
-              "CustomFields": null
-            }
-          }
-        },
-
-        //Changing the names and descriptions of existing foods and recipes
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "222": {
-              "Name": "Joja Cherry Pie",
-              "DisplayName": "Joja Cherry Pie",
-              "Description": "Disclaimer: this cherry pie includes no real or artificial cherries."
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Strings/Objects",
-          "Entries": {
-            "Salmonberry_Name": "Raspberry",
-            "Salmonberry_Description": "A sweet, spring-time berry with the flavor of the forest."
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "296": {
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 11
-            }
-          }
-        },
-
-        {
-          "Action": "EditData",
-          "Target": "Data/Objects",
-          "Entries": {
-            "167": {
-              "Texture": "Mods/{{ModId}}/Objects",
-              "SpriteIndex": 17
-            }
-          }
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_BoarMeat": {
+          "Name": "{{ModId}}_BoarMeat",
+          "DisplayName": "Boar Meat",
+          "Description": "A big juicy cut of meat, still on the bone.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 200,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 7,
+          "Edibility": 80,
+          "IsDrink": false,
+          "Buffs": null,
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_red",
+            "category_fish"
+          ],
+          "CustomFields": null
         }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Drumstick": {
+          "Name": "{{ModId}}_Drumstick",
+          "DisplayName": "Drumstick",
+          "Description": "A lighter type of meat, not to be eaten raw.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 30,
+          "Texture": null,
+          "SpriteIndex": "643",
+          "Edibility": -10,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": "Nauseous",
+              "IconTexture": null,
+              "IconSpriteIndex": 25,
+              "Duration": 1200,
+              "IsDebuff": true,
+              "GlowColor": "Green",
+              "CustomAttributes": null,
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_pink",
+            "fish_item",
+            "category_fish"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Poultry": {
+          "Name": "{{ModId}}_Poultry",
+          "DisplayName": "Poultry",
+          "Description": "A whole bird, excellent for smoking! Do not consume raw.",
+          "Type": "Basic",
+          "Category": -28,
+          "Price": 50,
+          "Texture": null,
+          "SpriteIndex": "620",
+          "Edibility": 90,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": "Nauseous",
+              "IconTexture": null,
+              "IconSpriteIndex": 25,
+              "Duration": 1200,
+              "IsDebuff": true,
+              "GlowColor": "Green",
+              "CustomAttributes": null,
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": true,
+          "ContextTags": [
+            "color_pink",
+            "category_fish"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+    //Changing the ingredients and conditions for obtaining a recipe
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Paella": "720 1 719 1 423 1 256 1/1 10/{{ModId}}_Paella/f Emily 7/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_PirateBento": "{{ModId}}_BoarMeat {{ModId}}_Poultry/1 10/{{ModId}}_PirateBento/f Sebastian 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Ramen": "246 1 174 1 {{ModId}}_BoarMeat 1/5 4/{{ModId}}_Ramen/f Kent 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_CoconutShrimp": "720 1 88 1 256 1 16 1/5 4/{{ModId}}_CoconutShrimp/f Leo 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Croquetas": "{{ModId}}_BoarMeat 1 -5 1 -6 1 246 1/5 4/{{ModId}}_Croquetas/f Marnie 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_SalmonOnigiri": "423 1 152 1 139 1/5 4/{{ModId}}_SalmonOnigiri/f Harvey 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HeartShavedIce": "245 1 829 1 597 1/5 4/{{ModId}}_HeartShavedIce/f Alex 4/"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Chili": "{{ModId}}_Poultry 1 256 1 248 1 260 1/5 4/{{ModId}}_Chili/f George 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Cheeseburger": "{{ModId}}_BoarMeat 1 216 1 424 1/5 4/{{ModId}}_Cheeseburger/f Robin 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Sandwich": "{{ModId}}_Poultry 1 216 1 256 1/5 4/{{ModId}}_Sandwich/f Demetrius 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Torikatsu": "{{ModId}}_Poultry 1 246 1 -5 1 /5 4/{{ModId}}_Torikatsu/f Linus 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_SakuraCottonCandy": "245 1 {{ModId}}_CherryBlossom/5 4/{{ModId}}_SakuraCottonCandy/f Krobus 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Chocolate": "245 1 {{ModId}}_CacaoPod 1 -6 1 /5 4/{{ModId}}_Chocolate/f Pam 4/"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HarvestCider": "613 1 340 1 829 1 /5 4/{{ModId}}_HarvestCider/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HotChocolate": "{{ModId}}_Chocolate 1 -5 1/5 4/{{ModId}}_HotChocolate/f Pudding 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Pudding": "-5 1 -6 1 245 1/5 4/{{ModId}}_Pudding/f Pierre 8/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Parfait": "{{ModId}}_Chocolate 1 -6 1 220 1 400 1 /5 4/{{ModId}}_Parfait/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Chiffon": "{{ModId}}_Cacaopod 1 -5 1 245 1 246 1 -6 1 /5 4/{{ModId}}_Chiffon/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Donut": "{{ModId}}_Chocolate 1 245 1 246 1 -5 1 /5 4/{{ModId}}_Donut/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_CremeBrulee": "245 1 -6 1 -5 1/5 4/{{ModId}}_CremeBrulee/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_Bagel": "246 1 -5 1 344 1 /5 4/{{ModId}}_Bagel/f Maru 4/"
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/CookingRecipes",
+      "Entries": {
+        "{{ModId}}_HotPot": "{{ModId}}_BoarMeat 1 278 1 -81 1/5 4/{{ModId}}_HotPot/f Maru 4/"
+      }
+    },
+
+    //add dishes
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_PirateBento": {
+          "Name": "{{ModId}}_PirateBento",
+          "DisplayName": "Pirate Bento",
+          "Description": "An excellent dish to store in your pockets for adventuring!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 600,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 6,
+          "Edibility": 140,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Ramen": {
+          "Name": "{{ModId}}_Ramen",
+          "DisplayName": "Ramen",
+          "Description": "A popular noodle dish covered with your favorite toppings!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 3,
+          "Edibility": 140,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Paella": {
+          "Name": "{{ModId}}_Paella",
+          "DisplayName": "Paella",
+          "Description": "An exquisite, world famous seafood dish!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 1000,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 10,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 2.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Chili": {
+          "Name": "{{ModId}}_Chili",
+          "DisplayName": "Chili",
+          "Description": "A hearty, meaty dish and Una's personal favorite.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 662,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 1.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_CoconutShrimp": {
+          "Name": "{{ModId}}_CoconutShrimp",
+          "DisplayName": "Coconut Shrimp",
+          "Description": "Crunchy shrimp with a spicy dipping sauce, Rose's favorite!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 600,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 0,
+          "Edibility": 240,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 1.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HeartShavedIce": {
+          "Name": "{{ModId}}_HeartShavedIce",
+          "DisplayName": "Heart Shaved Ice",
+          "Description": "A fabulous sweet treat designed especially to help picky Minks with upset stomachs.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 700,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 3,
+          "Edibility": 70,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_blue",
+            "ginger_item",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Croquetas": {
+          "Name": "{{ModId}}_Croquetas",
+          "DisplayName": "Croquetas",
+          "Description": "A homecooked savory dish made with leftover meats, Irene's favorite!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 1,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 1.0,
+                "ForagingLevel": 1.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 1.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_SalmonOnigiri": {
+          "Name": "{{ModId}}_SalmonOnigiri",
+          "DisplayName": "Salmon Onigiri",
+          "Description": "A portable, filling riceball with a salty filling for those with refined tastes.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 5,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_white",
+            "food_seafood"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Cheeseburger": {
+          "Name": "{{ModId}}_Cheeseburger",
+          "DisplayName": "Cheeseburger",
+          "Description": "Just a meat patty and some buns and a whole lot of cheese.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": null,
+          "SpriteIndex": 655,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat",
+            "food_sandwich"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Sandwich": {
+          "Name": "{{ModId}}_Sandwich",
+          "DisplayName": "Sandwich",
+          "Description": "Delicate slices of meat, vegetables, and spreads layered between soft pieces of bread.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 12,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat",
+            "food_sandwich"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_SakuraCottonCandy": {
+          "Name": "{{ModId}}_SakuraCottonCandy",
+          "DisplayName": "Sakura Cotton Candy",
+          "Description": "Spun from sugar and cherry blossoms, this sweet treat is one of the most delicious things you've ever tasted!",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 4,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_pink",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HarvestCider": {
+          "Name": "{{ModId}}_HarvestCider",
+          "DisplayName": "Harvest Cider",
+          "Description": "The perfect spiced beverage for a cool autumn day.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 2,
+          "Edibility": 100,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 2.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 1.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_orange",
+            "food_sweet",
+            "ginger_item"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Chocolate": {
+          "Name": "{{ModId}}_Chocolate",
+          "DisplayName": "Chocolate",
+          "Description": "A rich, luxurious item made from cacao.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 13,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 40.0,
+                "Speed": 2.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Torikatsu": {
+          "Name": "{{ModId}}_Torikatsu",
+          "DisplayName": "Torikatsu",
+          "Description": "A crunchy breaded chicken dish served with a tangy sauce.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 300,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 16,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 3.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HotChocolate": {
+          "Name": "{{ModId}}_HotChocolate",
+          "DisplayName": "Hot Chocolate",
+          "Description": "A sweet, rich beverage made from chocolate and milk.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 900,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 18,
+          "Edibility": 200,
+          "IsDrink": true,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 50.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Pudding": {
+          "Name": "{{ModId}}_Pudding",
+          "DisplayName": "Pudding",
+          "Description": "A sweet custard dessert with a chocolate syrup topping.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 900,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 19,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Parfait": {
+          "Name": "{{ModId}}_Parfait",
+          "DisplayName": "Parfait",
+          "Description": "A sweet dessert layered with cream, chocolate, and baked goods.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 900,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 20,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Chiffon": {
+          "Name": "{{ModId}}_Chiffon",
+          "DisplayName": "Chiffon",
+          "Description": "A light, chocolate infused spongey cake.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 900,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 21,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Donut": {
+          "Name": "{{ModId}}_Donut",
+          "DisplayName": "Donut",
+          "Description": "A fried dessert with a thick chocolate ganache topping.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 900,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 22,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_CremeBrulee": {
+          "Name": "{{ModId}}_CremeBrulee",
+          "DisplayName": "Creme Brulee",
+          "Description": "A sweet custard dessert with a firm layer of sugar toasted on top.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 1400,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 23,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_yellow",
+            "food_sweet"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_Bagel": {
+          "Name": "{{ModId}}_Bagel",
+          "DisplayName": "Bagel",
+          "Description": "A jelly-filled bagel sandwich.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 700,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 24,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_brown",
+            "food_sweet",
+            "food_sandwich"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "{{ModId}}_HotPot": {
+          "Name": "{{ModId}}_HotPot",
+          "DisplayName": "Hot Pot",
+          "Description": "A communal dish with a spicy broth and fresh ingredients.",
+          "Type": "Cooking",
+          "Category": -7,
+          "Price": 1800,
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 25,
+          "Edibility": 200,
+          "IsDrink": false,
+          "Buffs": [
+            {
+              "Id": "Food",
+              "BuffId": null,
+              "IconTexture": null,
+              "IconSpriteIndex": 0,
+              "Duration": 300,
+              "IsDebuff": false,
+              "GlowColor": null,
+              "CustomAttributes": {
+                "FarmingLevel": 0.0,
+                "FishingLevel": 0.0,
+                "MiningLevel": 0.0,
+                "LuckLevel": 0.0,
+                "ForagingLevel": 0.0,
+                "MaxStamina": 0.0,
+                "MagneticRadius": 0.0,
+                "Speed": 0.0,
+                "Defense": 0.0,
+                "Attack": 0.0
+              },
+              "CustomFields": null
+            }
+          ],
+          "GeodeDropsDefaultItems": false,
+          "GeodeDrops": null,
+          "ArtifactSpotChances": null,
+          "CanBeGivenAsGift": true,
+          "CanBeTrashed": true,
+          "ExcludeFromFishingCollection": false,
+          "ExcludeFromShippingCollection": false,
+          "ExcludeFromRandomSale": false,
+          "ContextTags": [
+            "color_red",
+            "food_meat"
+          ],
+          "CustomFields": null
+        }
+      }
+    },
+
+    //Changing the names and descriptions of existing foods and recipes
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "222": {
+          "Name": "Joja Cherry Pie",
+          "DisplayName": "Joja Cherry Pie",
+          "Description": "Disclaimer: this cherry pie includes no real or artificial cherries."
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Strings/Objects",
+      "Entries": {
+        "Salmonberry_Name": "Raspberry",
+        "Salmonberry_Description": "A sweet, spring-time berry with the flavor of the forest."
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "296": {
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 11
+        }
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Entries": {
+        "167": {
+          "Texture": "Mods/{{ModId}}/Objects",
+          "SpriteIndex": 17
+        }
+      }
+    }
   ]
 }

@@ -716,14 +716,7 @@
         "Weather": "Sun, Wind"
       }
     },
-    //Getting your first Cacao tree
-    {
-      "Action": "EditData",
-      "Target": "Data/Events/Farm",
-      "Entries": {
-        "00011/t 600 1130/Hn ccPantry/A cc_Greenhouse/f Elliott 4": "continue/64 15/farmer 64 16 2 Elliott 64 18 0/pause 1500/speak Elliott \"Hi @! Love the new greenhouse. $0#$b# I actually have a favor to ask... $1#$b# My brother has been traveling abroad and he got me this amazing Cacao tree, but the thing is...$2#$b# I have nowhere to grow it. I have no idea what he was thinking.$3#$b# Any chance you'd consider growing it for me? $0#$b# Maybe I can come by for Cacao Pods some time.$4\"/pause 500/ itemAboveHead {{ModId}}_Cacaosapling /playSound getNewSpecialItem/pause 3300/awardFestivalPrize {{ModId}}_Cacaosapling/pause 200/message \"Received a 'Cacao Sapling'\"/pause 800/ addMailReceived CACAO true / end"
-      }
-    },
+    
     //Adding bugs to bundles
     {
       "Action": "EditData",

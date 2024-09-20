@@ -1,5 +1,62 @@
 {
   "Changes": [
+
+    //Getting your first Cacao tree and a quest from Pudding...
+    {
+      "Action": "EditData",
+      "Target": "Data/Events/Farm",
+      "Entries": {
+        "00011/t 600 1130/Hn ccPantry/A cc_Greenhouse/f Elliott 6": "continue/64 15/farmer 64 16 2 Elliott 64 18 0/pause 1500/speak Elliott \"Hi @! Love the new greenhouse. $0#$b# I actually have a favor to ask... $1#$b# My brother has been traveling abroad and he got me this amazing Cacao tree, but the thing is...$2#$b# I have nowhere to grow it. I have no idea what he was thinking.$3#$b# Any chance you'd consider growing it for me? $0#$b# Maybe you could bring me...10 cacao pods when it's fully grown? $4\"/pause 500/ itemAboveHead {{ModId}}_Cacaosapling /playSound getNewSpecialItem/pause 3300/awardFestivalPrize {{ModId}}_Cacaosapling/pause 200/message \"Received a 'Cacao Sapling'\"/pause 800/ addQuest {{ModId}}_PUDDINGSHOP / end"
+      }
+    },
+    {
+      "Action": "EditData",
+      "Target": "Data/Quests",
+      "Entries": {
+        "{{ModId}}_PUDDINGSHOP": "ItemDelivery/Pudding's Chocolate Cravings/Pudding wants you to bring her some cacao pods for a special project./Bring Pudding 10 cacao pods./Elliott {{ModId}}_CacaoPod 10/-1/3000/-1/false/Wow, you really did it! Wait a few days and I'll show you what I can do with this."
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_FOODTRUCK": "Come buy our stuff! It's awesome!^^^ - Shachi & Penguin ^ P.S. We're talking about the foodtruck next to the blacksmith's. You can't miss it!",
+        "{{ModId}}_PUDDINGSHOPOPEN": "Dear @,^^ Please join us for the grand opening of Charlotte Chocolat in the cottage by the sea, Stardew Valley's first chocolatier! Store hours are from 9am to 5pm. Please enjoy this free sample! ^^ Sincerely yours, ^ Pudding %item id (O){{ModId}}_Chocolate 1 %%[#] Pudding Store Opening"
+      }
+    },
+
+    {
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_PUDDINGSHOPOPEN": {
+          "Id": "{{ModId}}_PUDDINGSHOPOPEN",
+          "Trigger": "DayStarted",
+          "Condition": "PLAYER_HAS_CONVERSATION_TOPIC Any questComplete_{{ModId}}_PUDDINGSHOP",
+          "Actions": [
+            "AddMail All {{ModId}}_PUDDINGSHOPOPEN tomorrow"
+          ]
+        }
+      }
+    },
+
+    //Schedule change
+    {
+      "Action": "EditData",
+      "Target": "Characters/schedules/Pudding",
+      "Entries": {
+        "Tue": "GOTO Thu",
+        "Wed": "GOTO Thu",
+        "Fri": "GOTO Thu",
+        "Mon": "GOTO Thu",
+        "Thu": "800 ElliottHouse 1 5 0/900 ElliottHouse 6 4 0/1700 SeedShop 7 7 2/2100 ElliottHouse 1 5 0/2400 ElliottHouse 13 4 1 elliott_sleep"
+      },
+      "When": {
+        "HasFlag": "{{ModId}}_PUDDINGSHOPOPEN"
+      }
+    },
+
     //Pudding's Bakery, Perona's plushies, Shachi and Penguin's foodtruck
     {
       "Action": "EditData",
@@ -53,6 +110,46 @@
               "ItemId": "(0)223",
               "AvailableStock": 3,
               "AvailableStockLimit": "Player"
+            },
+            {
+              "Id": "{{ModId}}_HotChocolate",
+              "ItemId": "{{ModId}}_HotChocolate",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON winter"
+            },
+            {
+              "Id": "{{ModId}}_Parfait",
+              "ItemId": "{{ModId}}_Parfait",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON summer"
+            },
+            {
+              "Id": "{{ModId}}_CremeBrulee",
+              "ItemId": "{{ModId}}_CremeBrulee",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON spring"
+            },
+            {
+              "Id": "{{ModId}}_Chiffon",
+              "ItemId": "{{ModId}}_Chiffon",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player",
+              "Condition": "SEASON winter"
+            },
+            {
+              "Id": "{{ModId}}_Donut",
+              "ItemId": "{{ModId}}_Donut",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player"
+            },
+            {
+              "Id": "{{ModId}}_Pudding",
+              "ItemId": "{{ModId}}_Pudding",
+              "AvailableStock": 3,
+              "AvailableStockLimit": "Player"
             }
 
           ]
@@ -83,22 +180,21 @@
         }
       ],
       "When": {
-        "HasFlag": "CHARLOTTE"
+        "HasFlag": "{{ModId}}_PUDDINGSHOPOPEN"
       }
     },
-    //Stolen Item Mail flag
+    //Mail flag
     {
       "Action": "EditData",
       "Target": "Data/Mail",
       "Entries": {
-        "STOLEN": "",
-        "CACAO": ""
+        "{{ModId}}_STOLEN": ""
       }
     },
 
 
 
-    //Pudding's Bakery, Perona's plushies, Shachi and Penguin's foodtruck
+    //Shachi and Penguin's foodtruck
     {
       "Action": "EditData",
       "Target": "Data/Shops",
@@ -206,7 +302,7 @@
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "Condition": "PLAYER_HEARTS Current Sebastian 6",
-              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+              "ActionsOnPurchase": [ "AddMail Current {{ModId}}_STOLEN received" ]
             },
 
             {
@@ -215,7 +311,7 @@
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "Condition": "PLAYER_HEARTS Current Sam 6",
-              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+              "ActionsOnPurchase": [ "AddMail Current {{ModId}}_STOLEN received" ]
             },
 
             {
@@ -224,7 +320,7 @@
               "AvailableStock": 1,
               "AvailableStockLimit": "Player",
               "Condition": "PLAYER_HEARTS Current Abigail 6",
-              "ActionsOnPurchase": [ "AddMail Current STOLEN received" ]
+              "ActionsOnPurchase": [ "AddMail Current {{ModId}}_STOLEN received" ]
             }
           ]
         }
@@ -307,83 +403,15 @@
       }
     },
 
-    //Add special orders to start store
-    {
-      "Action": "EditData",
-      "Target": "Data/SpecialOrders",
-      "Entries": {
-        "{{ModId}}_Pudding": {
-          "Name": "Pudding's Cacao Pods",
-          "Requester": "Elliot",
-          "Duration": "Month",
-          "Repeatable": true,
-          "RequiredTags": "CACAO",
-          "Condition": "",
-          "OrderType": "",
-          "SpecialRule": "",
-          "Text": "Pudding needs 10 cacao pods for a special project.",
-          "ItemToRemoveOnEnd": null,
-          "MailToRemoveOnEnd": "CACAO",
-          "RandomizedElements": null,
-          "Objectives": [
-            {
-              "Type": "Collect",
-              "Text": "Collect 10 cacao pods.",
-              "RequiredCount": "10",
-              "Data": {
-                "AcceptedContextTags": "item_cacao"
-              }
-            },
-            {
-              "Type": "Deliver",
-              "Text": "Give Pudding 10 cacao pods.",
-              "RequiredCount": "10",
-              "Data": {
-                "TargetName": "Elliot",
-                "AcceptedContextTags": "item_cacao"
-              }
-            }
-          ],
-          "Rewards": [
-            {
-              "Type": "Money",
-              "Data": {
-                "Amount": "3000"
-              }
-            },
-            {
-              "Type": "Mail",
-              "Data": {
-                "MailReceived": "CHARLOTTE",
-                "Host": "true",
-                "NoLetter": "false"
-              }
-            }
-          ],
-          "CustomFields": null
-        }
-      }
-    },
 
 
-
-    //add mail about store openings
-
-    {
-      "Action": "EditData",
-      "Target": "Data/Mail",
-      "Entries": {
-        "FOODTRUCK": "Come buy our stuff! It's awesome!^^^ - Shachi & Penguin ^ P.S. We're talking about the foodtruck next to the blacksmith's. You can't miss it!",
-        "CHARLOTTE": "Dear @,^^ Please join us for the grand opening of Charlotte Chocolat in the cottage by the sea, Stardew Valley's first chocolatier! Store hours are from 9am to 5pm. Please enjoy this free sample! ^^ Sincerely yours, Pudding %item id (O)ShipsAhoy_Chocolate 1 %%[#] Pudding Store Opening"
-      }
-    },
 
     //Food truck event where everyone in town is complaining about missing items. Nami wants her cut of the money.This event needs some choreographing and writing out normally to make it make sense.
     {
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"Nice try. #$b# @ is a pillar of this community.\"/ pause 500 / faceDirection Sebastian 1 / faceDirection Demetrius 1 / faceDirection Lewis 3 / faceDirection Penny 0 / faceDirection Harvey 0 / faceDirection Maru 1 / endSimultaneousCommand / speak Penny \"Don't think you're getting out of this without paying my cut plus interest. $5 #$b# Hand over the books... $3\"/ pause 1000 / emote Penny 16 / speak Penny \"I'm going to be so rich!$6\"/ pause 500 end"
+        "T00000/ n {{ModId}}_STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"Nice try. #$b# @ is a pillar of this community.\"/ pause 500 / faceDirection Sebastian 1 / faceDirection Demetrius 1 / faceDirection Lewis 3 / faceDirection Penny 0 / faceDirection Harvey 0 / faceDirection Maru 1 / endSimultaneousCommand / speak Penny \"Don't think you're getting out of this without paying my cut plus interest. $5 #$b# Hand over the books... $3\"/ pause 1000 / emote Penny 16 / speak Penny \"I'm going to be so rich!$6\"/ pause 500 end"
       },
       "When": {
         "HasFlag": "ccMovieTheater"
@@ -394,7 +422,7 @@
       "Action": "EditData",
       "Target": "Data/Events/Town",
       "Entries": {
-        "T00000/ n STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"I should have known. You've been playing into Blackbeard's hands since the beginning, @.\"/ pause 500 /  speak Penny \"Don't think you're getting out of this without paying me back, @ $5\"/ pause 500 / end"
+        "T00000/ n {{ModId}}_STOLEN /t 1200 2000": "default / 86 90 / farmer 79 94 1 Sebastian 85 93 1 Maru 88 93 3 Demetrius 87 95 0 Harvey 86 93 0 Lewis 90 93 3 Penny 87 93 0 George 87 91 2 Emily 83 94 1 Evelyn 86 91 2 / move farmer 3 0 / pause 500 / emote farmer 8 / skippable / beginSimultaneousCommand/ emote Evelyn 16 / emote Penny 12 / emote Harvey 28 / endSimultaneousCommand/ speak Penny \"You'd better have a really good explanation for this! $a\"/ pause 500 / advancedmove George false 2 0 0 2 / speak George \"Everybody calm down, I'm sure we can resolve this peacefully! $a\"/ emote Maru 12 Demetrius 12 Lewis 12 / emote Sebastian 8 / pause 500 / emote Sebastian 12 / speak Lewis \"Let's get to the bottom of this. $s #$b# There have been reports of personal items disappearing all over town. #$b# What do you two know about this?\"/ pause 500/ emote Evelyn 28 / emote George 28 / speak George \"...Whatever do you mean? $6\"/ speak Evelyn \"Don't look at us... $6 \"/ pause 500 / emote George 28 emote Evelyn 28 / speak George \"Yeah, @ has your stuff!\"/ pause 500 /  beginSimultaneousCommand/ faceDirection Sebastian 3 / faceDirection Demetrius 3 / faceDirection Lewis 3 / faceDirection Penny 3 / faceDirection Harvey 3 / faceDirection Maru 3 / endSimultaneousCommand / pause 1000 / emote farmer 16 / speak Lewis \"I should have known. You've been playing into Blackbeard's hands since the beginning, @.\"/ pause 500 /  speak Penny \"Don't think you're getting out of this without paying me back, @ $5\"/ pause 500 / end"
       },
       "When": {
         "HasFlag": "ccMovieTheaterJoja"
