@@ -11,78 +11,62 @@
 
 
     {
-      "Action": "EditImage",
-      "Target": "Characters/Sebastian",
-      "FromFile": "assets/Characters/Luffy.png"
+      "Action": "Load",
+      "Target": "Characters/Sebastian, Portraits/Sebastian, Characters/Sebastian_Hat, Portraits/Sebastian_Hat",
+      "FromFile": "assets/{{Target}}{{Random: red, blue, black |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
     },
     {
-      "Action": "EditImage",
-      "Target": "Portraits/Sebastian",
-      "FromFile": "assets/Portraits/Custom/Luffy.png"
+      "Action": "Load",
+      "Target": "Characters/Sebastian, Portraits/Sebastian, Characters/Sebastian_Hat, Portraits/Sebastian_Hat",
+      "FromFile": "assets/{{Target}}{{Random: red, blue |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
     },
+    //{
+    //  "Action": "Load",
+    //  "Target": "Portraits/Sebastian",
+    //  "FromFile": "assets/Portraits/Custom/Luffy{{Random: 0, 1, 2}}.png",
+    //  "Update": "OnDayStart"
+    //},
     {
       "Action": "EditImage",
       "Target": "Characters/Sebastian_Winter",
-      "FromFile": "assets/Characters/Luffy_Winter.png"
+      "FromFile": "assets/Characters/Sebastian_Winter.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/Sebastian_Winter",
-      "FromFile": "assets/Portraits/Custom/Luffy_Winter.png"
+      "FromFile": "assets/Portraits/Sebastian_Winter.png"
     },
 
     {
       "Action": "EditImage",
       "Target": "Characters/Sebastian_Beach",
-      "FromFile": "assets/Characters/Luffy_Beach.png"
+      "FromFile": "assets/Characters/Sebastian_Beach.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/Sebastian_Beach",
-      "FromFile": "assets/Portraits/Custom/Luffy_Beach.png"
+      "FromFile": "assets/Portraits/Sebastian_Beach.png"
     },
     //Adds hat/no hat mechanism
-    {
-      "Action": "Load",
-      "Target": "Characters/Sebastian_hat",
-      "FromFile": "assets/Characters/Luffy_hat.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Sebastian_hat",
-      "FromFile": "assets/Portraits/Custom/Luffy_hat.png"
+    //{
+    //  "Action": "Load",
+    //  "Target": "Characters/Sebastian_Hat",
+    //  "FromFile": "assets/Characters/Luffy_Hat.png"
+    //},
+    //{
+    //  "Action": "Load",
+    //  "Target": "Portraits/Sebastian_Hat",
+    //  "FromFile": "assets/Portraits/Custom/Luffy_Hat.png"
 
-    },
-    {
-      "Action": "Load",
-      "Target": "Characters/Sebastian1",
-      "FromFile": "assets/Characters/Luffy1.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Sebastian1",
-      "FromFile": "assets/Portraits/Custom/Luffy1.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Characters/Sebastian2",
-      "FromFile": "assets/Characters/Luffy2.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Sebastian1",
-      "FromFile": "assets/Portraits/Custom/Luffy1.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Characters/Sebastian_Winter1",
-      "FromFile": "assets/Characters/Luffy_Winter1.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Sebastian_Winter1",
-      "FromFile": "assets/Portraits/Custom/Luffy_Winter1.png"
-    },
+    //},
 
     // Character Data Entry  - clothing change isn't quite working yet, tried changing precedence but I need to look that up
 
@@ -263,78 +247,13 @@
               "Weight": 0
             },
             {
-              "Id": "Summer",
-              "Condition": "WEATHER TARGET (Sun, Rain, Storm, GreenRain)",
-              "Season": "Summer",
+              "Id": "Rain",
+              "Condition": "WEATHER TARGET (Rain, Storm, GreenRain)",
               "Indoors": false,
               "Outdoors": true,
-              "Portrait": "Portraits/Sebastian_hat",
-              "Sprite": "Characters/Sebastian_hat",
-              "Weather": "Sun, Rain, Storm, GreenRain",
-              "IsIslandAttire": false,
-              "Precedence": -1000,
-              "Weight": 0
-            },
-            {
-              "Id": "Spring",
-              "Condition": null,
-              "Season": "Spring",
-              "Indoors": false,
-              "Outdoors": true,
-              "Portrait": "Portraits/Sebastian_hat",
-              "Sprite": "Characters/Sebastian_hat",
+              "Portrait": "Portraits/Sebastian_Hat",
+              "Sprite": "Characters/Sebastian_Hat",
               "Weather": "Rain, Storm, GreenRain",
-              "IsIslandAttire": true,
-              "Precedence": -1000,
-              "Weight": 0
-            },
-            {
-              "Id": "SpringSun",
-              "Condition": null,
-              "Season": "Spring",
-              "Indoors": true,
-              "Outdoors": true,
-              "Portrait": "Portraits/Sebastian1",
-              "Sprite": "Characters/Sebastian1",
-              "Weather": "Sun, Wind",
-              "IsIslandAttire": true,
-              "Precedence": 1000,
-              "Weight": 0
-            },
-            {
-              "Id": "FallRain",
-              "Condition": null,
-              "Season": "Fall",
-              "Indoors": false,
-              "Outdoors": true,
-              "Portrait": "Portraits/Sebastian_hat",
-              "Sprite": "Characters/Sebastian_hat",
-              "Weather": "Rain, Storm, GreenRain",
-              "IsIslandAttire": false,
-              "Precedence": -1000,
-              "Weight": 0
-            },
-            {
-              "Id": "Fall",
-              "Condition": null,
-              "Season": "Fall",
-              "Indoors": true,
-              "Outdoors": true,
-              "Portrait": "Portraits/Sebastian2",
-              "Sprite": "Characters/Sebastian2",
-              "Weather": "Sun, Wind",
-              "IsIslandAttire": false,
-              "Precedence": 1000,
-              "Weight": 0
-            },
-            {
-              "Id": "WinterIndoor",
-              "Condition": null,
-              "Season": "Winter",
-              "Indoors": true,
-              "Outdoors": false,
-              "Portrait": "Portraits/Sebastian1",
-              "Sprite": "Characters/Sebastian1",
               "IsIslandAttire": false,
               "Precedence": -1000,
               "Weight": 0
@@ -431,7 +350,7 @@
         }
       ],
       "When": {
-        "Relationship": "Current Sebastian dating"
+        "Relationship: Sebastian": "Dating, Engaged, Married"
       }
     },
     // {
@@ -470,8 +389,13 @@
           ]
 
         }
+      },
+      "When": {
+        "Relationship: Sebastian": "Dating, Engaged, Married"
       }
     },
+
+
     {
       "Action": "EditData",
       "Target": "Data/Events/SebastianRoom",
@@ -482,7 +406,7 @@
         "Yes": "pause 500 / emote Sebastian 32 / speak Sebastian \"Cool! You can't snuggle Kabutonosuke though. $4#$b# He's mine.$6\"/ move Sebastian 3 0 3/ move farmer 3 0 3/ end newDay"
       },
       "When": {
-        "Relationship": "Current Sebastian dating"
+        "Relationship: Sebastian": "Dating, Engaged, Married"
       }
     },
 

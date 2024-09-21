@@ -4,22 +4,26 @@
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sam",
-			"FromFile": "assets/Characters/Ace.png"
+			"FromFile": "assets/Characters/Ace{{Random: 0, 1, 2}}.png",
+			"Update": "OnDayStart"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sam",
-			"FromFile": "assets/Portraits/Custom/Ace.png"
+			"FromFile": "assets/Portraits/Custom/Ace{{Random: 0, 1, 2}}.png",
+			"Update": "OnDayStart"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sam_Winter",
-			"FromFile": "assets/Characters/Ace_Winter.png"
+			"FromFile": "assets/Characters/Ace_Winter{{Random: 1, 2}}.png",
+			"Update": "OnDayStart"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sam_Winter",
-			"FromFile": "assets/Portraits/Custom/Ace_Winter.png"
+			"FromFile": "assets/Portraits/Custom/Ace_Winter{{Random: 1, 2}}.png",
+			"Update": "OnDayStart"
 		},
 
 		{
@@ -33,46 +37,6 @@
 			"FromFile": "assets/Portraits/Custom/Ace_Beach.png"
 		},
 
-		{
-			"Action": "Load",
-			"Target": "Characters/Sam1",
-			"FromFile": "assets/Characters/Ace1.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Portraits/Sam1",
-			"FromFile": "assets/Portraits/Custom/Ace1.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Characters/Sam2",
-			"FromFile": "assets/Characters/Ace2.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Portraits/Sam1",
-			"FromFile": "assets/Portraits/Custom/Ace1.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Characters/Sam_Winter1",
-			"FromFile": "assets/Characters/Ace_Winter1.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Portraits/Sam_Winter1",
-			"FromFile": "assets/Portraits/Custom/Ace_Winter1.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Characters/Sam_Winter2",
-			"FromFile": "assets/Characters/Ace_Winter2.png"
-		},
-		{
-			"Action": "Load",
-			"Target": "Portraits/Sam_Winter2",
-			"FromFile": "assets/Portraits/Custom/Ace_Winter2.png"
-		},
 
 		{
 			"Action": "EditData",
@@ -257,24 +221,24 @@
 
 			}
 		}
-		//{
-		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
-		//	"Entries": {}
+				//{
+				//	"Action": "EditData",
+				//	"Target": "Characters/schedules/Penny",
+				//	"Entries": {}
 
-		//}
+				//}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
+				//{
+				//	"Action": "Load",
+				//	"Target": "Characters/Penny",
+				//	"FromFile": "assets/Characters/Nami.png"
+				//},
+				//{
+				//	"Action": "Load",
+				//	"Target": "Portraits/Penny",
+				//	"FromFile": "assets/Characters/Nami.png"
+				//},
 	]
 
 }
