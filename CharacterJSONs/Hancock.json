@@ -1,37 +1,44 @@
 {
 	"Changes": [
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Shane",
-			"FromFile": "assets/Characters/Hancock.png"
+			"Action": "Load",
+			"Target": "Characters/Shane, Portraits/Shane",
+			"FromFile": "assets/{{Target}}{{Random: red |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Shane",
-			"FromFile": "assets/Portraits/Custom/Hancock.png"
+			"Action": "Load",
+			"Target": "Characters/Shane, Portraits/Shane",
+			"FromFile": "assets/{{Target}}{{Random: red |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Shane_Winter",
-			"FromFile": "assets/Characters/Hancock_Winter.png"
+			"FromFile": "assets/Characters/Shane_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Shane_Winter",
-			"FromFile": "assets/Portraits/Custom/Hancock_Winter.png"
+			"FromFile": "assets/Portraits/Shane_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Shane_Beach",
-			"FromFile": "assets/Characters/Hancock_Beach.png"
+			"FromFile": "assets/Characters/Shane_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Shane_Beach",
-			"FromFile": "assets/Portraits/Custom/Hancock_Beach.png"
+			"FromFile": "assets/Portraits/Shane_Beach.png"
 		},
-
 		{
 			"Action": "EditMap",
 			"Target": "Maps/SeedShop",

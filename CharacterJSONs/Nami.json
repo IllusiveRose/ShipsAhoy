@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Nami.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Penny",
-			"FromFile": "assets/Characters/Nami.png"
+			"Action": "Load",
+			"Target": "Characters/Penny, Portraits/Penny",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Penny",
-			"FromFile": "assets/Portraits/Custom/Nami.png"
+			"Action": "Load",
+			"Target": "Characters/Penny, Portraits/Penny",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Penny_Winter",
-			"FromFile": "assets/Characters/Nami_Winter.png"
+			"FromFile": "assets/Characters/Penny_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Penny_Winter",
-			"FromFile": "assets/Portraits/Custom/Nami_Winter.png"
+			"FromFile": "assets/Portraits/Penny_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Penny_Beach",
-			"FromFile": "assets/Characters/Nami_Beach.png"
+			"FromFile": "assets/Characters/Penny_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Penny_Beach",
-			"FromFile": "assets/Portraits/Custom/Nami_Beach.png"
+			"FromFile": "assets/Portraits/Penny_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

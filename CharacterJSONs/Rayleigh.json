@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Nami.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Caroline",
-			"FromFile": "assets/Characters/Rayleigh.png"
+			"Action": "Load",
+			"Target": "Characters/Caroline, Portraits/Caroline",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Caroline",
-			"FromFile": "assets/Portraits/Custom/Rayleigh.png"
+			"Action": "Load",
+			"Target": "Characters/Caroline, Portraits/Caroline",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Caroline_Winter",
-			"FromFile": "assets/Characters/Rayleigh_Winter.png"
+			"FromFile": "assets/Characters/Caroline_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Caroline_Winter",
-			"FromFile": "assets/Portraits/Custom/Rayleigh_Winter.png"
+			"FromFile": "assets/Portraits/Caroline_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Caroline_Beach",
-			"FromFile": "assets/Characters/Rayleigh_Beach.png"
+			"FromFile": "assets/Characters/Caroline_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Caroline_Beach",
-			"FromFile": "assets/Portraits/Custom/Rayleigh_Beach.png"
+			"FromFile": "assets/Portraits/Caroline_Beach.png"
 		},
 		//{
 		//	"Action": "EditData",

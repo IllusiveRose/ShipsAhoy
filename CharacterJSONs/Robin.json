@@ -1,42 +1,52 @@
 {
-	"Changes": [
+  "Changes": [
 
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Demetrius",
-		//	"FromFile": "assets/Characters/Robin.png"
-		//},
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Demetrius",
-			"FromFile": "assets/Characters/Robin.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Demetrius",
-			"FromFile": "assets/Portraits/Custom/Robin.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Demetrius_Winter",
-			"FromFile": "assets/Characters/Robin_Winter.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Demetrius_Winter",
-			"FromFile": "assets/Portraits/Custom/Robin_Winter.png"
-		},
+    //{
+    //	"Action": "EditImage",
+    //	"Target": "Characters/Demetrius",
+    //	"FromFile": "assets/Characters/Robin.png"
+    //},
+    {
+      "Action": "Load",
+      "Target": "Characters/Demetrius, Portraits/Demetrius",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Demetrius, Portraits/Demetrius",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Demetrius_Winter",
+      "FromFile": "assets/Characters/Demetrius_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Demetrius_Winter",
+      "FromFile": "assets/Portraits/Demetrius_Winter.png"
+    },
 
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Demetrius_Beach",
-			"FromFile": "assets/Characters/Robin_Beach.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Demetrius_Beach",
-			"FromFile": "assets/Portraits/Custom/Robin_Beach.png"
-		},
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Demetrius_Beach",
+      "FromFile": "assets/Characters/Demetrius_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Demetrius_Beach",
+      "FromFile": "assets/Portraits/Demetrius_Beach.png"
+    },
+
+    //Character Data
 
     {
       "Action": "EditData",
@@ -141,24 +151,24 @@
         }
       }
     }
-		//{
-		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Demetrius",
-		//	"Entries": {}
+    //{
+    //	"Action": "EditData",
+    //	"Target": "Characters/schedules/Demetrius",
+    //	"Entries": {}
 
-		//}
+    //}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Demetrius",
-		//	"FromFile": "assets/Characters/Robin.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Demetrius",
-		//	"FromFile": "assets/Characters/Robin.png"
-		//},
-	]
+    //{
+    //	"Action": "Load",
+    //	"Target": "Characters/Demetrius",
+    //	"FromFile": "assets/Characters/Robin.png"
+    //},
+    //{
+    //	"Action": "Load",
+    //	"Target": "Portraits/Demetrius",
+    //	"FromFile": "assets/Characters/Robin.png"
+    //},
+  ]
 
 }

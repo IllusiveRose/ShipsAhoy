@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Vivi.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Sandy",
-			"FromFile": "assets/Characters/Vivi.png"
+			"Action": "Load",
+			"Target": "Characters/Sandy, Portraits/Sandy",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Sandy",
-			"FromFile": "assets/Portraits/Custom/Vivi.png"
+			"Action": "Load",
+			"Target": "Characters/Sandy, Portraits/Sandy",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sandy_Winter",
-			"FromFile": "assets/Characters/Vivi_Winter.png"
+			"FromFile": "assets/Characters/Sandy_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sandy_Winter",
-			"FromFile": "assets/Portraits/Custom/Vivi_Winter.png"
+			"FromFile": "assets/Portraits/Sandy_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sandy_Beach",
-			"FromFile": "assets/Characters/Vivi_Beach.png"
+			"FromFile": "assets/Characters/Sandy_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sandy_Beach",
-			"FromFile": "assets/Portraits/Custom/Vivi_Beach.png"
+			"FromFile": "assets/Portraits/Sandy_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

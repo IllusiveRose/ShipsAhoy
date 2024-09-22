@@ -9,7 +9,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Gil",
-			"FromFile": "assets/Portraits/Custom/Killer.png"
+			"FromFile": "assets/Portraits/Killer.png"
 		},
 		{
 			"Action": "EditData",

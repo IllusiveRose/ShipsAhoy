@@ -3,36 +3,46 @@
 
 
     {
-      "Action": "EditImage",
-      "Target": "Characters/George",
-      "FromFile": "assets/Characters/Shachi.png"
+      "Action": "Load",
+      "Target": "Characters/George, Portraits/George",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
     },
     {
-      "Action": "EditImage",
-      "Target": "Portraits/George",
-      "FromFile": "assets/Portraits/Custom/Shachi.png"
+      "Action": "Load",
+      "Target": "Characters/George, Portraits/George",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
     },
     {
       "Action": "EditImage",
       "Target": "Characters/George_Winter",
-      "FromFile": "assets/Characters/Shachi_Winter.png"
+      "FromFile": "assets/Characters/George_Winter.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/George_Winter",
-      "FromFile": "assets/Portraits/Custom/Shachi_Winter.png"
+      "FromFile": "assets/Portraits/George_Winter.png"
     },
 
     {
       "Action": "EditImage",
       "Target": "Characters/George_Beach",
-      "FromFile": "assets/Characters/Shachi_Beach.png"
+      "FromFile": "assets/Characters/George_Beach.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/George_Beach",
-      "FromFile": "assets/Portraits/Custom/Shachi_Beach.png"
+      "FromFile": "assets/Portraits/George_Beach.png"
     },
+
+    //Schedule
     {
       "Action": "EditData",
       "Target": "Characters/schedules/George",

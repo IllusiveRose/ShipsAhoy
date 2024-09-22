@@ -2,35 +2,43 @@
 	"Changes": [
 
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Linus",
-			"FromFile": "assets/Characters/Bartolomeo.png"
+			"Action": "Load",
+			"Target": "Characters/Linus, Portraits/Linus",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Linus",
-			"FromFile": "assets/Portraits/Custom/Bartolomeo.png"
+			"Action": "Load",
+			"Target": "Characters/Linus, Portraits/Linus",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Linus_Winter",
-			"FromFile": "assets/Characters/Bartolomeo_Winter.png"
+			"FromFile": "assets/Characters/Linus_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Linus_Winter",
-			"FromFile": "assets/Portraits/Custom/Bartolomeo_Winter.png"
+			"FromFile": "assets/Portraits/Linus_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Linus_Beach",
-			"FromFile": "assets/Characters/Bartolomeo_Beach.png"
+			"FromFile": "assets/Characters/Linus_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Linus_Beach",
-			"FromFile": "assets/Portraits/Custom/Bartolomeo_Beach.png"
+			"FromFile": "assets/Portraits/Linus_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

@@ -1,15 +1,44 @@
 {
 	"Changes": [
-		
+
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Gunther",
-			"FromFile": "assets/Characters/Brook.png"
+			"Action": "Load",
+			"Target": "Characters/Gunther, Portraits/Gunther",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Gunther, Portraits/Gunther",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
-			"Target": "Portraits/Gunther",
-			"FromFile": "assets/Portraits/Custom/Brook.png"
+			"Target": "Characters/Gunther_Winter",
+			"FromFile": "assets/Characters/Gunther_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Gunther_Winter",
+			"FromFile": "assets/Portraits/Gunther_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Gunther_Beach",
+			"FromFile": "assets/Characters/Gunther_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Gunther_Beach",
+			"FromFile": "assets/Portraits/Gunther_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

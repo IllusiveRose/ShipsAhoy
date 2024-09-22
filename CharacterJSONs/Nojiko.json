@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Nami.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Pam",
-			"FromFile": "assets/Characters/Nojiko.png"
+			"Action": "Load",
+			"Target": "Characters/Pam, Portraits/Pam",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Pam",
-			"FromFile": "assets/Portraits/Custom/Nojiko.png"
+			"Action": "Load",
+			"Target": "Characters/Pam, Portraits/Pam",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Pam_Winter",
-			"FromFile": "assets/Characters/Nojiko_Winter.png"
+			"FromFile": "assets/Characters/Pam_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Pam_Winter",
-			"FromFile": "assets/Portraits/Custom/Nojiko_Winter.png"
+			"FromFile": "assets/Portraits/Pam_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Pam_Beach",
-			"FromFile": "assets/Characters/Nojiko_Beach.png"
+			"FromFile": "assets/Characters/Pam_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Pam_Beach",
-			"FromFile": "assets/Portraits/Custom/Nojiko_Beach.png"
+			"FromFile": "assets/Portraits/Pam_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

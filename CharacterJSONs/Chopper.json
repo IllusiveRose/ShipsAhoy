@@ -1,15 +1,44 @@
 {
 	"Changes": [
-		
+
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Krobus",
-			"FromFile": "assets/Characters/Chopper.png"
+			"Action": "Load",
+			"Target": "Characters/Krobus, Portraits/Krobus",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
+		},
+		{
+			"Action": "Load",
+			"Target": "Characters/Krobus, Portraits/Krobus",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
-			"Target": "Portraits/Krobus",
-			"FromFile": "assets/Portraits/Custom/Chopper.png"
+			"Target": "Characters/Krobus_Winter",
+			"FromFile": "assets/Characters/Krobus_Winter.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Krobus_Winter",
+			"FromFile": "assets/Portraits/Krobus_Winter.png"
+		},
+
+		{
+			"Action": "EditImage",
+			"Target": "Characters/Krobus_Beach",
+			"FromFile": "assets/Characters/Krobus_Beach.png"
+		},
+		{
+			"Action": "EditImage",
+			"Target": "Portraits/Krobus_Beach",
+			"FromFile": "assets/Portraits/Krobus_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

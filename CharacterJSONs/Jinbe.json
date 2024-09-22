@@ -14,7 +14,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Willy",
-			"FromFile": "assets/Portraits/Custom/Jinbe.png"
+			"FromFile": "assets/Portraits/Jinbe.png"
 		},
 		{
 			"Action": "EditImage",
@@ -24,7 +24,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Willy_Winter",
-			"FromFile": "assets/Portraits/Custom/Jinbe_Winter.png"
+			"FromFile": "assets/Portraits/Jinbe_Winter.png"
 		},
 
 		{
@@ -35,7 +35,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Willy_Beach",
-			"FromFile": "assets/Portraits/Custom/Jinbe_Beach.png"
+			"FromFile": "assets/Portraits/Jinbe_Beach.png"
 		},
 
     {

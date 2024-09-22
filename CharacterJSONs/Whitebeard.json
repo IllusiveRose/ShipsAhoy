@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Whitebeard.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Lewis",
-			"FromFile": "assets/Characters/Whitebeard.png"
+			"Action": "Load",
+			"Target": "Characters/Lewis, Portraits/Lewis",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Lewis",
-			"FromFile": "assets/Portraits/Custom/Whitebeard.png"
+			"Action": "Load",
+			"Target": "Characters/Lewis, Portraits/Lewis",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Lewis_Winter",
-			"FromFile": "assets/Characters/Whitebeard_Winter.png"
+			"FromFile": "assets/Characters/Lewis_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Lewis_Winter",
-			"FromFile": "assets/Portraits/Custom/Whitebeard_Winter.png"
+			"FromFile": "assets/Portraits/Lewis_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Lewis_Beach",
-			"FromFile": "assets/Characters/Whitebeard_Beach.png"
+			"FromFile": "assets/Characters/Lewis_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Lewis_Beach",
-			"FromFile": "assets/Portraits/Custom/Whitebeard_Beach.png"
+			"FromFile": "assets/Portraits/Lewis_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

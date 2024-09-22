@@ -9,7 +9,7 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Bouncer",
-			"FromFile": "assets/Portraits/Custom/Igaram.png"
+			"FromFile": "assets/Portraits/Igaram.png"
 		},
 		{
 			"Action": "EditImage",

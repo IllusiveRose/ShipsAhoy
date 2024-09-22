@@ -1,42 +1,52 @@
 {
-	"Changes": [
+  "Changes": [
 
-		//{
-		//	"Action": "EditImage",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Clint",
-			"FromFile": "assets/Characters/Mihawk.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Clint",
-			"FromFile": "assets/Portraits/Custom/Mihawk.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Clint_Winter",
-			"FromFile": "assets/Characters/Mihawk_Winter.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Clint_Winter",
-			"FromFile": "assets/Portraits/Custom/Mihawk_Winter.png"
-		},
+    //{
+    //	"Action": "EditImage",
+    //	"Target": "Characters/Penny",
+    //	"FromFile": "assets/Characters/Nami.png"
+    //},
+    {
+      "Action": "Load",
+      "Target": "Characters/Clint, Portraits/Clint",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Clint, Portraits/Clint",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Clint_Winter",
+      "FromFile": "assets/Characters/Clint_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Clint_Winter",
+      "FromFile": "assets/Portraits/Clint_Winter.png"
+    },
 
-		{
-			"Action": "EditImage",
-			"Target": "Characters/Clint_Beach",
-			"FromFile": "assets/Characters/Mihawk_Beach.png"
-		},
-		{
-			"Action": "EditImage",
-			"Target": "Portraits/Clint_Beach",
-			"FromFile": "assets/Portraits/Custom/Mihawk_Beach.png"
-		},
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Clint_Beach",
+      "FromFile": "assets/Characters/Clint_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Clint_Beach",
+      "FromFile": "assets/Portraits/Clint_Beach.png"
+    },
+
+//Character Data
     {
       "Action": "EditData",
       "Target": "Data/Characters",
@@ -205,24 +215,24 @@
         }
       }
     }
-		//{
-		//	"Action": "EditData",
-		//	"Target": "Characters/schedules/Penny",
-		//	"Entries": {}
+    //{
+    //	"Action": "EditData",
+    //	"Target": "Characters/schedules/Penny",
+    //	"Entries": {}
 
-		//}
+    //}
 
 
-		//{
-		//	"Action": "Load",
-		//	"Target": "Characters/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-		//{
-		//	"Action": "Load",
-		//	"Target": "Portraits/Penny",
-		//	"FromFile": "assets/Characters/Nami.png"
-		//},
-	]
+    //{
+    //	"Action": "Load",
+    //	"Target": "Characters/Penny",
+    //	"FromFile": "assets/Characters/Nami.png"
+    //},
+    //{
+    //	"Action": "Load",
+    //	"Target": "Portraits/Penny",
+    //	"FromFile": "assets/Characters/Nami.png"
+    //},
+  ]
 
 }

@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Nami.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Harvey",
-			"FromFile": "assets/Characters/Law.png"
+			"Action": "Load",
+			"Target": "Characters/Harvey, Portraits/Harvey",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Harvey",
-			"FromFile": "assets/Portraits/Custom/Law.png"
+			"Action": "Load",
+			"Target": "Characters/Harvey, Portraits/Harvey",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Harvey_Winter",
-			"FromFile": "assets/Characters/Law_Winter.png"
+			"FromFile": "assets/Characters/Harvey_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Harvey_Winter",
-			"FromFile": "assets/Portraits/Custom/Law_Winter.png"
+			"FromFile": "assets/Portraits/Harvey_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Harvey_Beach",
-			"FromFile": "assets/Characters/Law_Beach.png"
+			"FromFile": "assets/Characters/Harvey_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Harvey_Beach",
-			"FromFile": "assets/Portraits/Custom/Law_Beach.png"
+			"FromFile": "assets/Portraits/Harvey_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

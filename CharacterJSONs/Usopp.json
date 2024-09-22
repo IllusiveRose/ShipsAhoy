@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Usopp.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Maru",
-			"FromFile": "assets/Characters/Usopp.png"
+			"Action": "Load",
+			"Target": "Characters/Maru, Portraits/Maru",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Maru",
-			"FromFile": "assets/Portraits/Custom/Usopp.png"
+			"Action": "Load",
+			"Target": "Characters/Maru, Portraits/Maru",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Maru_Winter",
-			"FromFile": "assets/Characters/Usopp_Winter.png"
+			"FromFile": "assets/Characters/Maru_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Maru_Winter",
-			"FromFile": "assets/Portraits/Custom/Usopp_Winter.png"
+			"FromFile": "assets/Portraits/Maru_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Maru_Beach",
-			"FromFile": "assets/Characters/Usopp_Beach.png"
+			"FromFile": "assets/Characters/Maru_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Maru_Beach",
-			"FromFile": "assets/Portraits/Custom/Usopp_Beach.png"
+			"FromFile": "assets/Portraits/Maru_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

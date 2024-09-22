@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Nami.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Marnie",
-			"FromFile": "assets/Characters/Kuma.png"
+			"Action": "Load",
+			"Target": "Characters/Marnie, Portraits/Marnie",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Marnie",
-			"FromFile": "assets/Portraits/Custom/Kuma.png"
+			"Action": "Load",
+			"Target": "Characters/Marnie, Portraits/Marnie",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Marnie_Winter",
-			"FromFile": "assets/Characters/Kuma_Winter.png"
+			"FromFile": "assets/Characters/Marnie_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Marnie_Winter",
-			"FromFile": "assets/Portraits/Custom/Kuma_Winter.png"
+			"FromFile": "assets/Portraits/Marnie_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Marnie_Beach",
-			"FromFile": "assets/Characters/Kuma_Beach.png"
+			"FromFile": "assets/Characters/Marnie_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Marnie_Beach",
-			"FromFile": "assets/Portraits/Custom/Kuma_Beach.png"
+			"FromFile": "assets/Portraits/Marnie_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

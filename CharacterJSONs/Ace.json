@@ -2,40 +2,45 @@
 	"Changes": [
 
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Sam",
-			"FromFile": "assets/Characters/Ace{{Random: 0, 1, 2}}.png",
-			"Update": "OnDayStart"
+			"Action": "Load",
+			"Target": "Characters/Sam, Portraits/Sam",
+			"FromFile": "assets/{{Target}}{{Random: purple black yellow |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Sam",
-			"FromFile": "assets/Portraits/Custom/Ace{{Random: 0, 1, 2}}.png",
-			"Update": "OnDayStart"
+			"Action": "Load",
+			"Target": "Characters/Sam, Portraits/Sam",
+			"FromFile": "assets/{{Target}}{{Random: purple |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sam_Winter",
-			"FromFile": "assets/Characters/Ace_Winter{{Random: 1, 2}}.png",
-			"Update": "OnDayStart"
+			"FromFile": "assets/Characters/Sam_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sam_Winter",
-			"FromFile": "assets/Portraits/Custom/Ace_Winter{{Random: 1, 2}}.png",
-			"Update": "OnDayStart"
+			"FromFile": "assets/Portraits/Sam_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Sam_Beach",
-			"FromFile": "assets/Characters/Ace_Beach.png"
+			"FromFile": "assets/Characters/Sam_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Sam_Beach",
-			"FromFile": "assets/Portraits/Custom/Ace_Beach.png"
+			"FromFile": "assets/Portraits/Sam_Beach.png"
 		},
+
 
 
 		{
@@ -221,24 +226,24 @@
 
 			}
 		}
-				//{
-				//	"Action": "EditData",
-				//	"Target": "Characters/schedules/Penny",
-				//	"Entries": {}
+		//{
+		//	"Action": "EditData",
+		//	"Target": "Characters/schedules/Penny",
+		//	"Entries": {}
 
-				//}
+		//}
 
 
-				//{
-				//	"Action": "Load",
-				//	"Target": "Characters/Penny",
-				//	"FromFile": "assets/Characters/Nami.png"
-				//},
-				//{
-				//	"Action": "Load",
-				//	"Target": "Portraits/Penny",
-				//	"FromFile": "assets/Characters/Nami.png"
-				//},
+		//{
+		//	"Action": "Load",
+		//	"Target": "Characters/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
+		//{
+		//	"Action": "Load",
+		//	"Target": "Portraits/Penny",
+		//	"FromFile": "assets/Characters/Nami.png"
+		//},
 	]
 
 }

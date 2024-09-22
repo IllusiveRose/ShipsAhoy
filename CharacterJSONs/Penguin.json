@@ -3,36 +3,46 @@
 
 
     {
-      "Action": "EditImage",
-      "Target": "Characters/Evelyn",
-      "FromFile": "assets/Characters/Penguin.png"
+      "Action": "Load",
+      "Target": "Characters/Evelyn, Portraits/Evelyn",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
     },
     {
-      "Action": "EditImage",
-      "Target": "Portraits/Evelyn",
-      "FromFile": "assets/Portraits/Custom/Penguin.png"
+      "Action": "Load",
+      "Target": "Characters/Evelyn, Portraits/Evelyn",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
     },
     {
       "Action": "EditImage",
       "Target": "Characters/Evelyn_Winter",
-      "FromFile": "assets/Characters/Penguin_Winter.png"
+      "FromFile": "assets/Characters/Evelyn_Winter.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/Evelyn_Winter",
-      "FromFile": "assets/Portraits/Custom/Penguin_Winter.png"
+      "FromFile": "assets/Portraits/Evelyn_Winter.png"
     },
 
     {
       "Action": "EditImage",
       "Target": "Characters/Evelyn_Beach",
-      "FromFile": "assets/Characters/Penguin_Beach.png"
+      "FromFile": "assets/Characters/Evelyn_Beach.png"
     },
     {
       "Action": "EditImage",
       "Target": "Portraits/Evelyn_Beach",
-      "FromFile": "assets/Portraits/Custom/Penguin_Beach.png"
+      "FromFile": "assets/Portraits/Evelyn_Beach.png"
     },
+
+    //Character Data
     {
       "Action": "EditData",
       "Target": "Characters/schedules/Evelyn",

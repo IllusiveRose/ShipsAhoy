@@ -28,12 +28,6 @@
         "Season": "Winter"
       }
     },
-    //{
-    //  "Action": "Load",
-    //  "Target": "Portraits/Sebastian",
-    //  "FromFile": "assets/Portraits/Custom/Luffy{{Random: 0, 1, 2}}.png",
-    //  "Update": "OnDayStart"
-    //},
     {
       "Action": "EditImage",
       "Target": "Characters/Sebastian_Winter",
@@ -55,18 +49,7 @@
       "Target": "Portraits/Sebastian_Beach",
       "FromFile": "assets/Portraits/Sebastian_Beach.png"
     },
-    //Adds hat/no hat mechanism
-    //{
-    //  "Action": "Load",
-    //  "Target": "Characters/Sebastian_Hat",
-    //  "FromFile": "assets/Characters/Luffy_Hat.png"
-    //},
-    //{
-    //  "Action": "Load",
-    //  "Target": "Portraits/Sebastian_Hat",
-    //  "FromFile": "assets/Portraits/Custom/Luffy_Hat.png"
-
-    //},
+  
 
     // Character Data Entry  - clothing change isn't quite working yet, tried changing precedence but I need to look that up
 
@@ -243,17 +226,17 @@
               "Portrait": "Portraits/Sebastian_Winter",
               "Sprite": "Characters/Sebastian_Winter",
               "IsIslandAttire": false,
-              "Precedence": -1000,
+              "Precedence": -3000,
               "Weight": 0
             },
             {
-              "Id": "Rain",
-              "Condition": "WEATHER TARGET (Rain, Storm, GreenRain)",
+              "Id": "Hat Mechanic",
+              "Condition": "WEATHER TARGET Sebastian Sun Rain Storm GreenRain",
+              "Season": null,
               "Indoors": false,
               "Outdoors": true,
               "Portrait": "Portraits/Sebastian_Hat",
-              "Sprite": "Characters/Sebastian_Hat",
-              "Weather": "Rain, Storm, GreenRain",
+              "Sprite": "Characters/Sebastian_hat",
               "IsIslandAttire": false,
               "Precedence": -1000,
               "Weight": 0
@@ -400,9 +383,9 @@
       "Action": "EditData",
       "Target": "Data/Events/SebastianRoom",
       "Entries": {
-        "00000/D Sebastian/t 600 630": " / 6 6 / farmer 10 9 1 Sebastian 11 9 3 / eventSeen 00000 false / speak Sebastian \"Hey @, guess we stayed up too late last night huh? $12#$b# I had fun though! $4#\"/ emote Sebastian 24 / message \"Looks like he's asleep again...\"/ end position 10 9",
-        "00001/D Sebastian/t 2200 2600/p Sebastian/d Tue Fri Sat Sun": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00001 false / skippable / pause 500/ speak Sebastian \"Oh hey, @! You're just in time to play Pirate King!$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
-        "00002/D Sebastian/t 2200 2600/p Sebastian/d Wed Thu Mon": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00002 false / skippable / pause 500/ speak Sebastian \"Hi @! What movie do you want to watch? Tonight I was thinking...$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
+        "S000/D Sebastian/t 600 630": " / 6 6 / farmer 10 9 1 Sebastian 11 9 3 / eventSeen 00000 false / speak Sebastian \"Hey @, guess we stayed up too late last night huh? $12#$b# I had fun though! $4#\"/ emote Sebastian 24 / message \"Looks like he's asleep again...\"/ speak Sebastian \"...$18\"/ end position 10 9",
+        "S001/D Sebastian/t 2200 2600/p Sebastian/d Tue Fri Sat Sun": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00001 false / skippable / pause 500/ speak Sebastian \"Oh hey, @! You're just in time to play Pirate King!$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
+        "S002/D Sebastian/t 2200 2600/p Sebastian/d Wed Thu Mon": "nightTime / 6 6 / farmer 1 5 1 Sebastian 9 5 3 / move farmer 4 0 1/ eventSeen 00002 false / skippable / pause 500/ speak Sebastian \"Hi @! What movie do you want to watch? Tonight I was thinking...$4\"/ fade / warp farmer 7 9 / warp Sebastian 8 9 / pause 500 / fade unfade  / speak Sebastian \"It's getting late. $10#$b# You should stay over so you don't get eaten by something. $11#$b# The boar out there can get mean at this time of night. $12\"/question fork1 \"#No. I can make it home safely. #Yes. Slumber party!\"/ fork Yes / emote Sebastian 28 / speak Sebastian \"Aww really? But I wanted snuggles...$6 #$b# Maybe next time. $12\"/ end",
         "Yes": "pause 500 / emote Sebastian 32 / speak Sebastian \"Cool! You can't snuggle Kabutonosuke though. $4#$b# He's mine.$6\"/ move Sebastian 3 0 3/ move farmer 3 0 3/ end newDay"
       },
       "When": {
@@ -435,7 +418,7 @@
       "Action": "EditData",
       "Target": "Characters/Dialogue/Sebastian",
       "Entries": {
-        "Introduction": "Oh. You just moved in, right? Nice!#$b#We should definitely go on an adventure sometime!$4",
+        "Introduction": "Oh. You just moved in, right? Nice!#$b#We should definitely go on an adventure sometime!$1#$e# I think you're really going to like it here!#$e#What do you want?$14",
         "AcceptBirthdayGift_Positive": "You got me something for my birthday? #$b#You're the best!$8",
         "AcceptBirthdayGift_Negative": "Haha that's so gross!$1#$b#Why would you give me that on my birthday?$7",
         "dating_Sebastian": "Don't make fun of me... but I've never been in a relationship like this before.$l^Don't make fun of me... but I've never really had a girlfriend before.$l",
@@ -452,24 +435,24 @@
         "AcceptGift_(O)227": "$c 0.8#I really love this. How did you know?$h#Mmm... once you get used to eating raw meat, it becomes really addictive.",
         "AcceptGift_(O)305": "$c 0.8#Whoa... This egg speaks to me... I'll put it on my desk. Thanks!$h#Hmm... I wonder, if I put this under my pillow, will it hatch? Hehe... only one way to find out.$h",
         "AcceptGift_(O)236": "You brought me soup? That's really nice of you.$h#$b#This one brings back a lot of memories...",
-        "AcceptGift_(TR)FrogEgg": "Hey, that's a beetle egg! I'll see if I can get it to hatch. Thanks!$h",
-        "firstVisit_Railroad": "I'm glad the path to the railroad tracks is open again.#$b#I like going up there to hunt!#$e#There's not enough meat in town.",
-        "Resort_Entering": "The boat ride was awesome but I didn't get to see any mermaids.",
+        "AcceptGift_(0)ShipsAhoy_AtlasBeetle": "Hey, that's a rare atlas beetle!$8#$b# Are you really giving this to me?$4#$b#I should find another one and make 'em race...$1",
+        "firstVisit_Railroad": "I'm glad the path to the railroad tracks is open again.#$b#I like going up there to hunt!#$e#Nobody in town eats meat.$3 #$b# How do they even survive?$14",
+        "Resort_Entering": "The boat ride was awesome but I didn't get to see any sea kings.$12",
         "Resort_Leaving": "I'm ready to get back home. I'm super hungry!",
-        "Resort": "The beach is nice, but I want to go exploring. I hear this place has an awesome mountain!",
+        "Resort": "The beach is nice, but I want to go exploring. #$b# I hear this place has an awesome mountain! $1",
         "Resort_Shore": "You think Jimbei would let me borrow a jet ski out here?#$b#...Nah.$h",
         "Resort_Wander": "...Now, if I were a kabuto beetle, where would I hide...$h",
         "Resort_Wander_2": "I bet this place looks pretty cool in the rain!",
-        "Resort_Towel": "Do you think I'd get in trouble if I went hunting?'",
-        "Resort_Bar": "Being at the beach makes me want grilled meat. Or grilled fish. Or coconut juice. Or popsicles...$h",
+        "Resort_Towel": "Do you think I'd get in trouble if I went hunting?$6",
+        "Resort_Bar": "Being at the beach makes me want grilled meat.$9#$b# Or grilled fish. Or coconut juice. Or popsicles...$8",
         "FlowerDance_Accept_Spouse": "Ugh... do we have to? Alright.",
-        "FlowerDance_Decline": "Oh my bad, I already promised somebody else! Maybe next time.",
-        "divorced": "Stop it. $3 #$b# This just hurts.$s",
+        "FlowerDance_Decline": "Oh my bad, I already promised somebody else!$12#$b# Maybe next time.$0",
+        "divorced": "Stop it. $13 #$b# This just hurts.$16",
         "dumped_Guys": "Sorry, I just...don't want to see you for a while.$u",
-        "breakUp": "You're not kidding...?$13#$b# I don't know what I did wrong... $2 #$b#I have to go.$3",
-        "secondChance_Guys": "Hey...",
+        "breakUp": "You're not kidding...?$13#$b# You don't want to be with me anymore? $2 #$b#...I have to go.$17 #$e#%Luffy looks really upset...#$b#...$16",
+        "secondChance_Guys": "Hey...$12",
         "Mon": "Hey! 'Sup?",
-        "Mon4": "Do you think dragons are real?$s",
+        "Mon4": "Do you think dragons are real?$4",
         "Tue": "I can't really swim but I kinda want to try anyway.",
         "Tue6": "Have you read the Sora comics?",
         "Tue8": "The mushrooms growing under my floorboards taste surprisingly good! $0 #$b# Don't tell Chopper I said that! $7 #$b# He gets really mad when I eat weird things for some reason. $12",
@@ -522,14 +505,14 @@
         "summer_Sat": "Robin's threatening to go vegan...*groan*$s",
         "spring_12": "I'm not too big on festivals. Lots of commotion, too much social interaction... More stress than fun, if you ask me.",
         "spring_23": "Ugh... Tomorrow is the worst festival of the year by a mile. Just wait and see how stupid I look during the flower dance.",
-        "fall_20": "Are you looking forward to the Spirit's Eve festival? It's probably my favorite.$h",
-        "fall_26": "The Spirit's Eve festival is tomorrow. I really hope they have those skeletons on display again this year.$h#$e#I almost feel like they're my friends at this point.",
+        "fall_20": "Are you looking forward to the Spirit's Eve festival?$1#$b# It's probably my favorite!$8",
+        "fall_26": "The Spirit's Eve festival is tomorrow. $1#$b#I really hope they have those skeletons on display again this year!$1#$e#They're so cool!$8",
         "summer_10": "I hope there's a ton of fresh meat in the potluck tomorrow!#$e# But I guess everybody here just eats fish, so probably not...",
         "summer_27": "Tomorrow we'll all be gathering at the docks to see the migration of the moonlight jellies. I think it starts at ten o'clock.",
         "winter_24": "It's the eve of the winter star today. Better make sure you've got an empty stomach for the feast tomorrow.",
         "summer_Sun": "I usually only go outside after dark. Does that sound weird to you?",
-        "summer_Sun4": "Last night, I saw a group of bats flying around near the lake.#$e#I guess maybe they are feeding on the mosquitoes this time of year?",
-        "fall_Mon": "So... it's the big harvest season, isn't it?",
+        "summer_Sun4": "Last night, I saw a group of bats flying around near the lake!$0#$e#I guess maybe they are feeding on the mosquitoes this time of year?",
+        "fall_Mon": "So... it's the big harvest season, isn't it?$h",
         "fall_Mon4": "You're probably making a lot of money on your farm, huh?#$e#Nami says streaming video games isn't a real job...$s",
         "fall_Tue": "Pumpkin spice this... pumpkin spice that... When is somebody gonna make a steak flavored latte?",
         "fall_Tue6": "Nami's mad at me for going into the mines alone again. I don't get why she's so pissed.$a",
@@ -540,26 +523,26 @@
         "fall_Fri": "*yawn*... I was up until 3 reading this comic book Torao loaned me...#$q 62/63 fall_Fri_old#Do you read, @?#$r 62 -30 Fri_bad#I like real books!#$r 63 30 Fri_good#I love adventure and scifi#$r 62 0 Fri_bad#I like a good Romance#$r 63 -30 Fri_bad#No, I'm not really a reader'",
         "fall_Fri_old": "$p 62#You probably wouldn't like it.$s|I think you'd like it.",
         "fall_Fri_good": "Hey, me too! I love the ones with robots and ninjas and lots of action!$h",
-        "fall_Fri_bad": "Huh. Sounds boring.",
-        "fall_Fri6": "Farming must take up a lot of time, huh? I guess you wouldn't have time to play Pirate King with me...$h",
+        "fall_Fri_bad": "Huh. Sounds boring.$14",
+        "fall_Fri6": "Farming must take up a lot of time, huh? $11#$b#I guess you wouldn't have time to play Pirate King with me...$2",
         "fall_Sat": "Yamato threw me off the baseball team for fighting the umpire. I guess you're not supposed to catch the ball with your teeth...",
         "fall_Sun": "The sun is coming out less and less these days... almost time for snowboarding!",
-        "winter_Mon": "I love when it snows! My toes get kinda numb though.",
+        "winter_Mon": "I love when it snows! $1#$b# My toes get kinda numb though.$12",
         "winter_Mon4": "Do you ever wonder what the world is like out there? Sometimes I just want to get on a boat and go adventuring, but my friends are all so busy.",
         "winter_Mon8": "My friend Chopper says I shouldn't eat all the stuff I find in the woods... But back when I lived with my grandpa I kinda had to fend for myself.",
         "winter_Tue": "Which would win in a fight, robots or ninjas...?",
         "winter_Tue4": "Hey...#$b#It's hard to think of new things to talk about, sometimes. Even after you know someone.#$e#...Sorry.",
-        "winter_Tue6": "Torao chewed me out for passing out in the dungeons. I had no problem fighting those skeletons...but I guess I fell asleep$s.",
-        "winter_Tue10": "You came here to see me?$l#$e#...$h",
-        "winter_Wed": "Luffy seems lost in thought...",
+        "winter_Tue6": "Torao chewed me out for passing out in the dungeons.$6#$b#I had no problem fighting those skeletons!$13#$b#...But I guess I fell asleep.$12",
+        "winter_Tue10": "You came here to see me?$l#$e#What do you want to do today?$h",
+        "winter_Wed": "%Luffy seems lost in thought. #$b# ...$9",
         "winter_Wed4": "Hey, don't let me stop you from getting your work done.#$e#If you aren't busy I don't mind if you stick around.$h",
         "winter_Thu": "I wonder what's for dinner tonight... I hope it's meat!'",
         "winter_Thu6": "Torao keeps getting mad at me for hanging out in the mines but he doesn't want to go with me.'",
         "winter_Fri": "It's fun to live so close to the train tracks. It's a reminder that there's a big world out there.",
         "winter_Fri8": "When I was younger I'd run out to the railroad whenever I heard a train coming.#$e# But now it doesn't drop as much cool stuff. *sigh*$s",
         "winter_Sat": "The beetles aren't very happy in winter.#$e#Poor little guys.$s||I wonder what the bugs do in winter? Do they just become frozen and then thaw out in spring?",
-        "winter_Sat6": "I like winter but but it's harder to find animals to hunt.",
-        "winter_Sun": "I built a super awesome harpoon for ice fishing but Jimbei made me get rid of it.#$e#Said it wasn't 'safe.'$u",
+        "winter_Sat6": "I like winter but but it's harder to find animals to hunt.$6",
+        "winter_Sun": "I built a super awesome harpoon for ice fishing!$0 #$b#But Jimbei made me get rid of it.$3 #$b# Said it wasn't safe, just because I shot Usopp with it...$6",
         "winter_Sun6": "I built a super awesome catapult for mining but Franky says I'm not allowed to use it."
       }
     },
@@ -568,61 +551,33 @@
 
 
     //Schedule
-    {
-      "Action": "EditData",
-      "Target": "Characters/schedules/Sebastian",
-      "Entries": {
-        "rain": "1030 Beach 12 39 2 \"Strings\\schedules\\Sebastian:rain.000\"/1700 SebastianRoom 11 9 1 sebastian_sleep",
-        "GreenRain": "610 SebastianRoom 6 6 2",
-        "rain2": "1030 SebastianRoom 9 4 3 sebastian_computer/ 1200 Mountain 20 20 sebastian_smoking/ 1600 Railroad 62 49 1 sebastian_smoking/1900 Saloon 43 20 3/2100 SebastianRoom 11 9 1 sebastian_sleep",
-        "marriage_DesertFestival_1": "830 Desert 38 59 3 \"Strings\\1_6_Strings:DesertFestival_Sebastian_marriage\"/2520 bed",
-        "DesertFestival_1": "730 SebastianRoom 9 4 3 sebastian_computer/830 Desert 26 61 1 sebastian_smoking \"Strings\\1_6_Strings:DesertFestival_Sebastian\"/2500 SebastianRoom 11 9 1 sebastian_sleep",
-        "marriage_Mon": "830 Mountain 58 35 1 \"Strings\\schedules\\Sebastian:marriage_Mon.000\"/1300 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:marriage_Mon.001\"/1700 bed",
-        "marriage_Fri": "830 Beach 12 39 2 \"Strings\\schedules\\Sebastian:marriage_Fri.000\"/1500 Saloon 42 21 3 \"Strings\\schedules\\Sebastian:marriage_Fri.001\"/2100 bed",
-        "winter_16": "1030 SebastianRoom 9 4 3 sebastian_computer/1500 ScienceHouse 27 9 0/1530 SebastianRoom 9 4 3 sebastian_computer/1650 Beach 10 39 2 \"Strings\\schedules\\Sebastian:winter_16.000\"/2200 SebastianRoom 11 9 1 sebastian_sleep",
-        "fall": "1030 SebastianRoom 9 4 3 sebastian_computer/1200 Mountain 57 33 1/1400 Mountain 64 14 2/1500 Mountain 42 13 1 sebastian_smoking/1600 ScienceHouse 27 9 0/1730 SebastianRoom 9 4 3 sebastian_computer/2200 SebastianRoom 11 9 1 sebastian_sleep",
-        "summer_4": "900 SebastianRoom 10 7 1 \"Strings\\schedules\\Sebastian:summer_4.000\"/1000 Hospital 15 16 3 sebastian_cardsLeft/1330 Hospital 4 6 1 \"Strings\\schedules\\Sebastian:summer_4.001\"/1600 SebastianRoom 11 9 1 sebastian_sleep",
-        "11_6": "GOTO spring",
-        "25_6": "GOTO spring",
-        "11": "1000 SebastianRoom 9 4 3 sebastian_computer/1200 SebastianRoom 6 5 3/1710 ScienceHouse 27 9 0/1800 SebastianRoom 9 4 3 sebastian_computer/2130 SebastianRoom 11 9 1 sebastian_sleep",
-        "15": "GOTO 11",
-        "Sat": "900 Town 18 95 0/1230 SamHouse 19 18 0 sebastian_keyboard_up/1500 SamHouse 17 14 0/1800 Town 10 94 1 sebastian_smoking/1930 SebastianRoom 11 9 1 sebastian_sleep",
-        "Thu": "1030 SebastianRoom 9 4 3 sebastian_computer/1400 Railroad 62 49 1 sebastian_smoking/1800 Railroad 44 51 3/1930 Railroad 5 45 1/2130 SebastianRoom 11 9 1 sebastian_sleep",
-        "Fri": "1030 SebastianRoom 9 4 3 sebastian_computer/1500 Saloon 42 21 3 \"Strings\\schedules\\Sebastian:Fri.000\"/2110 SebastianRoom 11 9 1 sebastian_sleep",
-        "spring": "630 11 9 1 sebastian_sleep/1000 SebastianRoom 9 4 3 sebastian_computer/1200 ScienceHouse 27 13 0 /1330 Mine 15 10 1 sebastian_smoking/ 1830 Mountain 58 35 1 sebastian_smoking/2100 SebastianRoom 11 9 1 sebastian_sleep",
-        "default": "GOTO spring"
-      }
-
-    }
-
-
-    //NPC Gift Tastes: see https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide/text-operations.md
-    //To swap entire list:
     //{
-    // "Action": "EditData",
-    // "Target": "Data/NPCGiftTastes",
-    //"Entries": {
-    //"Universal_Love": "74 446 797 373 279 127 128" // replaces current value
+    //  "Action": "EditData",
+    //  "Target": "Characters/schedules/Sebastian",
+    //  "Entries": {
+    //    "rain": "GOTO rain2",
+    //    "GreenRain": "GOTO rain2",
+    //    "rain2": "1030 SebastianRoom 9 4 3 sebastian_computer/ 1200 Mountain 20 20 sebastian_smoking/ 1600 Railroad 62 49 1 sebastian_smoking/1900 Saloon 43 20 3/2100 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "marriage_DesertFestival_1": "830 Desert 38 59 3 \"Strings\\1_6_Strings:DesertFestival_Sebastian_marriage\"/2520 bed",
+    //    "DesertFestival_1": "730 SebastianRoom 9 4 3 sebastian_computer/830 Desert 26 61 1 sebastian_smoking \"Strings\\1_6_Strings:DesertFestival_Sebastian\"/2500 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "marriage_Mon": "830 Mountain 58 35 1 \"Strings\\schedules\\Sebastian:marriage_Mon.000\"/1300 ScienceHouse 6 20 0 \"Strings\\schedules\\Sebastian:marriage_Mon.001\"/1700 bed",
+    //    "marriage_Fri": "830 Beach 12 39 2 \"Strings\\schedules\\Sebastian:marriage_Fri.000\"/1500 Saloon 42 21 3 \"Strings\\schedules\\Sebastian:marriage_Fri.001\"/2100 bed",
+    //    "winter_16": "1030 SebastianRoom 9 4 3 sebastian_computer/1500 ScienceHouse 27 9 0/1530 SebastianRoom 9 4 3 sebastian_computer/1650 Beach 10 39 2 \"Strings\\schedules\\Sebastian:winter_16.000\"/2200 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "fall": "1030 SebastianRoom 9 4 3 sebastian_computer/1200 Mountain 57 33 1/1400 Mountain 64 14 2/1500 Mountain 42 13 1 sebastian_smoking/1600 ScienceHouse 27 9 0/1730 SebastianRoom 9 4 3 sebastian_computer/2200 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "summer_4": "900 SebastianRoom 10 7 1 \"Strings\\schedules\\Sebastian:summer_4.000\"/1000 Hospital 15 16 3 sebastian_cardsLeft/1330 Hospital 4 6 1 \"Strings\\schedules\\Sebastian:summer_4.001\"/1600 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "11_6": "GOTO spring",
+    //    "25_6": "GOTO spring",
+    //    "11": "1000 SebastianRoom 9 4 3 sebastian_computer/1200 SebastianRoom 6 5 3/1710 ScienceHouse 27 9 0/1800 SebastianRoom 9 4 3 sebastian_computer/2130 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "15": "GOTO 11",
+    //    "Sat": "900 Town 18 95 0/1230 SamHouse 19 18 0 sebastian_keyboard_up/1500 SamHouse 17 14 0/1800 Town 10 94 1 sebastian_smoking/1930 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "Thu": "1030 SebastianRoom 9 4 3 sebastian_computer/1400 Railroad 62 49 1 sebastian_smoking/1800 Railroad 44 51 3/1930 Railroad 5 45 1/2130 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "Fri": "1030 SebastianRoom 9 4 3 sebastian_computer/1500 Saloon 42 21 3 \"Strings\\schedules\\Sebastian:Fri.000\"/2110 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "spring": "630 11 9 1 sebastian_sleep/1000 SebastianRoom 9 4 3 sebastian_computer/1200 ScienceHouse 27 13 0 /1330 Mine 15 10 1 sebastian_smoking/ 1830 Mountain 58 35 1 sebastian_smoking/2100 SebastianRoom 11 9 1 sebastian_sleep",
+    //    "default": "GOTO spring"
+    //  }
+
     //}
-    // },
-    //This is pretty simple, but unfortunately it overwrites any previous values. 
-    //That will remove any changes from other mods or in future game updates. 
-    // So instead, we can use the Append operation to add new gift tastes without changing the other values: 
 
-    // {
-    // "Action": "EditData",
-    // "Target": "Data/NPCGiftTastes",
-    // "TextOperations": [
-    //  {
-    //   "Operation": "Append",
-    // "Target": [ "Entries", "Universal_Love" ],
-    // "Value": "127 128",
-    // "Delimiter": " " // if the field isn't empty, add a space between the old & new text
-    // }
-    //  ]
-    // }
-
-    //Engagement Dialogue
 
   ]
     }

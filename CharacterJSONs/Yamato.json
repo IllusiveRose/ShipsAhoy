@@ -2,35 +2,43 @@
 	"Changes": [
 
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Jodi",
-			"FromFile": "assets/Characters/Yamato.png"
+			"Action": "Load",
+			"Target": "Characters/Jodi, Portraits/Jodi",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Jodi",
-			"FromFile": "assets/Portraits/Custom/Yamato.png"
+			"Action": "Load",
+			"Target": "Characters/Jodi, Portraits/Jodi",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Jodi_Winter",
-			"FromFile": "assets/Characters/Yamato_Winter.png"
+			"FromFile": "assets/Characters/Jodi_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Jodi_Winter",
-			"FromFile": "assets/Portraits/Custom/Yamato_Winter.png"
+			"FromFile": "assets/Portraits/Jodi_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Jodi_Beach",
-			"FromFile": "assets/Characters/Yamato_Beach.png"
+			"FromFile": "assets/Characters/Jodi_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Jodi_Beach",
-			"FromFile": "assets/Portraits/Custom/Yamato_Beach.png"
+			"FromFile": "assets/Portraits/Jodi_Beach.png"
 		},
 
 		//{
@@ -80,7 +88,7 @@
 					"DumpsterDiveFriendshipEffect": -25,
 					"DumpsterDiveEmote": null,
 					"FriendsAndFamily": {
-						"Sam": "[LocalizedText Strings\\Characters:Relative_EldestSon]",
+						"Jodi": "[LocalizedText Strings\\Characters:Relative_EldestSon]",
 						"Vincent": "[LocalizedText Strings\\Characters:Relative_YoungestSon]",
 						"Kent": "[LocalizedText Strings\\Characters:Relative_Husband]"
 					},
@@ -93,7 +101,7 @@
 						{
 							"Id": "Default",
 							"Condition": null,
-							"Location": "SamHouse",
+							"Location": "JodiHouse",
 							"Tile": {
 								"X": 17,
 								"Y": 21
@@ -144,7 +152,7 @@
 			}
 		}
 
-	
+
 	]
 
 }

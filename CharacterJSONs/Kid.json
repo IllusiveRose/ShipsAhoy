@@ -9,7 +9,7 @@
     {
       "Action": "EditImage",
       "Target": "Portraits/Marlon",
-      "FromFile": "assets/Portraits/Custom/Kid.png"
+      "FromFile": "assets/Portraits/Kid.png"
     },
     {
       "Action": "EditData",

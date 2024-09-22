@@ -7,35 +7,43 @@
 		//	"FromFile": "assets/Characters/Zoro.png"
 		//},
 		{
-			"Action": "EditImage",
-			"Target": "Characters/Haley",
-			"FromFile": "assets/Characters/Zoro.png"
+			"Action": "Load",
+			"Target": "Characters/Haley, Portraits/Haley",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Summer, Spring, Fall"
+			}
 		},
 		{
-			"Action": "EditImage",
-			"Target": "Portraits/Haley",
-			"FromFile": "assets/Portraits/Custom/Zoro.png"
+			"Action": "Load",
+			"Target": "Characters/Haley, Portraits/Haley",
+			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"Update": "OnDayStart",
+			"When": {
+				"Season": "Winter"
+			}
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Haley_Winter",
-			"FromFile": "assets/Characters/Zoro_Winter.png"
+			"FromFile": "assets/Characters/Haley_Winter.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Haley_Winter",
-			"FromFile": "assets/Portraits/Custom/Zoro_Winter.png"
+			"FromFile": "assets/Portraits/Haley_Winter.png"
 		},
 
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Haley_Beach",
-			"FromFile": "assets/Characters/Zoro_Beach.png"
+			"FromFile": "assets/Characters/Haley_Beach.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Haley_Beach",
-			"FromFile": "assets/Portraits/Custom/Zoro_Beach.png"
+			"FromFile": "assets/Portraits/Haley_Beach.png"
 		}
 		//{
 		//	"Action": "EditData",

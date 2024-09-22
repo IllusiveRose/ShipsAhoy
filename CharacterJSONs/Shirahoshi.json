@@ -1,7 +1,45 @@
 {
   "Changes": [
 
+    {
+      "Action": "Load",
+      "Target": "Characters/Abigail, Portraits/Abigail",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Summer, Spring, Fall"
+      }
+    },
+    {
+      "Action": "Load",
+      "Target": "Characters/Abigail, Portraits/Abigail",
+      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "Update": "OnDayStart",
+      "When": {
+        "Season": "Winter"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Abigail_Winter",
+      "FromFile": "assets/Characters/Abigail_Winter.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Abigail_Winter",
+      "FromFile": "assets/Portraits/Abigail_Winter.png"
+    },
 
+    {
+      "Action": "EditImage",
+      "Target": "Characters/Abigail_Beach",
+      "FromFile": "assets/Characters/Abigail_Beach.png"
+    },
+    {
+      "Action": "EditImage",
+      "Target": "Portraits/Abigail_Beach",
+      "FromFile": "assets/Portraits/Abigail_Beach.png"
+    },
 
     {
       "Action": "EditMap",
@@ -94,22 +132,6 @@
 
 
 
-
-    {
-      "Action": "Load",
-      "Target": "Characters/Abigail",
-      "FromFile": "assets/Characters/ShirahoshiSwim.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Characters/{{ModId}}_ShirahoshiBeach",
-      "FromFile": "assets/Characters/Shirahoshi.png"
-    },
-    {
-      "Action": "Load",
-      "Target": "Portraits/Abigail",
-      "FromFile": "assets/Portraits/Custom/Shirahoshi.png"
-    },
 
     //    Schedule
     {
@@ -246,8 +268,8 @@
               "Season": "Winter",
               "Indoors": true,
               "Outdoors": true,
-              "Portrait": "Portraits/Abigail",
-              "Sprite": "Characters/{{ModId}}_ShirahoshiBeach",
+              "Portrait": "Portraits/Abigail_Winter",
+              "Sprite": "Characters/Abigail_Winter",
               "IsIslandAttire": false,
               "Precedence": -100,
               "Weight": 0,
