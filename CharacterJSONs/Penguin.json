@@ -5,7 +5,7 @@
     {
       "Action": "Load",
       "Target": "Characters/Evelyn, Portraits/Evelyn",
-      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "FromFile": "assets/{{Target}}{{Random: white |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
         "Season": "Summer, Spring, Fall"
@@ -14,7 +14,7 @@
     {
       "Action": "Load",
       "Target": "Characters/Evelyn, Portraits/Evelyn",
-      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "FromFile": "assets/{{Target}}{{Random: white |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
         "Season": "Winter"

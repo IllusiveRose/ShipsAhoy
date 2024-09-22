@@ -9,7 +9,7 @@
 		{
 			"Action": "Load",
 			"Target": "Characters/Maru, Portraits/Maru",
-			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"FromFile": "assets/{{Target}}{{Random: orange |key={{TargetWithoutPath}}}}.png",
 			"Update": "OnDayStart",
 			"When": {
 				"Season": "Summer, Spring, Fall"
@@ -18,7 +18,7 @@
 		{
 			"Action": "Load",
 			"Target": "Characters/Maru, Portraits/Maru",
-			"FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+			"FromFile": "assets/{{Target}}{{Random: orange |key={{TargetWithoutPath}}}}.png",
 			"Update": "OnDayStart",
 			"When": {
 				"Season": "Winter"

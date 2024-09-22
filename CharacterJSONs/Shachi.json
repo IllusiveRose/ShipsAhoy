@@ -5,7 +5,7 @@
     {
       "Action": "Load",
       "Target": "Characters/George, Portraits/George",
-      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "FromFile": "assets/{{Target}}{{Random: green |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
         "Season": "Summer, Spring, Fall"
@@ -14,7 +14,7 @@
     {
       "Action": "Load",
       "Target": "Characters/George, Portraits/George",
-      "FromFile": "assets/{{Target}}{{Random: |key={{TargetWithoutPath}}}}.png",
+      "FromFile": "assets/{{Target}}{{Random: green |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
         "Season": "Winter"

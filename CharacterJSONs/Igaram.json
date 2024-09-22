@@ -9,12 +9,12 @@
 		{
 			"Action": "EditImage",
 			"Target": "Portraits/Bouncer",
-			"FromFile": "assets/Portraits/Igaram.png"
+			"FromFile": "assets/Portraits/Bouncer.png"
 		},
 		{
 			"Action": "EditImage",
 			"Target": "Characters/Bouncer",
-			"FromFile": "assets/Characters/Igaram.png"
+			"FromFile": "assets/Characters/Bouncer.png"
 		}
 		//{
 		//	"Action": "EditData",
