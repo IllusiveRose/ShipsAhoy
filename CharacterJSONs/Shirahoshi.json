@@ -3,7 +3,7 @@
 
     {
       "Action": "Load",
-      "Target": "Characters/Abigail, Portraits/Abigail",
+      "Target": "Characters/Abigail, Portraits/Abigail, Portraits/Abigail_Swim, Characters/Abigail_Swim",
       "FromFile": "assets/{{Target}}{{Random: yellow |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
@@ -12,7 +12,7 @@
     },
     {
       "Action": "Load",
-      "Target": "Characters/Abigail, Portraits/Abigail",
+      "Target": "Characters/Abigail, Portraits/Abigail, Portraits/Abigail_Swim, Characters/Abigail_Swim",
       "FromFile": "assets/{{Target}}{{Random: yellow |key={{TargetWithoutPath}}}}.png",
       "Update": "OnDayStart",
       "When": {
@@ -41,23 +41,10 @@
       "FromFile": "assets/Portraits/Abigail_Beach.png"
     },
 
-    {
-      "Action": "EditMap",
-      "Target": "Maps/Forest",
-      "FromFile": "assets/Maps/ForestPatch0.tmx",
-      "FromArea": {
-        "X": 0,
-        "Y": 0,
-        "Width": 37,
-        "Height": 17
-      },
-      "ToArea": {
-        "X": 78,
-        "Y": 100,
-        "Width": 37,
-        "Height": 17
-      }
-    },
+      // add a warp to the new location
+
+
+    
 
     //{
     //  "Action": "EditMap",
@@ -94,41 +81,56 @@
     //    "Height": 13
     //  }
     //},
-
-
-
     {
       "Action": "EditMap",
-      "Target": "Maps/Forest",
+      "Target": "Maps/BathHouse_WomensLocker",
       "TextOperations": [
         {
           "Operation": "Append",
           "Target": [ "MapProperties", "NPCWarp" ],
-          "Value": "94 116 Beach 10 10",
-          "Delimiter": " " // if the field isn't empty, add a space between the old & new text,  87 118 Forest 56 93   46 86 Forest 38 36   37 30 Woods 10 23
+          "Value": "2 26 BathHouse_Pool 6 9",
+          "Delimiter": " " // if the field isn't empty, add a space between the old & new text,  87 118 ForestPatch4 56 93   46 86 ForestPatch4 38 36   37 30 Woods 10 23
+        }
+      ]
+    },
+
+
+    {
+      "Action": "EditMap",
+      "Target": "Maps/{{ModId}}_ShirahoshiWoods",
+      "TextOperations": [
+        {
+          "Operation": "Append",
+          "Target": [ "MapProperties", "NPCWarp" ],
+          "Value": "12 25 Beach 10 10",
+          "Delimiter": " " // if the field isn't empty, add a space between the old & new text,  87 118 ForestPatch4 56 93   46 86 ForestPatch4 38 36   37 30 Woods 10 23
         }
       ],
       "MapTiles": [
         {
-          "Layer": "Buildings",
+          "Layer": "Back",
           "Position": {
-            "X": 97,
-            "Y": 109
+            "X": 98,
+            "Y": 108
           },
           "SetProperties": {
-            "NPCPassable": "T"
+            "Passable": "T"
+          }
+        },
+        {
+          "Layer": "Back",
+          "Position": {
+            "X": 97,
+            "Y": 108
+          },
+          "SetProperties": {
+            "Passable": "T"
           }
         }
       ]
     },
 
 
-
-    {
-      "Action": "Load",
-      "Target": "assets/Maps",
-      "FromFile": "assets/Maps/Forest-SewerClean.tmx"
-    },
 
 
 
@@ -138,29 +140,29 @@
       "Action": "EditData",
       "Target": "Characters/schedules/Abigail",
       "Entries": {
-        "rain": "610 Forest 87 118 1/ 1300 Forest 97 109 1",
+        "rain": "610 {{ModId}}_ShirahoshiWoods 32 8 0",
         "rain2": "GOTO rain",
         "GreenRain": "GOTO rain",
         "marriage_DesertFestival_1": "800 Desert 8 10 2 \"Strings\\1_6_Strings:DesertFestival_Abigail_marriage\"/2530 bed",
-        "DesertFestival_1": "610 Forest 87 110 0/830 Desert 23 64 3 \"Strings\\1_6_Strings:DesertFestival_Abigail\"/2530 Forest 97 110 0",
+        "DesertFestival_1": "610 {{ModId}}_ShirahoshiWoods 32 8 0/830 Desert 23 64 3 \"Strings\\1_6_Strings:DesertFestival_Abigail\"/2530 {{ModId}}_ShirahoshiWoods 32 8 0",
         "winter_15": "GOTO winter",
         "marriage_Mon": "GOTO spring",
         "marriage_Fri": "GOTO spring",
-        "fall_Mon": "GOTO rain",
-        "6": "GOTO rain",
-        "16": "GOTO rain",
-        "spring_4": "GOTO rain",
-        "Sun": "GOTO rain",
-        "11_6": "GOTO rain",
-        "25_6": "GOTO rain",
-        "11": "GOTO rain",
-        "25": "GOTO rain",
-        "Wed": "GOTO rain",
-        "Fri": "GOTO rain",
-        "fall": "GOTO rain",
-        "winter": "610 Forest 94 114 1 / 700 Beach 15 10 3 square_5_3_2 / 900 BathHouse_Pool 16 13 3 square_10_3_2/ 1800 Forest 97 113",
+        "fall_Mon": "GOTO spring",
+        "6": "GOTO spring",
+        "16": "GOTO spring",
+        "spring_4": "GOTO spring",
+        "Sun": "GOTO spring",
+        "11_6": "GOTO spring",
+        "25_6": "GOTO spring",
+        "11": "GOTO spring",
+        "25": "GOTO spring",
+        "Wed": "GOTO spring",
+        "Fri": "GOTO spring",
+        "fall": "GOTO spring",
+        "winter": "610 {{ModId}}_ShirahoshiWoods 13 15 1 / 700 Beach 15 10 3 / 900 BathHouse_Pool 16 13 3 square_10_3_2/ 1800 {{ModId}}_ShirahoshiWoods 32 8",
         "summer": "610 Beach 20 10 square_10_2_1",
-        "spring": "610 Forest 91 112 2 square_10_3_2/ 1300 Forest 97 109 1 / 1900 Forest 97 115 3 square_10_3_2"
+        "spring": "610 {{ModId}}_ShirahoshiWoods 32 13 square_5_5_2"
       }
 
     },
@@ -251,10 +253,10 @@
             {
               "Id": "default",
               "Condition": null,
-              "Location": "Forest",
+              "Location": "{{ModId}}_ShirahoshiWoods",
               "Tile": {
-                "X": 95,
-                "Y": 112
+                "X": 15,
+                "Y": 17
               },
               "Direction": "1"
             }
@@ -272,13 +274,31 @@
               "Sprite": "Characters/Abigail_Winter",
               "IsIslandAttire": false,
               "Precedence": -100,
-              "Weight": 0,
-              "Shadow": {
-                "Offset": {
-                  "X": 0,
-                  "Y": 16
-                }
-              }
+              "Weight": 0
+            },
+            {
+              "Id": "{{ModId}}_ShirahoshiWoods",
+              "Condition": "LOCATION_NAME Abigail {{ModId}}_ShirahoshiWoods",
+              "Season": null,
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Abigail_Swim",
+              "Sprite": "Characters/Abigail_Swim",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
+            },
+            {
+              "Id": "Bathhouse",
+              "Condition": "LOCATION_NAME Abigail Bathhouse_Pool",
+              "Season": null,
+              "Indoors": true,
+              "Outdoors": true,
+              "Portrait": "Portraits/Abigail_Swim",
+              "Sprite": "Characters/Abigail_Swim",
+              "IsIslandAttire": false,
+              "Precedence": -100,
+              "Weight": 0
             }
           ],
           "MugShotSourceRect": null,

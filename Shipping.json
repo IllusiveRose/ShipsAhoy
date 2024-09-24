@@ -1,0 +1,52 @@
+{
+  "Changes": [
+
+
+    //Non-Mail Flags for successful shipping
+
+
+
+
+
+    //Using mail flags from Valentines, trigger mail quests or doorstep events to start shipping (e.g., Mail from Nami about Vivi), resulting in new flag triggered:
+
+
+
+
+
+    //Events triggered by successful shipping flag (couple gets together).
+
+
+
+
+    //Secondary dating events triggered by season/location conditions+friendship level with both characters (first date)
+
+
+
+
+    //Tertiary dating events triggered by conditions and quest line (Moving in together or proposal)
+
+
+
+
+    //Quest line to trigger tertiary dating
+
+
+
+
+    //End ship events (give bouquet or something to trigger breakup event)
+
+
+
+
+    //Marriage events triggered by conditions and quest line (Marriage or moving in)
+
+
+
+
+    //Quest line to trigger Marriage/move-in shipping
+
+
+
+  ]
+}

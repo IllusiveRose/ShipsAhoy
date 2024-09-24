@@ -1,0 +1,23 @@
+{
+  "Changes": [
+    //A copy of this really belongs on every character sheet for people if we allow shipping
+
+
+    
+    //If a certain event is seen, change Maps
+
+
+    
+    //If a certain event is seen, change character data (not single, change sleep location, maybe change sprites if job changes, etc.)
+
+
+    
+    //If a certain event is seen, change Schedules (they wake up on new map now)
+
+
+
+    //Adding baby NPCs under certain conditions.
+
+
+  ]
+}
